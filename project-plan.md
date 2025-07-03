@@ -9,6 +9,12 @@ A satirical marketing campaign targeting IT professionals with "Oktholm Syndrome
 - **Ready for Execution**: All foundational elements completed
 - **Next Steps**: Begin implementation of completed specifications
 
+> 📖 **New to this project?** Start with the [README.md](README.md) for overview and navigation
+> 
+> 🤝 **Want to contribute?** See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines
+> 
+> 🛠️ **Ready to implement?** Check [implementation/README.md](implementation/README.md) for technical setup
+
 ---
 
 ## Phase 1: Branding & Domain Setup ✅ **COMPLETED**
