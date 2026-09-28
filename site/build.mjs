@@ -44,15 +44,22 @@ function esc(s) {
   return String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 }
 
+// Preview/staging builds: SITE_URL points og:url/og:image at the deploy's own origin, and NOINDEX=true
+// (or a Netlify deploy-preview/branch-deploy CONTEXT) keeps the build out of search engines.
+const siteUrlOverride = process.env.SITE_URL || '';
+const noindex = process.env.NOINDEX === 'true' || ['deploy-preview', 'branch-deploy'].includes(process.env.CONTEXT);
+
 async function loadBrandMeta() {
   // Cache-bust so --serve picks up edits to brand metadata.
   const mod = await import(pathToFileURL(brandEntry).href + `?t=${Date.now()}`);
   const b = mod.default;
+  const url = siteUrlOverride || b.site?.url || '';
+  const ogImage = siteUrlOverride && b.site?.url && b.site?.ogImage?.startsWith(b.site.url) ? b.site.ogImage.replace(b.site.url, siteUrlOverride.replace(/\/?$/, '/')) : b.site?.ogImage || '';
   return {
     title: b.site?.title || b.site?.name || 'Parody Engine',
     description: b.site?.description || '',
-    url: b.site?.url || '',
-    ogImage: b.site?.ogImage || '',
+    url,
+    ogImage,
     themeColor: b.theme?.['--bg'] || '#070a0f',
     fonts: b.site?.fontsHref || '',
     lang: b.site?.lang || 'en',
@@ -74,7 +81,8 @@ async function emitHtml(result, outFile) {
     .replace('{{fonts}}', () => fontsTag())
     // Function replacers: bundled code can contain "$&"-style sequences that string replacement would expand.
     .replace('/*{{css}}*/', () => (css ? css.text : ''))
-    .replace('/*{{js}}*/', () => (js ? js.text.replaceAll('</script', '<\\/script') : ''));
+    .replace('/*{{js}}*/', () => (js ? js.text.replaceAll('</script', '<\\/script') : ''))
+    .replace('</head>', () => (noindex ? '<meta name="robots" content="noindex, nofollow">\n</head>' : '</head>'));
   await mkdir(path.dirname(outFile), { recursive: true });
   await writeFile(outFile, html);
   const kb = (Buffer.byteLength(html) / 1024).toFixed(0);
@@ -100,6 +108,10 @@ function fontsTag() {
 async function copyPublic() {
   const pub = path.join(root, 'public');
   if (existsSync(pub)) await cp(pub, outdir, { recursive: true });
+  // Always written, so a production build over a previous preview build can't inherit noindex.
+  await writeFile(path.join(outdir, 'robots.txt'), noindex ? 'User-agent: *\nDisallow: /\n' : 'User-agent: *\nAllow: /\n');
+  await writeFile(path.join(outdir, '_headers'), noindex ? '/*\n  X-Robots-Tag: noindex, nofollow\n' : '# Headers live in netlify.toml. Preview builds add X-Robots-Tag: noindex here.\n');
+  if (noindex) console.log('noindex build: robots.txt + X-Robots-Tag');
 }
 
 // `import modules from 'virtual:modules'` -> every src/games/*/index.js and src/shows/*/index.js.

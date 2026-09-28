@@ -54,6 +54,8 @@ The repo-root `netlify.toml` sets `base = "site"`. The functions use Netlify Blo
 | `ADMIN_TOKEN` | Bearer token for `GET /api/admin/confessions` and `POST /api/admin/confessions/moderate` |
 | `IP_SALT` | Salt for hashing visitor IPs used in rate limits (raw IPs are never stored) |
 | `BRAND` | Brand pack to build (default `oktholm`) |
+| `SITE_URL` | Overrides the brand URL in og:url/og:image (set it on preview/staging sites) |
+| `NOINDEX` | `true` adds `robots` noindex meta, `robots.txt` Disallow and an `X-Robots-Tag` header (automatic for Netlify deploy previews and branch deploys) |
 
 Moderate confessions:
 ```

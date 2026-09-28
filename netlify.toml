@@ -8,6 +8,8 @@
 [build.environment]
   NODE_VERSION = "22"
   BRAND = "oktholm"
+  # Playwright is a dev dependency for local smoke tests; Netlify builds don't need its browsers.
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
 
 [[headers]]
   for = "/fonts/*"
