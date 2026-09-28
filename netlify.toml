@@ -1,0 +1,22 @@
+# Netlify: the site lives in site/. Functions (site/netlify/functions) serve /api/*;
+# the edge function (site/netlify/edge-functions/og.mjs) personalizes link previews.
+[build]
+  base = "site"
+  command = "npm ci && npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  BRAND = "oktholm"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
