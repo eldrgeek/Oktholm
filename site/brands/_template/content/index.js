@@ -42,7 +42,7 @@ export default {
   },
   cure: { kicker: 'There is a cure', title: 'Treatment is available.', body: '', treatments: [{ symptom: 'Vendor Attachment', fact: 'pricing' }], dosage: [{ label: 'Small teams', fact: 'free' }], faq: [] },
 
-  // The cold open (first visit, bare home page). See brands/oktholm/content/admission.js for a full script.
+  // The cold open (every load of the bare home page). See brands/oktholm/content/admission.js for a full script.
   admission: {
     wake: { voice: 'paramedic', say: 'Hey. Can you hear me? Tap if you can hear me.', caption: 'Can you hear me? Tap if you can hear me.', tapLabel: 'Tap if you can hear me', timeoutMs: 5000 },
     scenes: [

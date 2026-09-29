@@ -50,13 +50,14 @@ if (q.toString()) history.replaceState(null, '', location.pathname + (landing ? 
 const shell = mountShell(document.getElementById('app'), s);
 const room = (render) => (route) => shell.show((root) => render(root, s, route), route);
 
-// ---- Admission (the cold open): first visit, bare home page only. Never for share links, reduced motion
-// or Save-Data. The lobby holds its TV until it's over; the captor holds its texts.
+// ---- Admission (the cold open): every load of the bare home page, reloads included; after the first, each
+// load rotates to the next scene. Never for share links, reduced motion or Save-Data. The lobby holds its TV
+// until it's over; the captor holds its texts.
 const admitted = s.store.scope('admission');
 const bareHome = !landing && ['', '#', '#/'].includes(location.hash);
 const reducedMotion = typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
 const saveData = navigator.connection?.saveData === true;
-s.admissionActive = !blockAdmit && (forceAdmit || (bareHome && !admitted.get('seen') && !reducedMotion && !saveData));
+s.admissionActive = !blockAdmit && (forceAdmit || (bareHome && !reducedMotion && !saveData));
 function admit(opts = {}) {
   s.admissionActive = true;
   let finished = false;
@@ -104,7 +105,8 @@ s.router
   .otherwise(room(renderNotFound));
 
 s.router.start();
-if (s.admissionActive) admit();
+// ?admit=1 always starts at the first scene; a returning visitor's load is a replay.
+if (s.admissionActive) admit({ replay: !forceAdmit && Boolean(admitted.get('seen')) });
 
 // Test/debug hook (used by tests/smoke.mjs). Exposes nothing a visitor couldn't see in devtools anyway.
 window.__pe = { brand: s.brand.id, modules: Object.keys(s.brand.modules || {}).filter((id) => getModule(id)).map((id) => ({ id, kind: getModule(id).kind })) };

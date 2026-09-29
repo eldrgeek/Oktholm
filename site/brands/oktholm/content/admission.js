@@ -1,4 +1,4 @@
-// Admission: the landing cold open. Plays once, on the bare home page, for first-time visitors (never on
+// Admission: the landing cold open. Plays on every load of the bare home page, reloads included (never on
 // share links, never with reduced motion or Save-Data). Lines are voiced by scripts/voices.mjs; tags in
 // [brackets] direct the performance and never appear on screen.
 export default {
@@ -14,7 +14,7 @@ export default {
     afterTap: { voice: 'paramedic', say: '[relieved, to the doctor] Responsive. Unlike their vendor.', caption: 'Responsive. Unlike their vendor.' },
   },
 
-  // First visit always gets the first scene; "Replay admission" rotates through the rest.
+  // First visit always gets the first scene; each later load (or "Replay admission") rotates through the rest.
   // Optional stage directions per line: `beat` (what the picture does when the line starts: 'ride', 'doctor',
   // 'monitor', 'doors', 'sign'; by default lines 1-5 get them in that order), `monitor` (text on the heart
   // monitor instead of the rate), `ecg` ({ bpm, spike: 'phrase', heart: 'phrase', flat }) and `sign` (the LED

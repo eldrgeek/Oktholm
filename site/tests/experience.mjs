@@ -34,6 +34,10 @@ for (const [width, height] of [
     check(gone, `${tag} Esc skips the admission`);
     const tv = await page.waitForSelector('.channel', { timeout: 4000 }).then(() => true).catch(() => false);
     check(tv, `${tag} the lobby TV starts after the admission`);
+    // Every load of the bare home page admits again; a returning visitor gets the next scene.
+    await page.reload();
+    const again = await page.waitForSelector('.adm-overlay', { timeout: 3000 }).then(() => true).catch(() => false);
+    check(again, `${tag} a reload replays the admission`);
   }
   noErrors(page, `${tag} admission`);
   await page.close();
