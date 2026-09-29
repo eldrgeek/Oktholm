@@ -74,7 +74,7 @@ Counters use ETag compare-and-swap, so they are safe under concurrency. For very
 
 | file | what | copy |
 | --- | --- | --- |
-| `admission.js` | the cold open: first visit, bare home page only (never share links, reduced motion, Save-Data). `?admit=1` forces it; `#/admit` replays it | `content/admission.js` |
+| `admission.js` | the cold open: every load of the bare home page, reloads included, rotating scenes after the first (never share links, reduced motion, Save-Data). `?admit=1` forces the first scene; `?admit=0` suppresses it; `#/admit` replays it | `content/admission.js` |
 | `intake.js` | the front-desk chatbot in the lobby hero (docked on other pages), its typed commands and the guided tour. Lobby sections carry `data-tour` and `data-cue` | `content/intake.js` |
 | `captor.js` | "Your IdP" texts that react to what the visitor does, the thread, its PNG export and The Breakup | `content/captor.js` (read the ex test at the top) |
 | `eggs.js` | the Konami code and the devtools note | `content/home.js` → `eggs` |
@@ -83,8 +83,8 @@ Also `src/rooms/chart.js`: `#/chart` shows everything the site stores in the bro
 
 ## Voices (ElevenLabs, rendered ahead of time)
 
-The site plays pre-rendered clips from `brands/<id>/voice/` (committed) and never calls a voice API. The cast (18 original
-voices, their design prompts and browser fallbacks) is `brands/<id>/cast.js`. Rendering needs `ELEVENLABS_API_KEY` in
+The site plays pre-rendered clips from `brands/<id>/voice/` (committed) and never calls a voice API. The cast (18 roles,
+each with a design prompt and a browser fallback) is `brands/<id>/cast.js`; the chosen voices are in `voices.json`. Rendering needs `ELEVENLABS_API_KEY` in
 the shell, never in Netlify.
 
 ```
@@ -103,12 +103,23 @@ show them. A clip is keyed by role + tagged text, so rewriting or re-directing a
 **The key:** Mike's ElevenLabs key is listed in the Voice Synthesis section of `api-keys-reference.md` (and in his
 memory notes). Export it as `ELEVENLABS_API_KEY` for the run; never write it into this repo or a Netlify build log.
 
-**First render, in order:**
-1. `npm run voices -- harvest`: about 20 minutes; the shows' lines land in `voice-work/`.
-2. `npm run voices -- cast`: three designed voices per role. Put `voice-work/oktholm/casting/` somewhere Mike can
-   listen (for example, a preview deploy under `/casting/` that isn't committed). He picks by ear.
-3. `npm run voices -- pick paramedic=B doctor=A …`, then commit `brands/oktholm/voices.json`.
-4. `npm run voices -- render`, then `sfx`, then commit `brands/oktholm/voice/` and redeploy the preview.
+**The Oktholm cast (rendered 2026-09-28):** the 18 roles use professional voices from the ElevenLabs Voice Library,
+not designed ones. Each voice was picked without an audition, to match the role's `design` text. Roles that share a
+scene (the cold open, the intervention couch, OKTV) were kept apart by pitch and accent. `voices.json` maps each role
+to its voice ID, and the voices are saved in Mike's ElevenLabs account as "OKT …". The clips use `eleven_v4`.
+
+Three roles have a voice but no clips yet. The intern only speaks in interventions that a visitor stages with four or
+more symptoms, and those letters contain the typed name, so they can't be rendered ahead. The Please Hold game records
+no lines in harvest mode, so the IVR still uses browser speech. No show uses the trailer narrator yet.
+
+**Recasting a role:** clips are keyed by role and text, not by voice, so the old clips have to be cleared first.
+1. Add the new library voice to the account, then put its ID in `voices.json`.
+2. Delete that role's entries from `voice/manifest.json` (each clip records its role as `"r"`).
+3. Run `npm run voices -- render --only=<role>`, then `npm run voices -- prune` to delete the old files.
+
+**Rendering from scratch, in order:** `harvest` (about 20 minutes), `lines` to check the count, `render`, then
+`sfx`. Commit `brands/oktholm/voices.json` and `brands/oktholm/voice/`, then redeploy the preview. The `cast` and
+`pick` commands still design original voices by ear, for a brand that wants them.
 
 ## Adding a brand for another startup
 

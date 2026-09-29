@@ -1,7 +1,8 @@
 // Voice cast. Used by scripts/voices.mjs (ElevenLabs) and by the browser fallback in src/engine/speech.js.
 //
-//   voiceId  an ElevenLabs voice. Empty until casting: `npm run voices -- cast` designs three previews per
-//            role from `design`, a human picks by ear, `npm run voices -- pick role=B` saves it to voices.json.
+//   voiceId  an ElevenLabs voice. Oktholm's live in voices.json (Voice Library picks, 2026-09-28); for designed
+//            voices, `npm run voices -- cast` makes three previews per role from `design`, a human picks by ear,
+//            and `npm run voices -- pick role=B` saves the pick to voices.json.
 //   design   a Voice Design prompt. Original voices only: never describe, name or imitate a real person.
 //   sample   what the previews read (100+ characters with the other samples).
 //   web      the Web Speech family used when a line has no rendered clip ('narrator'|'anchor'|'fast'|'victim').
