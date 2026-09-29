@@ -70,13 +70,14 @@ export default {
 
   // Friends on the couch. The person staging it gets the seat with the heart pillow.
   cast: [
-    { emoji: '👩🏽‍💼', label: 'Linda, from Finance', voice: 'narrator', pitch: 1.1 },
-    { emoji: '🧔🏻', label: 'Greg, the other admin', voice: 'anchor', pitch: 0.92 },
-    { emoji: '👵🏿', label: 'Your mom', voice: 'victim', pitch: 1.2 },
-    { emoji: '🧑🏼‍💻', label: 'The intern (now a director)', voice: 'fast', pitch: 1.05 },
+    // `voice` is a cast role (brands/oktholm/cast.js); pitch only tunes the browser fallback.
+    { emoji: '👩🏽‍💼', label: 'Linda, from Finance', voice: 'linda', pitch: 1.1 },
+    { emoji: '🧔🏻', label: 'Greg, the other admin', voice: 'greg', pitch: 0.92 },
+    { emoji: '👵🏿', label: 'Your mom', voice: 'mom', pitch: 1.2 },
+    { emoji: '🧑🏼‍💻', label: 'The intern (now a director)', voice: 'intern', pitch: 1.05 },
   ],
   castFallbackLabel: 'A concerned coworker',
-  host: { emoji: '🧑🏾‍⚕️', label: 'Dr. Holm, interventionist', voice: 'narrator', pitch: 0.95 },
+  host: { emoji: '🧑🏾‍⚕️', label: 'Dr. Holm, interventionist', voice: 'interventionist', pitch: 0.95 },
   senderEmoji: '🧑🏽',
 
   coldOpens: [
@@ -131,8 +132,8 @@ export default {
     fromLabel: 'Your first name (optional)',
     fromPlaceholder: 'Leave blank to stay anonymous',
     fromHint: 'You read the last letter. Leave it blank to stay anonymous.',
-    preview: 'Preview it',
-    stage: 'Stage it & get the link',
+    preview: 'Preview the intervention',
+    stage: 'Stage the intervention & get the link',
     previewNote: 'Live preview. This is what {name} will see.',
     errName: 'Letters, spaces, hyphens, apostrophes and periods only (24 max).',
     errNameMissing: 'Who is this intervention for?',

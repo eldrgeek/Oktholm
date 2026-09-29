@@ -114,6 +114,10 @@ export function mountChannel(container, s, { rotation = [], startAt = 0, onProgr
       offAudio();
     },
     next: () => skipBtn.click(),
+    /** Turn the channel's sound on or off (the lobby silences it while Intake gives the tour). */
+    setSound(on) {
+      if (Boolean(on) !== tvSound) soundBtn.click();
+    },
     screen,
   };
 }

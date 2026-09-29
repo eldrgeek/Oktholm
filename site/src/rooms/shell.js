@@ -4,6 +4,7 @@
 import { el, $$ } from '../engine/dom.js';
 import { mountTicker } from '../engine/ticker.js';
 import { dailyPick } from '../engine/rng.js';
+import { createScrollCue } from '../engine/scrollcue.js';
 import { brandIcon } from './common.js';
 
 export function mountShell(app, s) {
@@ -74,6 +75,10 @@ export function mountShell(app, s) {
     items: [lead && `TODAY’S GAZETTE: ${lead}`, ...(home.ticker || []), ...gazette.filter((g) => g !== lead).slice(0, 12)].filter(Boolean),
   });
   s.ticker = ticker;
+  // Interactive pages (games, shows) only need the hint once; content pages keep naming the next section.
+  const cue = createScrollCue({ container: outlet });
+  s.cue = cue;
+  const interactive = new Set(['play', 'watch', 'intervention', 'intervention-view']);
 
   let cleanup = null;
   function show(render, route) {
@@ -94,6 +99,7 @@ export function mountShell(app, s) {
     window.scrollTo(0, 0);
     const r = render(outlet);
     cleanup = typeof r === 'function' ? r : null;
+    cue.refresh({ persistent: !interactive.has(route?.name) });
     s.track('room_view', { room: route?.name || 'unknown', path: route?.path });
     return cleanup;
   }
@@ -122,6 +128,8 @@ function buildFooter(s) {
         el('h4', 'Wards'),
         (s.brand.content?.home?.nav || []).map((n) => el('a', { href: '#' + n.path, text: n.label })),
         el('a', { href: '#/gazette', text: 'The Gazette' }),
+        el('a', { href: '#/chart', text: 'Your medical records' }),
+        el('a', { href: '#/admit', text: 'Replay admission' }),
       ),
       el(
         'div',

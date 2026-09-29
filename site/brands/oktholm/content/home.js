@@ -15,15 +15,29 @@ export default {
     kicker: 'Public health advisory · Live from Oktholm General',
     // Rotates daily; the first is the default.
     headlines: [
-      'It’s not you. It’s your identity provider.',
-      'You are not a hostage. You are a customer. (Same thing.)',
+      'That’s not loyalty. That’s Oktholm Syndrome.',
       'Your identity provider loves you. That’s the problem.',
-      'Recovery is possible. So is leaving work at five.',
     ],
-    body: 'Oktholm Syndrome is the condition in which IT admins develop a deep emotional attachment to the identity tools holding them captive. Symptoms include group hoarding, renewal denial, and describing the SSO tax as “customary.” You are not alone. You are, however, on hold.',
+    body: 'Oktholm Syndrome: when you’ve been held by your identity provider so long, you start defending it. Symptoms include renewal denial, group hoarding and describing the SSO tax as “customary.” You are not alone. You are, however, on hold.',
     primary: { label: 'Get diagnosed · 2 min', path: '/triage' },
-    secondary: { label: 'Play Access, Please', path: '/play/access-please' },
-    tertiary: { label: 'Stage an intervention', path: '/intervention' },
+    secondary: { label: 'Stage an intervention', path: '/intervention' },
+  },
+
+  symptoms: {
+    cue: 'Symptoms',
+    kicker: 'Know the signs',
+    title: 'Symptoms include…',
+    body: 'Four of the recognized signs, rotated daily. If two or more sound like your Tuesday, get screened. It takes two minutes and nobody asks for your work email.',
+    cta: 'Get screened · 2 min',
+  },
+
+  intervention: {
+    cue: 'Interventions',
+    kicker: 'For the coworker who calls the renewal “fair”',
+    title: 'Stage an intervention',
+    body: 'Pick their symptoms. We write the letters, gather the couch and film it. You send one link. It’s anonymous. They’ll know it was you.',
+    cta: 'Stage an intervention',
+    couch: ['🛋️', '👩🏽‍💼', '🧔🏻', '👵🏿', '🧑🏼‍💻', '🧑🏾‍⚕️'],
   },
 
   // Deterministic "live" counters: value = base + perDay * (fraction of today elapsed, UTC) with jitter.
@@ -87,8 +101,17 @@ export default {
     'CORRECTION: Yesterday’s report said “most” groups are unnecessary. We meant “all.”',
   ],
 
+  eggs: {
+    konami: 'B·A: Budget approved',
+    console: [
+      'STOP.',
+      'Anyone who tells you to paste code here to unlock Enterprise Plus is your identity provider.',
+      'You opened devtools on a hospital. That’s Stage II. The source is readable on purpose. Say hi to the front desk: type “help” in the chat.',
+    ],
+  },
+
   footer: {
-    disclaimer: 'Oktholm Syndrome is not a real medical condition. It is a real professional condition. All statistics on this site are satirical and simulated, except YeshID’s pricing, which is real and published on a public web page, which in this industry counts as satire.',
+    disclaimer: 'Oktholm Syndrome is not a real medical condition. It is a real professional condition. All statistics on this site are satirical and simulated, except the ones marked REAL and YeshID’s pricing, which is published on a public web page, which in this industry counts as satire.',
     legal: 'Any resemblance to an identity provider, living or billing, is [REDACTED BY LEGAL]. No vendors were named in the making of this website, on the advice of counsel, who would also like a word about the ransom notes.',
     made: 'A public service of Oktholm General. Paid for by YeshID. Yes, this is marketing. We told you it was.',
   },

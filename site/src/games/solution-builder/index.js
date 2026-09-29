@@ -163,7 +163,7 @@ const CHAOS_STYLE = {
   laptop: { fill: '#d5dbe3', stroke: '#9aa5b1', text: '#16181d', note: '#545a66' },
   sticky: { fill: '#ffe066', stroke: '#e0b400', text: '#1a1400', note: '#5a4a00', marker: true },
 };
-const CARD_FONTS = ['400 40px Anton', "600 20px 'IBM Plex Mono'", "700 20px 'IBM Plex Mono'", "800 20px 'Plus Jakarta Sans'", "600 20px 'Plus Jakarta Sans'", "400 20px 'Permanent Marker'"];
+const CARD_FONTS = ['400 40px Anton', '800 40px Archivo', "600 20px 'IBM Plex Mono'", "700 20px 'IBM Plex Mono'", "800 20px 'Plus Jakarta Sans'", "600 20px 'Plus Jakarta Sans'", "400 20px 'Permanent Marker'"];
 const SVGNS = 'http://www.w3.org/2000/svg';
 
 /* ---------------------------------------------------------------- utils */
@@ -1869,16 +1869,16 @@ export default {
       g.font = "600 17px 'IBM Plex Mono', monospace";
       g.fillText(fill(K.kicker, v).toUpperCase(), L, 58);
       let tp = 60;
-      g.font = `400 ${tp}px Anton, Impact, sans-serif`;
-      const title = String(K.title).toUpperCase();
-      while (tp > 36 && g.measureText(title).width > colW) g.font = `400 ${--tp}px Anton, Impact, sans-serif`;
+      g.font = `800 ${tp}px Archivo, 'Arial Narrow', sans-serif`;
+      const title = String(K.title);
+      while (tp > 36 && g.measureText(title).width > colW) g.font = `800 ${--tp}px Archivo, 'Arial Narrow', sans-serif`;
       g.fillStyle = TOK.text;
       g.fillText(title, L, 126);
 
       let bp = 120;
       const big = usdCompact(q.totals.annual);
-      g.font = `400 ${bp}px Anton, Impact, sans-serif`;
-      while (bp > 60 && g.measureText(big).width > colW - 110) g.font = `400 ${--bp}px Anton, Impact, sans-serif`;
+      g.font = `800 ${bp}px Archivo, 'Arial Narrow', sans-serif`;
+      while (bp > 60 && g.measureText(big).width > colW - 110) g.font = `800 ${--bp}px Archivo, 'Arial Narrow', sans-serif`;
       g.fillStyle = TOK.amber;
       g.fillText(big, L, 268);
       const bw = g.measureText(big).width;

@@ -11,7 +11,8 @@
     "test:smoke": "node tests/smoke.mjs",
     "fonts": "node scripts/fetch-fonts.mjs",
     "preview": "node build.mjs --inline-fonts",
-    "new-brand": "node scripts/new-brand.mjs"
+    "new-brand": "node scripts/new-brand.mjs",
+    "voices": "node scripts/voices.mjs"
   },
   "devDependencies": {
     "esbuild": "^0.25.0",

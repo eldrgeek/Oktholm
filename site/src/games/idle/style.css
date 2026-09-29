@@ -224,7 +224,7 @@
   background: var(--bg-2);
 }
 .idl-done[hidden] { display: none; }
-.idl-done__verdict { display: flex; align-items: baseline; gap: 10px; font: 400 30px/1 var(--font-display); text-transform: uppercase; color: var(--idl-correct); }
+.idl-done__verdict { display: flex; align-items: baseline; gap: 10px; font: 400 30px/1 var(--font-display); color: var(--idl-correct); }
 .idl-done__verdict[data-status='lost'] { color: var(--alarm); }
 .idl-done__score { font: 400 20px/1 var(--font-pixel); color: var(--text-dim); }
 .idl-done__line { margin: 8px 0 0; font-size: 14px; color: var(--text-dim); }
@@ -237,7 +237,7 @@
 
 /* ---------- Rules ---------- */
 .idl-rules { padding: clamp(18px, 3vw, 28px); }
-.idl-rules__title { margin: 8px 0 14px; font: 400 clamp(28px, 3.4vw, 36px)/1 var(--font-display); text-transform: uppercase; }
+.idl-rules__title { margin: 8px 0 14px; font: 400 clamp(28px, 3.4vw, 36px)/1 var(--font-display); }
 .idl-rules__list { margin: 0 0 18px; padding-left: 20px; display: grid; gap: 8px; color: var(--text-dim); }
 .idl-legend { list-style: none; margin: 0 0 16px; padding: 14px 0 0; display: grid; gap: 10px; border-top: 1px solid var(--line); }
 .idl-legend__item { display: flex; align-items: center; gap: 12px; color: var(--text); font-size: 15px; }

@@ -52,7 +52,7 @@
 /* ---------- Rubber stamp ---------- */
 .stamp {
   display: inline-block; padding: 6px 14px; border: 4px double currentColor; border-radius: 8px;
-  font: 400 clamp(22px, 4vw, 40px)/1 var(--font-display); letter-spacing: 0.06em; text-transform: uppercase;
+  font: 400 clamp(22px, 4vw, 40px)/1 var(--font-stamp); letter-spacing: 0.06em; text-transform: uppercase;
   transform: rotate(-9deg); opacity: 0.88; mix-blend-mode: multiply;
   -webkit-mask-image: radial-gradient(circle at 30% 40%, #000 60%, rgba(0,0,0,.65) 61%, #000 75%);
           mask-image: radial-gradient(circle at 30% 40%, #000 60%, rgba(0,0,0,.65) 61%, #000 75%);
@@ -113,7 +113,7 @@
 .modal-overlay.is-in { opacity: 1; }
 .modal { width: min(560px, 100%); max-height: calc(100vh - 32px); overflow: auto; background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--radius); padding: clamp(18px, 3vw, 28px); box-shadow: var(--shadow); }
 .modal--wide { width: min(920px, 100%); }
-.modal__title { font-family: var(--font-display); text-transform: uppercase; font-weight: 400; font-size: clamp(26px, 4vw, 36px); }
+.modal__title { font-family: var(--font-display); font-weight: 400; font-size: clamp(26px, 4vw, 36px); }
 .modal__actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; margin-top: 18px; }
 .confetti { position: fixed; inset: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 1200; }
 
@@ -129,7 +129,7 @@
 /* ---------- Prescription (sponsor CTA) card ---------- */
 .rx { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: start; padding: clamp(16px, 3vw, 24px); border-radius: var(--radius); border: 2px solid var(--cure); background: linear-gradient(135deg, color-mix(in srgb, var(--cure) 18%, var(--surface)), var(--surface)); }
 .rx__mark { font: 400 56px/1 var(--font-display); color: var(--cure-2); }
-.rx__title { font: 400 clamp(22px, 3vw, 30px)/1.05 var(--font-display); text-transform: uppercase; margin-top: 6px; }
+.rx__title { font: 400 clamp(22px, 3vw, 30px)/1.05 var(--font-display); margin-top: 6px; }
 .rx__text { color: var(--text-dim); margin: 8px 0 14px; }
 .rx__actions { display: flex; gap: 10px; flex-wrap: wrap; }
 @media (max-width: 520px) { .rx { grid-template-columns: minmax(0, 1fr); } .rx__mark { font-size: 40px; } }

@@ -28,7 +28,8 @@ if (!existsSync(brandEntry)) {
   console.error(`Unknown brand "${brandId}" — expected ${brandEntry}`);
   process.exit(1);
 }
-const outdir = path.join(root, 'dist');
+// OUTDIR lets parallel work build side by side (e.g. OUTDIR=dist-intake) without clobbering dist/.
+const outdir = path.join(root, process.env.OUTDIR || 'dist');
 const moduleId = args.get('game');
 const serve = args.has('serve');
 
@@ -63,6 +64,7 @@ async function loadBrandMeta() {
     themeColor: b.theme?.['--bg'] || '#070a0f',
     fonts: b.site?.fontsHref || '',
     lang: b.site?.lang || 'en',
+    sourceNote: b.site?.sourceNote || '',
   };
 }
 
@@ -79,6 +81,7 @@ async function emitHtml(result, outFile) {
     .replaceAll('{{ogImage}}', esc(meta.ogImage))
     .replaceAll('{{themeColor}}', esc(meta.themeColor))
     .replace('{{fonts}}', () => fontsTag())
+    .replace('<!--{{sourceNote}}-->', () => (meta.sourceNote ? `<!-- ${meta.sourceNote.replaceAll('--', '—')} -->` : ''))
     // Function replacers: bundled code can contain "$&"-style sequences that string replacement would expand.
     .replace('/*{{css}}*/', () => (css ? css.text : ''))
     .replace('/*{{js}}*/', () => (js ? js.text.replaceAll('</script', '<\\/script') : ''))
@@ -108,8 +111,15 @@ function fontsTag() {
 async function copyPublic() {
   const pub = path.join(root, 'public');
   if (existsSync(pub)) await cp(pub, outdir, { recursive: true });
+  // Rendered voice clips live with the brand (scripts/voices.mjs); the speech service reads voice/manifest.json.
+  const voice = path.join(root, 'brands', brandId, 'voice');
+  if (existsSync(voice)) await cp(voice, path.join(outdir, 'voice'), { recursive: true });
   // Always written, so a production build over a previous preview build can't inherit noindex.
-  await writeFile(path.join(outdir, 'robots.txt'), noindex ? 'User-agent: *\nDisallow: /\n' : 'User-agent: *\nAllow: /\n');
+  // Previews stay out of search (noindex header + meta) but let link-preview bots in, or shared links
+  // unfurl as blank cards on LinkedIn, X, Slack and friends.
+  const unfurlers = ['LinkedInBot', 'Twitterbot', 'facebookexternalhit', 'Slackbot-LinkExpanding', 'Slackbot', 'Discordbot', 'redditbot', 'WhatsApp', 'TelegramBot', 'Applebot'];
+  const previewRobots = unfurlers.map((b) => `User-agent: ${b}\nAllow: /\n`).join('\n') + '\nUser-agent: *\nDisallow: /\n';
+  await writeFile(path.join(outdir, 'robots.txt'), noindex ? previewRobots : 'User-agent: *\nAllow: /\n# Staff only.\nDisallow: /break-glass/\n');
   await writeFile(path.join(outdir, '_headers'), noindex ? '/*\n  X-Robots-Tag: noindex, nofollow\n' : '# Headers live in netlify.toml. Preview builds add X-Robots-Tag: noindex here.\n');
   if (noindex) console.log('noindex build: robots.txt + X-Robots-Tag');
 }

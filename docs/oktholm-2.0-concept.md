@@ -124,7 +124,7 @@ The 12-step frame does real work: "sponsor" is a word everyone already knows, an
 | --- | --- | --- | --- |
 | 1 | Sponsor | Oktholm Survivor sticker pack | ~$3–5 shipped |
 | 3 | Licensed Interventionist | Recovery Kit: wristband with your Patient ID, "I SURVIVED THE RENEWAL" pin, get-well card | ~$10–15 |
-| 5 | Group Therapist | The hoodie (back: "IT'S NOT YOU. IT'S YOUR IDENTITY PROVIDER.") | ~$35–50 |
+| 5 | Group Therapist | The hoodie (back: "It's not love. It's lock-in.") | ~$35–50 |
 | 10 | Chief Recovery Officer | **The Big Red Button**: a USB desk button that fires a YeshID offboarding workflow via webhook. For real. "Please do not press it at your manager." | ~$30–60 hardware + setup |
 | 25 | Cult Leader (Affectionate) | Donor-wall name, varsity jacket, live roast of your stack by the YeshID team | ~$150 + an hour of the team's time |
 
@@ -163,6 +163,12 @@ The 12-step frame does real work: "sponsor" is a word everyone already knows, an
 - **Interventions are safe to receive.** Names are validated (letters only, 24 chars, blocklist), symptoms come from a fixed list, and nothing from a link is ever rendered as HTML.
 - **No email capture.** You can play everything anonymously. It's a feature: it's why admins will trust it.
 - **Accessibility:** keyboard play, reduced-motion support, captions on every show, TV starts muted.
+- **House rule on jokes: keep the joke.** The site should sound like Mike, and comedy that's been sanded down for every sensibility stops being funny. If a line might go too far, flag it for Mike to decide; the default is keep, not cut. (The red team's "ex test" for the captor's texts was considered and overruled: the captor stays jealous and clingy as well as greedy.)
+- **What the captor can't do:** Block works, instantly and for good, right after its last word ("you can't block me. i'm your identity provider"). Texts render as part of the site, never as fake OS notifications. The tab title changes at most once a visit and keeps the site's name.
+- **Intake breaks character for distress.** Typed messages that suggest someone is actually struggling get a plain, sincere reply with 988 and findahelpline.com, no jokes, no voice.
+- **Referrers stay anonymous on the page.** Landings say "brought in by a concerned colleague," never the sender's Patient ID.
+- **Real numbers are marked REAL** and deduplicated per Patient ID per day; the footer says every other statistic is satire.
+- **No runtime speech of anything a visitor types.** Every voice line is rendered ahead of time and reviewed.
 
 ## 11. Needs YeshID sign-off
 
@@ -173,6 +179,9 @@ The 12-step frame does real work: "sponsor" is a word everyone already knows, an
 5. Directory sync wording: YeshID's pricing page says it syncs Okta directories on Business; the site says "other directories too, including one legal won't let us name" to keep the never-name-the-vendor rule. Decide if the Cure page should say it plainly.
 6. Deploy target (oktholm-syndrome.com) and analytics choice.
 7. Using "Rae" (YeshID's AI) as a character on OKTV, e.g. a Nightly News guest.
+8. Before physical rewards ship: split the public referral code from a private claim token (today the Patient ID is both, and it's printed on shareable certificates).
+9. The Intake distress reply and the captor texts (a quick legal and tone read).
+10. An ElevenLabs paid plan (Starter at minimum) for the commercial license on the voices and sound cues.
 
 ## 12. 30 / 60 / 90
 
@@ -184,3 +193,63 @@ The 12-step frame does real work: "sponsor" is a word everyone already knows, an
 
 - **For visitors:** the Build Your Own Oktholm™ Solution configurator (in the arcade).
 - **For other startups:** the engine is brand-agnostic. `npm run new-brand -- <id>` scaffolds `site/brands/<id>/` from the template. Fill in the enemy (never named), the syndrome, the sponsor's real claims and the content libraries; then `BRAND=<id> npm run build`. Same games, same shows, same sponsorship backend, different joke. See `site/README.md`.
+
+## 14. v2.1: the admission
+
+What changed after the first review, and why.
+
+**The landing is a scene, not a page.** First-time visitors on the bare home page get a 12–16 second cold open from a gurney:
+- A paramedic asks "Can you hear me? Tap if you can hear me." The tap is the story's beat, and it is also exactly the gesture browsers require before they allow sound. No tap means the scene plays muted and captioned.
+- Ceiling lights stream past; the ECG draws a ♥ on "our partner"; the gurney crashes through the doors; "CODE OKTHOLM · ED" lights up; a wristband prints the visitor's Patient ID and flies into the top bar; a dictionary card defines the condition.
+- It never plays for share links, reduced motion or Save-Data. Three scenes rotate on replay (`#/admit`).
+
+**Intake, the website introducing itself.** A scripted front-desk chatbot that parodies every B2B chat widget ("Other sites put ‘Jessica from Sales’ here. Jessica was also a script."):
+- It sits in the hero. Quick replies: the tour, the diagnosis, and "I'm fine. My IdP loves me." (a real, deduplicated count: "You're the first person to say that today. Denial has to start somewhere.").
+- A voiced tour spotlights each section. Typed commands are the easter-egg layer (`sudo`, `ssh`, `traceroute`, `dig`, `:q!`, `rm -rf dave`).
+
+**Your IdP texts you.** The captor reacts to what you do, capped at three texts a visit:
+- A price that edits itself upward ("renewal's only up 12% 🙂" → "38% (edited)").
+- A voice note ("[whispering] i love you. [brightly] per user, per month, billed annually!").
+- An incoming call that puts *you* on hold.
+- **The Breakup:** a push-your-luck negotiation where it counters with bigger discounts and you walk away with your score, or get auto-renewed. Seeded daily, so scores compare.
+- The thread exports as a PNG with the visitor's short referral link (`/r/<code>`).
+
+**Trust, turned into a bit.** `#/chart` ("your medical records") shows everything the site stores and every request it made, with a one-click wipe: "Processed instantly. Your vendor would need 30 business days." The captor's texts link to it ("How does it know?").
+
+**Easter eggs for the people who look:** the Konami code ("B·A: Budget approved"), a devtools warning in character, a view-source note, `curl` on the home page returns a discharge summary, `/brew` is a teapot, `robots.txt` disallows `/break-glass/`.
+
+**Voices.** ElevenLabs Eleven v4, rendered at build time into `site/brands/oktholm/voice/` and committed; the site never calls the API.
+- A cast of 13 original voices (`site/brands/oktholm/cast.js`), with accents chosen so voices separate by ear.
+- A casting call page lets a human pick each voice by ear.
+- Browser speech remains only as a fallback for older show lines; the cold open, Intake and the captor stay captioned-silent rather than use a robot voice.
+- Interventions will need names spoken: the plan is a runtime vocative restricted to an allowlist of about 20,000 first names from global sources, cached server-side, so the name list isn't Anglo-only and nothing typed can be made to speak.
+
+**From the team review, taken:**
+- the tap-to-hear beat (comedy writer)
+- referrer anonymity, distress handling and the records page (red team). Their "ex test" for the captor was overruled by the house rule: keep the joke.
+- the Cure-page fix: the captor learns YeshID works *alongside* it (growth: the old line implied YeshID replaces an IdP)
+- thread export with short links, and referral-progress texts (growth)
+- The Breakup and the command eggs (game designer)
+- the beat sheet, voice bible and sound palette (sound director)
+
+**Parked for a later round:**
+- personalized admission links (a coworker's first name and a symptom)
+- Discharge Progress and Days Sober streaks
+- the Break-Glass hidden-object drill
+- page-a-coworker on the PA
+- the ED tracking board
+- blink-back Morse on the hostage tape
+- a `.ics` "mandatory check-in"
+- a real DNS TXT record
+
+**Launch seeding, updated:**
+- **r/sysadmin:** "We built a parody hospital where your IdP texts you. What would yours text you?" The best replies become captor texts, credited with permission.
+- **HN:** launch on Access, Please; in week two, "Show HN: a B2B chat widget that refuses to take your email."
+- **LinkedIn:** the cold open as native muted video, the tagline as the caption.
+- **Slack communities:** plain `?ref` links now unfurl as "You've been admitted to Oktholm General."
+
+**Measure, and the first test:**
+- **Events:** `admission_start`/`admission_end` (skipped, seconds, sound), `sound_on`, `intake_choice`, `tour_step`, `captor_text`, `captor_block`, `breakup_end`, and returns.
+- **First A/B:** the muted, captioned cold open (current) against a one-tap "Admit me 🔊 / quietly" gate.
+  - Primary metric: an Intake reply within 60 seconds.
+  - Guardrail: bounces under 10 seconds.

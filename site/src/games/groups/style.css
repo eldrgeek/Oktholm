@@ -64,7 +64,7 @@
 .gr-score.is-bump { animation: gr-bump 0.2s ease-out; }
 .gr-stat__val { font-size: 24px; line-height: 1.1; color: var(--text); }
 .gr-stat__val.is-new { color: var(--vital); text-shadow: 0 0 14px var(--vital-glow); }
-.gr-dept { font: 400 22px/1.05 var(--font-display); text-transform: uppercase; letter-spacing: 0.02em; overflow-wrap: anywhere; }
+.gr-dept { font: 400 22px/1.05 var(--font-display); letter-spacing: 0; overflow-wrap: anywhere; }
 .gr-formerly { font: 11px/1.3 var(--font-mono); color: var(--text-faint); text-decoration: line-through; }
 .gr-formerly:empty { display: none; }
 .gr-reorg { font: 600 15px/1.2 var(--font-mono); }

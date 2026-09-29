@@ -20,8 +20,11 @@
 // Shared by all four OKTV shows; a candidate for promotion to src/engine/show.js.
 
 import './showkit.css';
+import { stripTags } from '../../engine/speech.js';
 
 const DEV = typeof __DEV__ !== 'undefined' && __DEV__;
+// scripts/voices.mjs harvest runs shows fast with ?harvest=1: still call say() so every spoken line is recorded.
+const HARVEST = DEV && typeof location !== 'undefined' && /[?&]harvest=1\b/.test(location.search);
 
 /** Test hook (dev harness builds only): ?fast=1 divides every wait by 10 (?fast=N by N). */
 export function speedFromUrl() {
@@ -151,9 +154,11 @@ export function createTimeline(ctx, opts = {}) {
 
   function plan(b) {
     if (b.say === false) return [];
-    const caption = b.caption ?? b.say;
+    // Performance tags ("[sighs]") go to the voice renderer, never on screen.
+    const tagged = typeof b.say === 'string' && b.say !== stripTags(b.say);
+    const caption = b.caption ?? (tagged ? stripTags(b.say) : b.say);
     if (caption == null || caption === '') return [];
-    if (b.say != null && b.caption != null && b.say !== b.caption) return [{ speak: String(b.say), captions: [String(b.caption)] }];
+    if (b.say != null && (b.caption != null || tagged) && b.say !== caption) return [{ speak: String(b.say), captions: [String(caption)] }];
     return planCaption(caption, b.maxChars || maxChars);
   }
 
@@ -169,7 +174,7 @@ export function createTimeline(ctx, opts = {}) {
   }
 
   async function speak(text, b, est, tk) {
-    if (b.silent || speed !== 1) return wait(est, tk);
+    if (b.silent || (speed !== 1 && !HARVEST)) return wait(est, tk);
     const t0 = performance.now();
     let r = 'error';
     try {

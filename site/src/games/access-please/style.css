@@ -25,7 +25,7 @@
 
 .ap-mode { padding: 18px 20px 20px; border-radius: var(--radius); border: 1px solid var(--line); background: linear-gradient(180deg, var(--surface-2), var(--surface)); box-shadow: var(--shadow-sm); }
 .ap-mode--daily { border-color: color-mix(in srgb, var(--vital) 45%, var(--line)); box-shadow: 0 0 0 1px color-mix(in srgb, var(--vital) 18%, transparent) inset, 0 0 40px rgba(54, 245, 154, 0.07), var(--shadow-sm); }
-.ap-mode__title { margin: 6px 0; font: 400 clamp(28px, 4vw, 38px)/1 var(--font-display); text-transform: uppercase; letter-spacing: 0.01em; }
+.ap-mode__title { margin: 6px 0; font: 400 clamp(28px, 4vw, 38px)/1 var(--font-display); letter-spacing: 0.01em; }
 .ap-mode__blurb { margin: 0 0 14px; color: var(--text-dim); font-size: 15px; }
 .ap-mode__done { margin: 0 0 12px; padding: 10px 12px; border: 1px dashed var(--line-2); border-radius: 10px; background: var(--bg-2); color: var(--text-dim); font: 13px/1.5 var(--font-mono); }
 .ap-mode__grid { display: block; margin-top: 4px; letter-spacing: 2px; word-break: break-all; }
@@ -40,7 +40,7 @@
 /* ---------- Memo / paper documents ---------- */
 .ap-memo { position: relative; overflow: hidden; padding: clamp(18px, 3vw, 30px); font-family: var(--font-type); }
 .ap-memo__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 12px; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 3px double var(--ink); }
-.ap-memo__title { font: 400 clamp(26px, 4vw, 36px)/1 var(--font-display); text-transform: uppercase; letter-spacing: 0.03em; }
+.ap-memo__title { font: 400 clamp(26px, 4vw, 36px)/1 var(--font-display); letter-spacing: 0; }
 .ap-memo__dept { color: var(--ink-dim); font: 600 11px/1.3 var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; }
 .ap-memo__meta { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 2px 14px; margin: 0 0 14px; font-size: 14.5px; }
 .ap-memo__meta dt { color: var(--ink-dim); font: 700 11px/1.9 var(--font-mono); letter-spacing: 0.12em; text-transform: uppercase; }
@@ -59,7 +59,7 @@
 /* ---------- Morning bulletin + Policy Book ---------- */
 .ap-bulletin-wrap { display: grid; justify-items: center; }
 .ap-bulletin { width: min(780px, 100%); padding: clamp(18px, 3.5vw, 34px); font-family: var(--font-type); }
-.ap-bulletin__title { margin: 8px 0 10px; font: 400 clamp(30px, 5vw, 48px)/1 var(--font-display); text-transform: uppercase; }
+.ap-bulletin__title { margin: 8px 0 10px; font: 400 clamp(30px, 5vw, 48px)/1 var(--font-display); }
 .ap-bulletin__body { font-size: 16.5px; line-height: 1.6; }
 .ap-bulletin__h { margin: 18px 0 10px; color: var(--ink-dim); font: 700 12px/1.3 var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; }
 .ap-bulletin__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
@@ -74,14 +74,14 @@
 .ap-new { display: inline-block; margin-left: 8px; padding: 1px 6px; border-radius: 4px; background: var(--alarm); color: #fff; font: 700 10px/1.5 var(--font-mono); letter-spacing: 0.1em; vertical-align: 1px; }
 .ap-redact { background: var(--ink); color: transparent; border-radius: 2px; -webkit-box-decoration-break: clone; box-decoration-break: clone; user-select: none; }
 .ap-rule__later { display: block; margin-top: 5px; color: var(--ink-dim); font: 600 10.5px/1.4 var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase; }
-.ap-policy__foot { margin: 16px 0 0; color: var(--ap-red); font: 400 20px/1 var(--font-display); letter-spacing: 0.08em; text-align: center; text-transform: uppercase; }
+.ap-policy__foot { margin: 16px 0 0; color: var(--ap-red); font: 400 20px/1 var(--font-stamp); letter-spacing: 0.08em; text-align: center; text-transform: uppercase; }
 
 /* ---------- HUD ---------- */
 .ap-shift { gap: 14px; }
 .ap-hud { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; padding: 8px 16px; border: 1px solid var(--line); border-radius: 14px; background: linear-gradient(180deg, var(--surface-2), var(--surface)); box-shadow: var(--shadow-sm); }
 .ap-hud__k { display: block; color: var(--text-faint); font: 600 10px/1.3 var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; }
 .ap-hud__label { min-width: 0; margin-right: auto; }
-.ap-hud__title { display: block; overflow: hidden; font: 400 21px/1.1 var(--font-display); letter-spacing: 0.02em; text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; }
+.ap-hud__title { display: block; overflow: hidden; font: 400 21px/1.1 var(--font-display); letter-spacing: 0; text-overflow: ellipsis; white-space: nowrap; }
 .ap-hud__v { display: block; color: var(--text); font: 700 15px/1.35 var(--font-mono); white-space: nowrap; }
 .ap-hud__v--queue { color: var(--amber); }
 .ap-hud__v.is-bad { color: var(--alarm); }
@@ -159,7 +159,7 @@
 @keyframes ap-out-right { to { opacity: 0; transform: translateX(70px) rotate(5deg); } }
 @keyframes ap-out-left { to { opacity: 0; transform: translateX(-70px) rotate(-5deg); } }
 .ap-ticket__band { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 18px 11px; border-bottom: 2px dashed rgba(22, 24, 29, 0.3); background: var(--paper-2); }
-.ap-ticket__title { font: 400 25px/1 var(--font-display); letter-spacing: 0.04em; text-transform: uppercase; }
+.ap-ticket__title { font: 400 25px/1 var(--font-display); letter-spacing: 0; }
 .ap-ticket__code { margin-top: 3px; color: var(--ink-dim); font: 600 10.5px/1.4 var(--font-mono); letter-spacing: 0.12em; text-transform: uppercase; }
 .ap-ticket__no { display: grid; justify-items: end; gap: 3px; font: 700 12px/1 var(--font-mono); letter-spacing: 0.06em; }
 .ap-barcode { width: 86px; height: 20px; background: repeating-linear-gradient(90deg, var(--ink) 0 2px, transparent 2px 3px, var(--ink) 3px 4px, transparent 4px 7px, var(--ink) 7px 10px, transparent 10px 11px); }
@@ -168,7 +168,7 @@
 .ap-ticket__id { min-width: 0; }
 .ap-link { margin: 0; padding: 0; border: 0; border-radius: 3px; background: none; color: var(--ap-blue); font: inherit; text-align: left; cursor: pointer; text-decoration: underline dotted 2px; text-underline-offset: 4px; }
 .ap-link:hover { background: rgba(28, 63, 209, 0.08); color: var(--ap-blue); }
-.ap-link--name { display: block; color: var(--ink); font: 400 clamp(24px, 3.2vw, 31px)/1.05 var(--font-display); letter-spacing: 0.02em; text-transform: uppercase; text-decoration-color: rgba(22, 24, 29, 0.45); }
+.ap-link--name { display: block; color: var(--ink); font: 400 clamp(24px, 3.2vw, 31px)/1.05 var(--font-display); letter-spacing: 0; text-decoration-color: rgba(22, 24, 29, 0.45); }
 .ap-link--name:hover { color: var(--ink); }
 .ap-ticket__meta { margin-top: 5px; color: var(--ink-dim); font-size: 14px; line-height: 1.35; }
 .ap-self { color: #9a5f12; font: 600 10px/1 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; }
@@ -353,7 +353,7 @@
 
 /* ---------- Endings ---------- */
 .ap-dx, .ap-memo--complete { position: relative; width: min(780px, 100%); margin: 0 auto; padding: clamp(18px, 3.5vw, 34px); font-family: var(--font-type); }
-.ap-dx__title { margin: 8px 0 14px; font: 400 clamp(36px, 6vw, 58px)/1 var(--font-display); text-transform: uppercase; }
+.ap-dx__title { margin: 8px 0 14px; font: 400 clamp(36px, 6vw, 58px)/1 var(--font-display); }
 .ap-dx__symptoms { display: grid; gap: 7px; padding-left: 22px; font-size: 16px; }
 .ap .ap-dx__stamp { display: block; width: max-content; max-width: 100%; margin: 36px auto 42px; font-size: clamp(30px, 6vw, 56px); white-space: nowrap; }
 .ap-dx__prognosis { margin: 0; font: 700 16px/1.5 var(--font-body); }

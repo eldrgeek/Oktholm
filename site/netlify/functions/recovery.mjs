@@ -4,7 +4,7 @@
 //   POST /api/referral/qualify   { patientId, ref, kind }       -> credits ref once per patient (kind 'diagnosis')
 //   GET  /api/sponsor/:id                                       -> { sponsees, landed }
 //   GET  /api/leaderboard                                       -> { top: [{ name, count }] }
-//   POST /api/event              { type, patientId }
+//   POST /api/event              { type, patientId }             -> { ok, count }  (today's total for that type)
 //   POST /api/confession         { text, who, patientId }       -> moderation queue
 //   GET  /api/confessions                                       -> approved confessions
 //   POST /api/confession/react   { key, reaction }

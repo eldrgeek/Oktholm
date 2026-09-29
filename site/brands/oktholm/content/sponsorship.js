@@ -15,7 +15,7 @@ export default {
   tiers: [
     { count: 1, chip: 'sponsor-1', name: 'Sponsor', icon: '🥉', reward: 'Oktholm Survivor sticker pack', detail: 'Six die-cut stickers, including “IT’S ALWAYS DNS (EXCEPT WHEN IT’S IDENTITY)” and a very small ransom note.' },
     { count: 3, chip: 'sponsor-3', name: 'Licensed Interventionist', icon: '🥈', reward: 'The Recovery Kit', detail: 'A hospital wristband with your Patient ID, an enamel pin that says “I SURVIVED THE RENEWAL,” and a get-well card signed by nobody from your vendor.' },
-    { count: 5, chip: 'sponsor-5', name: 'Group Therapist', icon: '🧑‍⚕️', reward: 'The hoodie', detail: 'Front: a small ECG line. Back, in large letters: “IT’S NOT YOU. IT’S YOUR IDENTITY PROVIDER.”' },
+    { count: 5, chip: 'sponsor-5', name: 'Group Therapist', icon: '🧑‍⚕️', reward: 'The hoodie', detail: 'Front: a small ECG line. Back, in large letters: “It’s not love. It’s lock-in.”' },
     { count: 10, chip: 'sponsor-10', name: 'Chief Recovery Officer', icon: '🥇', reward: 'The Big Red Button', detail: 'A USB desk button that triggers an offboarding workflow through a webhook. For real. Please do not press it at your desk. Please do not press it at your manager.' },
     { count: 25, chip: 'sponsor-25', name: 'Cult Leader (Affectionate)', icon: '🏆', reward: 'Your name on the Oktholm General donor wall', detail: 'Plus a varsity jacket and a live call where the YeshID team roasts your identity stack with you, gently, on camera if you want.' },
   ],

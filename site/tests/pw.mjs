@@ -22,8 +22,10 @@ export async function open(browser, target, { width = 1280, height = 800 } = {})
   page.__errors = [];
   page.on('pageerror', (e) => page.__errors.push('pageerror: ' + e.message));
   page.on('console', (m) => m.type() === 'error' && page.__errors.push('console: ' + m.text()));
-  const [file, hash] = target.split('#');
-  const url = /^https?:/.test(target) ? target : pathToFileURL(path.resolve(file)).href + (hash ? '#' + hash : '');
+  // pathToFileURL would percent-encode "?" and "#", so split the query and hash off the file path first.
+  const [beforeHash, hash] = target.split('#');
+  const [file, query] = beforeHash.split('?');
+  const url = /^https?:/.test(target) ? target : pathToFileURL(path.resolve(file)).href + (query ? '?' + query : '') + (hash ? '#' + hash : '');
   await page.goto(url);
   return page;
 }

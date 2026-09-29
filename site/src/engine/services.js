@@ -12,7 +12,8 @@ import { createRouter } from './router.js';
 import { el } from './dom.js';
 
 function createTracker() {
-  return function track(event, props = {}) {
+  const listeners = new Set();
+  function track(event, props = {}) {
     try {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ event, ...props });
@@ -22,7 +23,17 @@ function createTracker() {
       /* analytics must never break the page */
     }
     if (typeof __DEV__ !== 'undefined' && __DEV__) console.debug('[track]', event, props);
-  };
+    for (const fn of listeners) {
+      try {
+        fn(event, props);
+      } catch (e) {
+        console.error(e);
+      }
+    }
+  }
+  /** Subscribe to every tracked event (the captor's texts react to what visitors do). Returns an unsubscribe. */
+  track.on = (fn) => (listeners.add(fn), () => listeners.delete(fn));
+  return track;
 }
 
 export function createCta({ brand, track }) {
@@ -76,7 +87,10 @@ export function createServices() {
   if (singleton) return singleton;
   const store = createStore(`pe:${brand.id}`);
   const audio = createAudio(store.scope('prefs'));
-  const speech = createSpeech({ isMuted: audio.isMuted });
+  // makeSpeech(): an independent channel (own cancel generation) for voices that must not be cut off when a
+  // show or route change calls speech.stop(): the cold open, Intake, the captor's voice notes.
+  const makeSpeech = () => createSpeech({ isMuted: audio.isMuted, onMuteChange: audio.onChange, cast: brand.cast });
+  const speech = makeSpeech();
   const ui = createUi({ sfx: audio.sfx });
   const api = createApi(brand.api?.base || '/api');
   const track = createTracker();
@@ -84,6 +98,6 @@ export function createServices() {
   const share = createShare({ brand, referral, ui, track });
   const cta = createCta({ brand, track });
   const router = createRouter();
-  singleton = { brand, store, audio, sfx: audio.sfx, speech, ui, api, track, referral, share, cta, router };
+  singleton = { brand, store, audio, sfx: audio.sfx, speech, makeSpeech, ui, api, track, referral, share, cta, router };
   return singleton;
 }

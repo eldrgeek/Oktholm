@@ -141,5 +141,5 @@ export default {
 
   // Fallback subtype when there is no strong trait (low scores).
   defaultSubtype: 'accidental',
-  shareTemplate: 'I was just diagnosed with {stageName} ({stage}), subtype “{subtype}.” {emoji} It’s not me. It’s my identity provider. Get screened:',
+  shareTemplate: 'I was just diagnosed with {stageName} ({stage}), subtype “{subtype}.” {emoji} Turns out it’s not loyalty. It’s Oktholm Syndrome. Get screened:',
 };

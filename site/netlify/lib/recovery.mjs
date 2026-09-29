@@ -95,13 +95,17 @@ export function createRecovery(store, { now = () => Date.now() } = {}) {
       return { top: lb.top.slice(0, Math.min(limit, LIMITS.leaderboardSize)).map((r) => ({ name: r.id, count: r.count })) };
     },
 
-    async event({ type, patientId }, { ipHash } = {}) {
+    async event({ type, patientId, unique }, { ipHash } = {}) {
       const t = clean(type, 24).replace(/[^\w-]/g, '');
       if (!t) throw new HttpError(400, 'invalid type');
       if (patientId !== undefined) assertId(patientId, 'patientId');
       await rateLimit(ipHash, 'event');
-      await store.update(`event:${day(now())}:${t}`, (c) => (c || 0) + 1);
-      return { ok: true };
+      const key = `event:${day(now())}:${t}`;
+      // unique: count each patient once per day (the "real" counters the page shows).
+      if (unique && patientId && !(await store.putIfNew(`seen:${day(now())}:${t}:${patientId}`, 1))) return { ok: true, count: (await store.get(key)) || 0, repeat: true };
+      // Today's running total, so the page can say "you're the 43rd person to say that today".
+      const count = await store.update(key, (c) => (c || 0) + 1);
+      return { ok: true, count };
     },
 
     async confess({ text, who, patientId }, { ipHash } = {}) {

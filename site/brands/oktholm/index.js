@@ -14,21 +14,28 @@ import intervention from './modules/intervention.js';
 import news from './modules/news.js';
 import hold from './modules/hold.js';
 import content from './content/index.js';
+import cast from './cast.js';
 
 export default {
   id: 'oktholm',
+  cast,
   // Day 1 of the daily rotation (IDle #1, Gazette #1, Daily Shift #1).
   epoch: '2026-09-01',
 
   site: {
     name: 'Oktholm Syndrome',
-    title: 'Oktholm Syndrome — It’s not you. It’s your identity provider.',
+    title: 'Oktholm Syndrome — It’s not love. It’s lock-in.',
+    // The main line (hero, certificate, social card) and the sign-off (end cards, merch).
+    tagline: ['That’s not loyalty.', 'That’s Oktholm Syndrome.'],
+    signoff: 'It’s not love. It’s lock-in.',
+    // An HTML comment for people who open view-source.
+    sourceNote: 'You opened view-source on a hospital. That’s Stage II. Try the console next. (No, there’s nothing hidden here. Not everything is a vendor.)',
     description:
       'A public health emergency for IT admins held captive by their identity tools. Get diagnosed, play the games, stage an intervention for a coworker. Sponsored by YeshID.',
     url: 'https://www.oktholm-syndrome.com/',
     ogImage: 'https://www.oktholm-syndrome.com/og.png',
     fontsHref:
-      'https://fonts.googleapis.com/css2?family=Anton&family=DotGothic16&family=IBM+Plex+Mono:wght@400;600;700&family=Permanent+Marker&family=Plus+Jakarta+Sans:wght@400;600;800&family=Special+Elite&display=swap',
+      'https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@75,800&family=DotGothic16&family=IBM+Plex+Mono:wght@400;600;700&family=Permanent+Marker&family=Plus+Jakarta+Sans:wght@400;600;800&family=Special+Elite&display=swap',
     hospital: 'Oktholm General',
     network: 'OKTV',
     condition: 'Oktholm Syndrome',
@@ -60,7 +67,7 @@ export default {
       shadow: 'Visibility into shadow IT and the OAuth apps nobody approved.',
       reviews: 'Access reviews and identity governance you can hand to an auditor.',
       rbac: 'RBAC policies with static and dynamic groups instead of group sprawl.',
-      // YeshID's pricing page names the vendor ("Okta Directory Integration" on Business). The site never does.
+      // YeshID's pricing page names a directory vendor on the Business plan. This site never names it.
       directories: 'Works with Google Workspace and Microsoft 365, and on the Business plan syncs other directories too, including one legal won’t let us name.',
       rae: 'Rae, YeshID’s AI for IAM, watches for policy drift and does the routine work.',
       audit: 'Audit-ready logs for SOC 2, ISO and SOX.',

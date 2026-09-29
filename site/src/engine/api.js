@@ -3,9 +3,14 @@
 
 export function createApi(base = '/api') {
   let offline = typeof location !== 'undefined' && location.protocol === 'file:';
+  // What this page sent this visit (method, path, status; never bodies). Shown on the records page.
+  const log = [];
 
   async function request(method, path, body) {
     if (offline) return null;
+    const entry = { at: Date.now(), method, path: base + path, fields: body ? Object.keys(body) : [], status: 'pending' };
+    log.push(entry);
+    if (log.length > 60) log.shift();
     let timer = null;
     const ctrl = typeof AbortController === 'function' ? new AbortController() : null;
     if (ctrl) timer = setTimeout(() => ctrl.abort(), 5000);
@@ -17,6 +22,7 @@ export function createApi(base = '/api') {
         signal: ctrl?.signal,
         credentials: 'same-origin',
       });
+      entry.status = res.status;
       if (res.status === 404 || res.status === 405) {
         offline = true;
         return null;
@@ -30,6 +36,7 @@ export function createApi(base = '/api') {
       }
       return await res.json();
     } catch {
+      entry.status = 'failed';
       return null;
     } finally {
       if (timer) clearTimeout(timer);
@@ -42,5 +49,6 @@ export function createApi(base = '/api') {
     get offline() {
       return offline;
     },
+    log,
   };
 }

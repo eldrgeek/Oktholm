@@ -20,9 +20,20 @@ export function createShare({ brand, referral, ui, track }) {
     return u.toString();
   }
 
+  const touch = () => typeof matchMedia === 'function' && matchMedia('(pointer: coarse)').matches;
   const platforms = {
     x: { label: 'X', href: (t, u) => `https://x.com/intent/post?text=${encodeURIComponent(t)}&url=${encodeURIComponent(u)}` },
-    linkedin: { label: 'LinkedIn', href: (t, u) => `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(u)}` },
+    // LinkedIn's share-offsite endpoint takes only a URL, so the post opens empty. On desktop the feed composer
+    // takes pre-filled text (undocumented, usually works); phones get share-offsite. Either way the text is on
+    // the clipboard first, so it can be pasted if LinkedIn drops it.
+    linkedin: {
+      label: 'LinkedIn',
+      copyFirst: true,
+      href: (t, u) =>
+        touch()
+          ? `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(u)}`
+          : `https://www.linkedin.com/feed/?shareActive=true&text=${encodeURIComponent(`${t}\n\n${u}`)}`,
+    },
     reddit: { label: 'Reddit', href: (t, u) => `https://www.reddit.com/submit?url=${encodeURIComponent(u)}&title=${encodeURIComponent(t)}` },
     bluesky: { label: 'Bluesky', href: (t, u) => `https://bsky.app/intent/compose?text=${encodeURIComponent(t + ' ' + u)}` },
     hn: { label: 'HN', href: (t, u) => `https://news.ycombinator.com/submitlink?u=${encodeURIComponent(u)}&t=${encodeURIComponent(t)}` },
@@ -87,13 +98,19 @@ export function createShare({ brand, referral, ui, track }) {
           }),
         );
       } else if (platforms[p]) {
+        const link = url(params, { platform: p });
         buttons.append(
           el('a.btn.btn--ghost.btn--sm', {
-            href: platforms[p].href(text, url(params, { platform: p })),
+            href: platforms[p].href(text, link),
             target: '_blank',
             rel: 'noopener noreferrer',
             text: platforms[p].label,
-            onclick: () => referral.recordShare(p, kind),
+            onclick: () => {
+              referral.recordShare(p, kind);
+              if (!platforms[p].copyFirst) return;
+              // Runs inside the click, so the clipboard write is allowed; the link still opens normally.
+              copy(`${text}\n\n${link}`).then((ok) => ok && ui?.toast(`Post text copied. If ${platforms[p].label} opens an empty post, paste it in.`));
+            },
           }),
         );
       }

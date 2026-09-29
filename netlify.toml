@@ -22,3 +22,20 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Short referral links for screenshots and exports: /r/7F3K-2Q -> /?ref=OKT-7F3K-2Q
+[[redirects]]
+  from = "/r/:code"
+  to = "/?ref=OKT-:code&utm_source=png&utm_medium=referral"
+  status = 302
+
+# robots.txt says "Staff only". Obviously someone will look.
+[[redirects]]
+  from = "/break-glass"
+  to = "/#/break-glass"
+  status = 302
+
+[[redirects]]
+  from = "/break-glass/*"
+  to = "/#/break-glass"
+  status = 302

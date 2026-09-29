@@ -37,6 +37,19 @@ function rawDel(key) {
   }
 }
 
+function keysUnder(prefix) {
+  const found = new Set([...memory.keys()].filter((k) => k.startsWith(prefix + ':')));
+  try {
+    for (let i = 0; backend && i < backend.length; i++) {
+      const k = backend.key(i);
+      if (k && k.startsWith(prefix + ':')) found.add(k);
+    }
+  } catch {
+    /* ignore */
+  }
+  return [...found].sort();
+}
+
 /** Namespaced JSON store: createStore('oktholm').scope('access-please').get('best', 0) */
 export function createStore(prefix) {
   const p = (k) => `${prefix}:${k}`;
@@ -62,6 +75,23 @@ export function createStore(prefix) {
     },
     scope(name) {
       return createStore(`${prefix}:${name}`);
+    },
+    /** Everything stored under this prefix, parsed ({ 'pe:oktholm:chips': {...} }). Powers the records page. */
+    dump() {
+      const out = {};
+      for (const k of keysUnder(prefix)) {
+        const v = rawGet(k);
+        try {
+          out[k] = JSON.parse(v);
+        } catch {
+          out[k] = v;
+        }
+      }
+      return out;
+    },
+    /** Delete everything under this prefix. */
+    clear() {
+      for (const k of keysUnder(prefix)) rawDel(k);
     },
     persistent: Boolean(backend),
   };

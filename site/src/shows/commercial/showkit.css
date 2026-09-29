@@ -47,7 +47,7 @@
   font: 700 clamp(9px, 1.5cqw, 14px)/1.2 var(--font-mono); letter-spacing: 0.22em; text-transform: uppercase; color: var(--amber);
 }
 :is(.cm-poster__title, .hs-poster__title, .iv-poster__title, .nw-poster__title) {
-  max-width: 16em; font: 400 clamp(24px, 7cqw, 78px)/0.95 var(--font-display); text-transform: uppercase; letter-spacing: 0.01em;
+  max-width: 16em; font: 400 clamp(24px, 7cqw, 78px)/0.95 var(--font-display); letter-spacing: 0.01em;
   text-shadow: 0 0.06em 0.3em rgba(0, 0, 0, 0.6); overflow-wrap: anywhere;
 }
 :is(.cm-poster__sub, .hs-poster__sub, .iv-poster__sub, .nw-poster__sub) {
@@ -75,7 +75,7 @@
 :is(.cm-paused, .hs-paused, .iv-paused, .nw-paused) {
   position: absolute; inset: 0; z-index: 39; display: none; place-items: center; pointer-events: none;
   background: rgba(0, 0, 0, 0.35);
-  font: 400 clamp(18px, 5cqw, 48px)/1 var(--font-display); letter-spacing: 0.08em; color: #fff; text-transform: uppercase;
+  font: 400 clamp(18px, 5cqw, 48px)/1 var(--font-stamp); letter-spacing: 0.08em; color: #fff; text-transform: uppercase;
 }
 [data-state='paused'] > :is(.cm-paused, .hs-paused, .iv-paused, .nw-paused) { display: grid; }
 
@@ -107,5 +107,5 @@
 
 /* ---------- Below-the-player blocks ---------- */
 :is(.cm-about, .hs-about, .iv-about, .nw-about) { display: grid; gap: 8px; }
-:is(.cm-about, .hs-about, .iv-about, .nw-about) h2 { margin: 0; font: 400 clamp(28px, 5vw, 44px)/0.98 var(--font-display); text-transform: uppercase; }
+:is(.cm-about, .hs-about, .iv-about, .nw-about) h2 { margin: 0; font: 400 clamp(28px, 5vw, 44px)/0.98 var(--font-display); }
 :is(.cm-about, .hs-about, .iv-about, .nw-about) p { margin: 0; color: var(--text-dim); max-width: 62ch; }

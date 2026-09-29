@@ -3,7 +3,7 @@
 /* ===== Create page ===== */
 .iv-create { display: grid; gap: clamp(22px, 3vw, 34px); width: 100%; max-width: 1180px; margin: 0 auto; }
 .iv-hero { display: grid; gap: 8px; max-width: 780px; }
-.iv-hero__title { margin: 0; font: 400 clamp(38px, 6.4vw, 70px)/0.92 var(--font-display); text-transform: uppercase; letter-spacing: 0.005em; }
+.iv-hero__title { margin: 0; font: 400 clamp(38px, 6.4vw, 70px)/0.92 var(--font-display); letter-spacing: 0.005em; }
 .iv-hero__lede { margin: 0; color: var(--text-dim); font-size: clamp(16px, 1.7vw, 19px); max-width: 60ch; }
 .iv-layout { display: grid; gap: 24px; grid-template-columns: minmax(0, 1fr); align-items: start; }
 .iv-main { display: grid; gap: 18px; min-width: 0; }
@@ -15,7 +15,7 @@
 .iv-form { display: grid; gap: 26px; padding: clamp(16px, 3vw, 28px); }
 .iv-root [hidden] { display: none !important; } /* design-system classes (.rx, .card) set display and would beat [hidden] */
 .iv-fs { display: grid; gap: 12px; min-width: 0; margin: 0; padding: 0; border: 0; }
-.iv-fs legend { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 0 0 12px; padding: 0; font: 400 clamp(21px, 2.3vw, 27px)/1 var(--font-display); text-transform: uppercase; letter-spacing: 0.02em; }
+.iv-fs legend { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 0 0 12px; padding: 0; font: 400 clamp(21px, 2.3vw, 27px)/1 var(--font-display); letter-spacing: 0; }
 .iv-fs legend b { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--vital); color: #03140b; font: 800 14px/1 var(--font-body); }
 .iv-fs legend .pill-count { font-size: 12px; }
 .iv-two { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
@@ -40,22 +40,22 @@
 .iv-preview { display: grid; gap: 8px; min-width: 0; }
 .iv-preview__note { margin: 0; font: 12px/1.4 var(--font-mono); color: var(--text-faint); }
 .iv-staged { display: grid; gap: 14px; padding: clamp(16px, 3vw, 28px); border-color: var(--vital); }
-.iv-staged__title { margin: 0; font: 400 clamp(30px, 4.4vw, 48px)/0.98 var(--font-display); text-transform: uppercase; overflow-wrap: anywhere; }
+.iv-staged__title { margin: 0; font: 400 clamp(30px, 4.4vw, 48px)/0.98 var(--font-display); overflow-wrap: anywhere; }
 .iv-staged p { margin: 0; }
 @media (max-width: 520px) { .iv-actions .btn { flex: 1 1 100%; white-space: normal; } }
 
 /* ===== View page ===== */
 .iv-view { display: grid; gap: 20px; width: 100%; max-width: 1000px; margin: 0 auto; }
 .iv-view__head { display: grid; gap: 8px; }
-.iv-view__title { margin: 0; font: 400 clamp(32px, 5.4vw, 58px)/0.95 var(--font-display); text-transform: uppercase; }
+.iv-view__title { margin: 0; font: 400 clamp(32px, 5.4vw, 58px)/0.95 var(--font-display); }
 .iv-view__head p { margin: 0; }
 .iv-previewbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 6px; padding: 10px 14px; border: 1px dashed var(--amber); border-radius: 10px; color: var(--amber); font: 600 13px/1.4 var(--font-mono); }
 .iv-after { display: grid; gap: 10px; padding: clamp(16px, 3vw, 26px); border-color: var(--cure); }
-.iv-after h3 { margin: 0; font: 400 clamp(26px, 3.6vw, 38px)/1 var(--font-display); text-transform: uppercase; }
+.iv-after h3 { margin: 0; font: 400 clamp(26px, 3.6vw, 38px)/1 var(--font-display); }
 .iv-after p { margin: 0; }
 .iv-damaged { display: grid; justify-items: center; gap: 12px; max-width: 640px; margin: 0 auto; padding: clamp(22px, 4vw, 40px); text-align: center; }
 .iv-damaged__tape { font-size: 60px; line-height: 1; filter: grayscale(0.3); transform: rotate(-8deg); }
-.iv-damaged h2 { margin: 0; font: 400 clamp(28px, 4.6vw, 44px)/1 var(--font-display); text-transform: uppercase; }
+.iv-damaged h2 { margin: 0; font: 400 clamp(28px, 4.6vw, 44px)/1 var(--font-display); }
 .iv-damaged p { margin: 0; }
 .iv-damaged .row { justify-content: center; }
 .iv-end-ghost { color: #fff; border-color: rgba(255, 255, 255, 0.6); }
@@ -141,7 +141,7 @@
   background: radial-gradient(ellipse at center, #1f1a16, #000 72%); color: #fff; text-align: center; opacity: 0; transition: opacity 0.5s; pointer-events: none; }
 .iv-stage[data-scene='title'] .iv-title { opacity: 1; }
 .iv-title__kicker { font: 700 1.5cqw/1 var(--font-mono); letter-spacing: 0.42em; text-transform: uppercase; color: #ffcc4d; }
-.iv-title__word { font: 400 9.6cqw/0.9 var(--font-display); letter-spacing: 0.12em; text-transform: uppercase; }
+.iv-title__word { font: 400 9.6cqw/0.9 var(--font-stamp); letter-spacing: 0.12em; text-transform: uppercase; }
 .iv-title__rule { width: 34cqw; height: 0.45cqw; background: #e03131; }
 .iv-title__name { max-width: 100%; font: 400 4.4cqw/1.05 var(--font-display); letter-spacing: 0.18em; color: #ffcc4d; overflow-wrap: anywhere; }
 [data-tone='reality'][data-scene='title'] .iv-title__word { animation: iv-glitch 1.8s steps(1) infinite; }
@@ -154,7 +154,7 @@
 
 .iv-rx { position: absolute; left: 50%; top: 9%; z-index: 22; width: 46%; padding: 2cqw 2.4cqw 2.2cqw; color: var(--ink); opacity: 0; transform: translate(-50%, 8%) rotate(-2deg) scale(0.9); transition: opacity 0.5s, transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1); }
 .iv-rx.is-on { opacity: 1; transform: translate(-50%, 0) rotate(-2deg); }
-.iv-rx__title { margin-bottom: 0.9cqw; padding-bottom: 0.6cqw; border-bottom: 0.25cqw solid var(--ink); font: 400 3.3cqw/1 var(--font-display); letter-spacing: 0.04em; text-transform: uppercase; }
+.iv-rx__title { margin-bottom: 0.9cqw; padding-bottom: 0.6cqw; border-bottom: 0.25cqw solid var(--ink); font: 400 3.3cqw/1 var(--font-display); letter-spacing: 0; }
 .iv-rx__row { font: 400 1.5cqw/1.35 var(--font-type); overflow-wrap: anywhere; }
 .iv-rx__row b { font-weight: 400; background: linear-gradient(transparent 60%, rgba(255, 212, 0, 0.5) 60%); }
 .iv-rx__facts { display: grid; gap: 0.7cqw; margin: 1cqw 0; padding: 0; list-style: none; }
@@ -168,7 +168,7 @@
   background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)); color: #fff; text-align: center; opacity: 0; transition: opacity 0.6s; pointer-events: none; }
 .iv-cliff.is-on { opacity: 1; }
 .iv-cliff__kicker { font: 700 1.5cqw/1 var(--font-mono); letter-spacing: 0.3em; text-transform: uppercase; color: #ffcc4d; }
-.iv-cliff__text { font: 400 6.2cqw/1 var(--font-display); letter-spacing: 0.02em; text-transform: uppercase; overflow-wrap: anywhere; }
+.iv-cliff__text { font: 400 6.2cqw/1 var(--font-display); letter-spacing: 0; overflow-wrap: anywhere; }
 .iv-cliff.is-on .iv-cliff__text { animation: iv-zoomtext 3s ease-out both; }
 @keyframes iv-zoomtext { from { transform: scale(1.12); letter-spacing: 0.08em; } to { transform: scale(1); letter-spacing: 0.02em; } }
 

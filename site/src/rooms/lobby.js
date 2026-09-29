@@ -1,7 +1,9 @@
-// The lobby: broadcast hero, vitals, today's rotating content, arcade, OKTV guide, sponsorship, therapy, cure.
+// The lobby, laid out as a case file: the admission hero (with Intake at the desk), symptoms, today,
+// the arcade, OKTV, interventions, sponsorship, the cure. Every section carries data-cue (the "Learn more"
+// label) and, where Intake's tour stops, data-tour.
 
 import { el, disposer } from '../engine/dom.js';
-import { dailyPick, dayNumber } from '../engine/rng.js';
+import { dailyPick, dayNumber, seeded } from '../engine/rng.js';
 import { getModule, moduleMeta } from '../engine/modules.js';
 import { mountChannel } from './channel.js';
 import { sectionHead, vitalsPanel, arcadeGrid, guideList, link, severityTag } from './common.js';
@@ -14,60 +16,73 @@ export function renderLobby(root, s) {
   const hero = home.hero || {};
   const day = dayNumber(brand.epoch);
 
-  // ---- Hero
-  const headline = dailyPick(hero.headlines || ['It’s not you.'], 'hero', brand.epoch);
-  const title = el('h1.hero__title');
-  // Emphasize the last sentence fragment in phosphor green.
-  // Sentence split without regex lookbehind (a parse-time SyntaxError on Safari < 16.4).
-  const parts = (headline.match(/[^.!?]+[.!?]*/g) || [headline]).map((p) => p.trim()).filter(Boolean);
-  parts.forEach((p, i) => (i === parts.length - 1 && parts.length > 1 ? title.append(el('em', p)) : title.append(p + (i < parts.length - 1 ? ' ' : ''))));
-  const tvHost = el('div');
+  // ---- Admission: the brand's main line, the definition, and Intake at the front desk.
+  const [lead, kicker] = brand.site?.tagline || [dailyPick(hero.headlines || [''], 'hero', brand.epoch), ''];
+  const intakeHost = el('div.hero__intake');
   root.append(
     el(
       'section.hero',
+      { dataset: { cue: 'Admission' } },
       el(
         'div.wrap.hero__grid',
         el(
-          'div',
+          'div.hero__copy',
           el('div.kicker', el('span.live-dot'), ' ', hero.kicker || ''),
-          title,
+          el('h1.hero__title', lead + ' ', kicker && el('em', kicker)),
           el('p.hero__body', hero.body || ''),
           el(
             'div.hero__ctas',
             hero.primary && el('a.btn.btn--vital.btn--lg', { href: '#' + hero.primary.path, text: hero.primary.label }),
             hero.secondary && el('a.btn.btn--ghost.btn--lg', { href: '#' + hero.secondary.path, text: hero.secondary.label }),
-            hero.tertiary && el('a.btn.btn--ghost.btn--lg', { href: '#' + hero.tertiary.path, text: hero.tertiary.label }),
           ),
           el('p.hero__fine', `Patient ${s.referral.patientId()} · No login required · Sponsored by ${brand.sponsor?.name}`),
         ),
-        tvHost,
+        intakeHost,
       ),
-      el('div.wrap', vitalsPanel(home.vitals || [], d)),
     ),
   );
-  const nowPlaying = el('span');
-  const upNext = el('span');
-  const channel = mountChannel(tvHost, s, {
-    rotation: home.tv?.rotation || [],
-    startAt: day,
-    onProgram: (mod, next) => {
-      nowPlaying.textContent = `Now: ${moduleMeta(mod, brand).title}`;
-      upNext.textContent = next ? `Up next: ${moduleMeta(next, brand).title}` : '';
-    },
-  });
-  tvHost.append(el('div.channel__meta', nowPlaying, upNext, link('/tv', 'Full channel ▸', 'btn btn--ghost btn--sm')));
-  d(() => channel.destroy());
+  const offIntake = s.intake?.embed?.(intakeHost);
+  if (typeof offIntake === 'function') d(offIntake);
 
-  // ---- Today
+  // ---- Symptoms: four signs (rotating daily) and the satirical outbreak dashboard.
+  const sy = home.symptoms || {};
+  const featured = seeded(`symptoms:${day}`).sample(c.symptoms || [], 4);
+  root.append(
+    el(
+      'section.section',
+      { dataset: { cue: sy.cue || 'Symptoms', tour: 'triage' } },
+      el(
+        'div.wrap',
+        sectionHead({ kicker: sy.kicker, title: sy.title, body: sy.body, actions: link('/triage', sy.cta || 'Get screened', 'btn btn--vital') }),
+        el(
+          'div.signs',
+          featured.map((x, i) =>
+            el(
+              'a.card.card--raised.card--link.sign',
+              { href: '#/dsm', style: { '--i': i } },
+              el('div.sign__ecg', { 'aria-hidden': 'true' }),
+              el('div.kicker.kicker--alarm', el('span', x.code), severityTag(x.severity)),
+              el('h3.sign__name', x.name),
+              el('p.sign__desc', x.desc),
+            ),
+          ),
+        ),
+        vitalsPanel(home.vitals || [], d),
+      ),
+    ),
+  );
+
+  // ---- Today: the Gazette, a confession, the overhead page and the daily games. New every UTC day.
   const gz = c.gazette || [];
-  const lead = dailyPick(gz, 'gazette', brand.epoch);
-  const symptom = dailyPick(c.symptoms || [], 'symptom', brand.epoch);
+  const story = dailyPick(gz, 'gazette', brand.epoch);
   const confession = dailyPick(c.confessions || [], 'confession', brand.epoch);
+  const page = dailyPick(c.admission?.pages || [], 'pa', brand.epoch);
   const idle = getModule('idle');
   const shift = getModule('access-please');
   root.append(
     el(
       'section.section',
+      { dataset: { cue: 'Today' } },
       el(
         'div.wrap',
         sectionHead({ kicker: `${home.today?.kicker || 'Today'} · Day ${day}`, title: home.today?.title || 'Today' }),
@@ -78,19 +93,12 @@ export function renderLobby(root, s) {
             { href: '#/gazette', style: { textDecoration: 'none' } },
             el('div.gazette-card__mast', el('span', `Vol. 1 · No. ${day}`), el('span', new Date().toLocaleDateString([], { weekday: 'long', month: 'long', day: 'numeric' })), el('span', 'Price: 1 SSO tax')),
             el('div.gazette-card__name', 'The Oktholm Gazette'),
-            lead && el('h3.gazette-card__headline', lead.headline),
-            lead && el('p.gazette-card__dek', lead.dek),
+            story && el('h3.gazette-card__headline', story.headline),
+            story && el('p.gazette-card__dek', story.dek),
           ),
           el(
             'div.today__side',
-            symptom &&
-              el(
-                'div.card.card--raised.tile',
-                el('div.kicker.kicker--alarm', el('span', 'Symptom of the day'), el('span', symptom.code)),
-                el('div.tile__big', symptom.name),
-                el('p.dim', { style: { margin: 0 } }, symptom.desc),
-                el('div.tile__foot', severityTag(symptom.severity), link('/triage', 'Get screened', 'btn btn--sm btn--ghost')),
-              ),
+            page && overheadPage(s, page, d),
             confession &&
               el(
                 'div.card.card--raised.tile',
@@ -100,7 +108,7 @@ export function renderLobby(root, s) {
               ),
           ),
           el(
-            'div.today__row',
+            'div.today__row.today__row--2',
             idle &&
               el(
                 'a.card.card--raised.card--link.tile',
@@ -119,14 +127,6 @@ export function renderLobby(root, s) {
                 el('p.dim', { style: { margin: 0 } }, 'Today’s queue is the same for every admin on Earth. Stamp wisely. Glory to Compliance.'),
                 el('div.tile__foot', el('span.btn.btn--sm.btn--vital', 'Clock in')),
               ),
-            el(
-              'a.card.card--raised.card--link.tile',
-              { href: '#/intervention' },
-              el('div.kicker', el('span', 'Referral of the day'), el('span', '💌')),
-              el('div.tile__big', 'Stage an intervention'),
-              el('p.dim', { style: { margin: 0 } }, 'Know an admin who defends their renewal quote at dinner? Send them a personalized intervention. It’s what friends do.'),
-              el('div.tile__foot', el('span.btn.btn--sm.btn--amber', 'Start')),
-            ),
           ),
         ),
       ),
@@ -137,22 +137,67 @@ export function renderLobby(root, s) {
   root.append(
     el(
       'section.section',
-      el(
-        'div.wrap',
-        sectionHead({ kicker: home.arcade?.kicker, title: home.arcade?.title, body: home.arcade?.body, actions: link('/arcade', 'All games ▸') }),
-        arcadeGrid(brand, ['game', 'toy']),
-      ),
+      { dataset: { cue: home.arcade?.title || 'The Arcade', tour: 'arcade' } },
+      el('div.wrap', sectionHead({ kicker: home.arcade?.kicker, title: home.arcade?.title, body: home.arcade?.body, actions: link('/arcade', 'All games ▸') }), arcadeGrid(brand, ['game', 'toy'])),
     ),
   );
 
-  // ---- OKTV guide + shows
+  // ---- OKTV: the channel lives here now (the hero belongs to Intake).
+  const tvHost = el('div.lobby-tv');
+  const nowPlaying = el('span');
+  const upNext = el('span');
   root.append(
     el(
       'section.section',
+      { dataset: { cue: s.brand.site?.network || 'OKTV', tour: 'oktv' } },
       el(
         'div.wrap',
-        sectionHead({ kicker: home.tv?.kicker, title: home.tv?.title, body: home.tv?.body, actions: link('/tv', 'Watch OKTV ▸', 'btn btn--cure') }),
-        el('div.grid.grid--2', guideList(home.tv?.guide || [], 6, brand), arcadeGrid(brand, 'show')),
+        sectionHead({ kicker: home.tv?.kicker, title: home.tv?.title, body: home.tv?.body, actions: link('/tv', 'Watch full screen ▸', 'btn btn--cure') }),
+        el('div.lobby-tv__grid', el('div', tvHost, el('div.channel__meta', nowPlaying, upNext)), guideList(home.tv?.guide || [], 6, brand)),
+      ),
+    ),
+  );
+  let channel = null;
+  const startChannel = () => {
+    if (channel) return;
+    channel = mountChannel(tvHost, s, {
+      rotation: home.tv?.rotation || [],
+      startAt: day,
+      onProgram: (mod, next) => {
+        nowPlaying.textContent = `Now: ${moduleMeta(mod, brand).title}`;
+        upNext.textContent = next ? `Up next: ${moduleMeta(next, brand).title}` : '';
+      },
+    });
+  };
+  d(() => channel?.destroy());
+  // Don't run the channel under the admission overlay; don't let it talk over Intake's tour.
+  d(
+    s.track.on((event) => {
+      if (event === 'admission_end') startChannel();
+      if (event === 'tour_start') channel?.setSound?.(false);
+    }),
+  );
+  if (!s.admissionActive) startChannel();
+
+  // ---- Interventions
+  const iv = home.intervention || {};
+  root.append(
+    el(
+      'section.section',
+      { dataset: { cue: iv.cue || 'Interventions', tour: 'intervention' } },
+      el(
+        'div.wrap',
+        el(
+          'div.card.card--raised.pad.iv-band',
+          el(
+            'div',
+            el('div.kicker.kicker--amber', iv.kicker || ''),
+            el('h2.section__title', iv.title || ''),
+            el('p.section__body', iv.body || ''),
+            el('div.row', { style: { marginTop: '16px' } }, link('/intervention', iv.cta || 'Stage an intervention', 'btn btn--amber btn--lg')),
+          ),
+          el('div.iv-band__couch', { 'aria-hidden': 'true' }, (iv.couch || []).map((e, i) => el('span', { style: { '--i': i } }, e))),
+        ),
       ),
     ),
   );
@@ -162,6 +207,7 @@ export function renderLobby(root, s) {
   root.append(
     el(
       'section.section',
+      { dataset: { cue: 'Sponsorship', tour: 'sponsor' } },
       el(
         'div.wrap',
         el(
@@ -188,6 +234,7 @@ export function renderLobby(root, s) {
   root.append(
     el(
       'section.section',
+      { dataset: { cue: 'The Cure', tour: 'cure' } },
       el(
         'div.wrap',
         el(
@@ -211,4 +258,33 @@ export function renderLobby(root, s) {
   );
 
   return () => d.run();
+}
+
+/** Today's overhead page, voiced by the hospital PA on request. */
+function overheadPage(s, text, d) {
+  const voice = s.makeSpeech();
+  let playing = false;
+  const btn = el('button.btn.btn--sm.btn--ghost', { type: 'button', text: '▶ Play the page' });
+  const render = () => (btn.textContent = playing ? '■ Stop' : '▶ Play the page');
+  btn.addEventListener('click', async () => {
+    if (playing) {
+      voice.stop();
+      return;
+    }
+    if (s.audio.isMuted()) s.audio.setMuted(false);
+    s.audio.unlock();
+    playing = true;
+    render();
+    s.track('pa_play');
+    await voice.say(text, { voice: 'pa' });
+    playing = false;
+    render();
+  });
+  d(() => voice.stop());
+  return el(
+    'div.card.card--raised.tile.pa-tile',
+    el('div.kicker', el('span', 'Overhead page'), el('span', '📢')),
+    el('p.pa-tile__text', `“${text}”`),
+    el('div.tile__foot', el('span.faint.mono', { style: { fontSize: '12px' } }, 'Oktholm General PA'), btn),
+  );
 }

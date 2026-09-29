@@ -8,6 +8,10 @@ import confessions from './confessions.js';
 import sponsorship from './sponsorship.js';
 import home from './home.js';
 import cure from './cure.js';
+import admission from './admission.js';
+import intake from './intake.js';
+import captor from './captor.js';
+import records from './records.js';
 
 export default {
   chips,
@@ -19,4 +23,8 @@ export default {
   sponsorship,
   home,
   cure,
+  admission,
+  intake,
+  captor,
+  records,
 };

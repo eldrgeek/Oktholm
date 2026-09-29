@@ -63,7 +63,7 @@ export function renderSponsor(root, s) {
           el('div.kicker', 'Your sponsor code'),
           el('div.sponsor__band', el('span.wristband__dot'), el('span', pid)),
           el('div.field', { style: { marginTop: '14px' } }, el('span', 'Your link'), el('div.sponsor__link', el('input.input.mono', { value: link, readOnly: true, onfocus: (e) => e.target.select() }), el('button.btn.btn--vital', { type: 'button', text: 'Copy', onclick: async () => s.ui.toast((await s.share.copy(link)) ? 'Link copied. Go forth and sponsor.' : 'Copy failed.') }))),
-          el('div', { style: { marginTop: '16px' } }, s.share.panel({ text: 'I got diagnosed with Oktholm Syndrome. You should get screened too. It’s free, it takes two minutes, and it’s not you, it’s your identity provider.', kind: 'sponsor', title: 'Or share with a message' })),
+          el('div', { style: { marginTop: '16px' } }, s.share.panel({ text: 'I got diagnosed with Oktholm Syndrome. You should get screened too. It’s free, it takes two minutes, and the thing you call loyalty might be a symptom.', kind: 'sponsor', title: 'Or share with a message' })),
           el('div.row', { style: { marginTop: '14px' } }, el('a.btn.btn--amber', { href: '#/intervention', text: 'Stage an intervention' }), el('a.btn.btn--ghost', { href: '#/triage', text: 'Get diagnosed first' })),
         ),
         el(
@@ -76,7 +76,7 @@ export function renderSponsor(root, s) {
         ),
       ),
       el('section.section', sectionHead({ kicker: 'The ladder', title: 'Rewards' }), el('p.faint', { style: { fontSize: '13px', marginTop: '-8px' } }, sp.fulfillmentNote || ''), ladder),
-      el('section.section', sectionHead({ kicker: 'How it works', title: 'Three steps. No steak dinner.' }), el('div.grid.grid--3', (sp.howItWorks || []).map((h) => el('div.card.pad', el('div.howto__step', h.step), el('h3', h.title), el('p.dim', h.body))))),
+      el('section.section', sectionHead({ kicker: 'How this works', title: 'Three steps. No steak dinner.' }), el('div.grid.grid--3', (sp.howItWorks || []).map((h) => el('div.card.pad', el('div.howto__step', h.step), el('h3', h.title), el('p.dim', h.body))))),
       el(
         'section.section',
         sectionHead({ kicker: 'Recovery chips', title: 'Your chips', body: 'Earned on this device by playing, watching and admitting things. Referral chips arrive from the backend when your sponsees get diagnosed.' }),

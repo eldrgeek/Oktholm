@@ -58,7 +58,7 @@ export default {
 | `ctx.sfx` | synth sounds: `click beep ecg good bad stamp whack coin alarm type flatline` and `tone(freq, dur, opts)`, `noise(dur, opts)` |
 | `ctx.audio` | `holdMusic() -> {stop}`, `isMuted()`, `toggle()`, `setMuted(bool)`, `unlock()` (call from a click before playing audio), `onChange(fn)` |
 | `ctx.today` | site-wide picks for today, shared with the rooms: `today.gazette` (`{ headline, dek }`) |
-| `ctx.speech` | `say(text, { rate, pitch, voice: 'narrator'|'anchor'|'fast'|'victim' }) -> Promise` (resolves at the estimated end even when muted, so captions stay in sync), `stop()`, `estimate(text, rate)` seconds |
+| `ctx.speech` | `say(text, { voice, rate, pitch, fallback }) -> Promise`: plays the pre-rendered clip for (voice, text) when `brands/<id>/voice/manifest.json` has one, else browser speech (`fallback: 'silent'` shows captions only). Resolves when the line would end, even when muted, so captions stay in sync. `voice` is a cast role from `brands/<id>/cast.js` or a legacy kind (`narrator`, `anchor`, `fast`, `victim`). Lines may carry performance tags for the renderer (`'[sighs] Fine.'`); show text with `stripTags()` from src/engine/speech.js. Also `stop()`, `estimate(text, rate)`, `preload(lines)`, `sfx(id)` |
 | `ctx.ui` | `toast(msg, {kind:'good'|'bad'|'chip'})`, `modal({title, body, actions})`, `confetti()` |
 | `ctx.share` | `panel({ text, params, kind, title })` -> share block element (adds the sharer's referral code), `url(params)`, `copy(text)` |
 | `ctx.referral` | `grantChip(id)`, `qualify(kind)` (call when the visitor completes something meaningful: it credits whoever referred them), `patientId()` |

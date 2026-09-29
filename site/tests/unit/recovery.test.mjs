@@ -49,7 +49,8 @@ test('per-IP daily rate limits are bucketed', async () => {
   for (let i = 0; i < LIMITS.perIpPerDay.event; i++) await r.event({ type: 'share' }, { ipHash: 'x' });
   await assert.rejects(r.event({ type: 'share' }, { ipHash: 'x' }), (e) => e.status === 429);
   // Another IP is unaffected, and the same IP can still earn referral credit.
-  assert.deepEqual(await r.event({ type: 'share' }, { ipHash: 'y' }), { ok: true });
+  // The response carries today's running total for that event type.
+  assert.deepEqual(await r.event({ type: 'share' }, { ipHash: 'y' }), { ok: true, count: LIMITS.perIpPerDay.event + 1 });
   assert.equal((await r.qualify({ patientId: B, ref: A, kind: 'diagnosis' }, { ipHash: 'x' })).credited, true);
 });
 
@@ -73,4 +74,11 @@ test('reactions validate input and count', async () => {
   await r.react({ key: 'seed:1', reaction: 'same' });
   const { counts } = await r.react({ key: 'seed:1', reaction: 'same' });
   assert.equal(counts.same, 2);
+});
+
+test('unique events count each patient once per day', async () => {
+  const r = createRecovery(memoryStore());
+  assert.equal((await r.event({ type: 'denial', patientId: A, unique: true }, { ipHash: 'a' })).count, 1);
+  assert.deepEqual(await r.event({ type: 'denial', patientId: A, unique: true }, { ipHash: 'a' }), { ok: true, count: 1, repeat: true });
+  assert.equal((await r.event({ type: 'denial', patientId: B, unique: true }, { ipHash: 'b' })).count, 2);
 });

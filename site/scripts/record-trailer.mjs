@@ -42,7 +42,7 @@ async function caption(text) {
     if (!c) {
       c = document.createElement('div');
       c.id = '__cap';
-      c.style.cssText = 'position:fixed;left:50%;top:14px;transform:translateX(-50%);z-index:99999;padding:10px 18px;border-radius:12px;background:rgba(0,0,0,.82);color:#fff;font:400 26px/1.1 Anton,Impact,sans-serif;letter-spacing:.04em;text-transform:uppercase;box-shadow:0 10px 30px rgba(0,0,0,.5);border:2px solid #36f59a;max-width:92vw;text-align:center';
+      c.style.cssText = 'position:fixed;left:50%;top:14px;transform:translateX(-50%);z-index:99999;padding:10px 18px;border-radius:12px;background:rgba(0,0,0,.82);color:#fff;font:800 28px/1.1 Archivo,'Arial Narrow',sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.5);border:2px solid #36f59a;max-width:92vw;text-align:center';
       document.body.append(c);
     }
     c.textContent = text;
@@ -143,7 +143,7 @@ await caption('Refer admins. Earn chips. Win the Big Red Button.');
 await smoothScroll(vertical ? 1700 : 900, 1600);
 await wait(1400);
 
-await caption('It’s not you. It’s your identity provider.');
+await caption('It’s not love. It’s lock-in.');
 await go('#/', 600);
 await wait(2600);
 

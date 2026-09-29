@@ -7,15 +7,29 @@ import content from './content/index.js';
 
 export default {
   id: '__BRAND_ID__',
+  // Voices for scripts/voices.mjs. See brands/oktholm/cast.js for a full cast with design prompts.
+  cast: {
+    model: 'eleven_v4',
+    aliases: { narrator: 'pitchman', fast: 'speedreader', victim: 'hostage' },
+    roles: {
+      paramedic: { label: 'Paramedic', web: 'narrator', design: 'A calm, quick paramedic in her late thirties.' },
+      doctor: { label: 'Doctor', web: 'anchor', design: 'A dry, exhausted ER doctor in his fifties.' },
+      pa: { label: 'Hospital PA', web: 'anchor', design: 'A serenely bored hospital public-address announcer.' },
+      intake: { label: 'Intake', web: 'narrator', design: 'A deadpan, self-aware front-desk assistant.' },
+      captor: { label: 'The captor', web: 'narrator', design: 'A relentlessly upbeat customer-success manager.' },
+    },
+  },
   epoch: '__EPOCH__', // day 1 of the daily rotation (YYYY-MM-DD)
 
   site: {
     name: 'Example Syndrome',
-    title: 'Example Syndrome — It’s not you. It’s your tooling.',
+    title: 'Example Syndrome — It’s not love. It’s lock-in.',
+    tagline: ['That’s not loyalty.', 'That’s Example Syndrome.'],
+    signoff: 'It’s not love. It’s lock-in.',
     description: 'A public health emergency for people held captive by their tools. Get diagnosed, play, stage an intervention.',
     url: 'https://example.com/',
     ogImage: 'https://example.com/og.png',
-    fontsHref: 'https://fonts.googleapis.com/css2?family=Anton&family=DotGothic16&family=IBM+Plex+Mono:wght@400;600;700&family=Permanent+Marker&family=Plus+Jakarta+Sans:wght@400;600;800&family=Special+Elite&display=swap',
+    fontsHref: 'https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@75,800&family=DotGothic16&family=IBM+Plex+Mono:wght@400;600;700&family=Permanent+Marker&family=Plus+Jakarta+Sans:wght@400;600;800&family=Special+Elite&display=swap',
     hospital: 'Example General',
     network: 'EXTV',
     condition: 'Example Syndrome',

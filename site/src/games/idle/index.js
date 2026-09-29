@@ -53,7 +53,7 @@ const DEFAULT_COPY = {
   shareLines: {},
   shareTitle: 'Share your result (spoiler-free)',
   shareHint: undefined,
-  rulesKicker: 'How it works',
+  rulesKicker: 'How to play',
   rulesTitle: 'How to play',
   rules: ['Guess the five-letter word in six tries.', 'Type or tap letters, then press Enter.', 'After each guess, the tiles show how close you were.'],
   legend: { correct: 'Right letter, right slot.', present: 'Right letter, wrong slot.', absent: 'Not in the word.' },

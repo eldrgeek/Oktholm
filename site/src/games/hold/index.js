@@ -413,7 +413,7 @@ export default {
       return true;
     }
 
-    const IVR_VOICE = { voice: 'narrator' };
+    const IVR_VOICE = { voice: 'ivr' };
     const holdStatus = (cl) => fill(t.statusHoldTier || t.statusHold, { tier: String(c.reps[cl.repIndex % c.reps.length].tier || '').toUpperCase() });
 
     // ---------- Call flow ----------

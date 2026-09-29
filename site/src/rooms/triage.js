@@ -200,7 +200,7 @@ export function renderTriage(root, s, route) {
 
 /** 1200x630 social card of the diagnosis. Drawn on canvas (no DOM screenshots). */
 export async function renderCertificatePng({ brand, r, pid, date }) {
-  await ensureFonts(['40px Anton', '700 20px "IBM Plex Mono"', '400 22px "Special Elite"', '800 28px "Plus Jakarta Sans"', '400 30px "Permanent Marker"']);
+  await ensureFonts(['800 40px Archivo', '40px Anton', '700 20px "IBM Plex Mono"', '400 22px "Special Elite"', '800 28px "Plus Jakarta Sans"', '400 30px "Permanent Marker"']);
   const W = 1200;
   const H = 630;
   const c = document.createElement('canvas');
@@ -221,7 +221,7 @@ export async function renderCertificatePng({ brand, r, pid, date }) {
   roundRect(g, 0, 0, 720, 542, 14);
   g.fill();
   g.fillStyle = '#16181d';
-  g.font = '400 30px Anton';
+  g.font = '800 32px Archivo';
   g.fillText((brand.site?.hospital || '').toUpperCase(), 36, 58);
   g.font = '700 14px "IBM Plex Mono"';
   g.fillStyle = '#545a66';
@@ -234,8 +234,8 @@ export async function renderCertificatePng({ brand, r, pid, date }) {
   g.fillStyle = '#0b6b3f';
   g.fillText('DIAGNOSIS', 36, 172);
   g.fillStyle = '#16181d';
-  g.font = '400 58px Anton';
-  const stageLines = wrapLines(g, r.stage.name.toUpperCase(), 640);
+  g.font = '800 60px Archivo';
+  const stageLines = wrapLines(g, r.stage.name, 640);
   let y = 232;
   for (const line of stageLines.slice(0, 2)) {
     g.fillText(line, 36, y);
@@ -285,12 +285,16 @@ export async function renderCertificatePng({ brand, r, pid, date }) {
   g.fillStyle = '#36f59a';
   g.font = '700 15px "IBM Plex Mono"';
   g.fillText('● LIVE FROM ' + (brand.site?.hospital || '').toUpperCase(), 820, 90);
-  g.fillStyle = '#e9f0f7';
-  g.font = '400 54px Anton';
-  let ry = 170;
-  for (const line of ['IT’S NOT ME.', 'IT’S MY', 'IDENTITY', 'PROVIDER.']) {
-    g.fillText(line, 820, ry);
-    ry += 60;
+  // The brand's main line, second half in phosphor green.
+  const [lead, kicker] = brand.site?.tagline || ['', brand.site?.condition || ''];
+  g.font = '800 56px Archivo';
+  let ry = 168;
+  for (const [text, color] of [[lead, '#e9f0f7'], [kicker, '#36f59a']]) {
+    g.fillStyle = color;
+    for (const line of wrapLines(g, text, 340).slice(0, 3)) {
+      g.fillText(line, 820, ry);
+      ry += 58;
+    }
   }
   g.fillStyle = '#a3b3c5';
   g.font = '600 18px "Plus Jakarta Sans"';

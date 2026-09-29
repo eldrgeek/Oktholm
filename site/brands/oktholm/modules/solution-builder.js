@@ -337,8 +337,8 @@ export default {
       { label: 'Pricing', fact: 'pricing', variants: [{ text: '{annual}/yr, after {hiddenCount} fees revealed at checkout' }] },
     ],
     pricingLabel: 'See the public pricing page',
-    // Sponsor-fact clauses containing these words are dropped: the captor is never named on this site.
-    neverSay: ['Okta'],
+    // neverSay: [...] drops sponsor-fact clauses containing these words. Left empty on purpose: the banned
+    // names live in tests/unit/brand-safety.test.mjs so they never ship in the bundle.
   },
 
   cta: {

@@ -108,7 +108,7 @@
 .nw-l3.is-on { transform: none; }
 .nw-l3__top { display: flex; align-items: stretch; width: 100%; box-shadow: 0 0.6cqw 1.6cqw rgba(0, 0, 0, 0.45); }
 .nw-l3__tag { flex: none; display: grid; place-items: center; padding: 0 1.4cqw; background: #c92a2a; color: #fff; font: 400 2.1cqw/1 var(--font-display); letter-spacing: 0.1em; text-transform: uppercase; }
-.nw-l3__main { flex: 1; min-width: 0; padding: 0.75cqw 1.4cqw; background: #f4f7ff; color: #0b1834; font: 400 2.4cqw/1.08 var(--font-display); letter-spacing: 0.01em; text-transform: uppercase;
+.nw-l3__main { flex: 1; min-width: 0; padding: 0.75cqw 1.4cqw; background: #f4f7ff; color: #0b1834; font: 400 2.4cqw/1.08 var(--font-display); letter-spacing: 0.01em;
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .nw-l3__sub { padding: 0.45cqw 1.4cqw; background: #0b1834; color: #9cc3ff; font: 700 1.15cqw/1 var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; }
 .nw-l3[data-tone='breaking'] .nw-l3__tag { animation: nw-tag 0.9s steps(1) infinite; }

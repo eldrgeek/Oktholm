@@ -4,7 +4,7 @@
 
 /* ---------- Header ---------- */
 .hold-head { display: grid; gap: 6px 32px; margin-bottom: 22px; }
-.hold-title { margin: 0; font: 400 clamp(40px, 7vw, 64px)/0.9 var(--font-display); text-transform: uppercase; letter-spacing: 0.01em; }
+.hold-title { margin: 0; font: 400 clamp(40px, 7vw, 64px)/0.9 var(--font-display); letter-spacing: 0.01em; }
 .hold-blurb { margin: 2px 0 0; max-width: 60ch; color: var(--text-dim); }
 @media (min-width: 960px) {
   .hold-head { grid-template-columns: auto minmax(0, 1fr); grid-template-areas: 'kick blurb' 'title blurb'; align-items: end; }
@@ -287,7 +287,7 @@ button.hold-spk:hover { border-color: var(--text-dim); color: var(--text); }
 .hold-ticket { position: relative; padding: 22px 24px 20px; overflow: hidden; }
 .hold-ticket__head { display: flex; justify-content: space-between; align-items: center; gap: 6px 12px; flex-wrap: wrap; }
 .hold-ticket__status { font: 700 11px/1.2 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-dim); }
-.hold-ticket__title { margin: 10px 0 12px; font: 400 clamp(30px, 4vw, 42px)/1 var(--font-display); text-transform: uppercase; color: var(--ink); }
+.hold-ticket__title { margin: 10px 0 12px; font: 400 clamp(30px, 4vw, 42px)/1 var(--font-display); color: var(--ink); }
 .hold-ticket__drop { margin: -4px 0 10px; font: 400 15px/1.4 var(--font-type); color: #b3001b; }
 .hold-ticket__rows { margin: 0; }
 .hold-ticket__row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 8px 0; border-bottom: 1px dashed rgba(22, 24, 29, 0.2); font-family: var(--font-type); }
@@ -296,7 +296,7 @@ button.hold-spk:hover { border-color: var(--text-dim); color: var(--text); }
 .hold-ticket__row:first-child dd { font: 400 26px/1 var(--font-pixel); }
 .hold-ticket__row--resolution { border-bottom: 0; padding-top: 12px; }
 .hold-ticket__row--resolution dt,
-.hold-ticket__row--resolution dd { font: 400 22px/1 var(--font-display); text-transform: uppercase; letter-spacing: 0.02em; }
+.hold-ticket__row--resolution dd { font: 400 22px/1 var(--font-stamp); text-transform: uppercase; letter-spacing: 0.02em; }
 .hold-ticket__row--resolution dd { color: #b3001b; }
 .hold-ticket__note { margin: 12px 0 4px; font-size: 14px; color: var(--ink); }
 .hold-ticket__foot { margin: 0; font: 12px/1.4 var(--font-mono); color: var(--ink-dim); }

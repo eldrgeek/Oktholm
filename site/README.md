@@ -22,10 +22,11 @@ npm run new-brand -- acme  # scaffold brands/acme from brands/_template
 
 ```
 src/engine/     services: router, store, rng (daily seeds), share, referral, speech, audio, ui, canvas, ticker
-src/rooms/      pages: lobby, triage (+certificate PNG), arcade, tv (channel player), sponsor, therapy, dsm, gazette, cure
+src/rooms/      pages: lobby, triage (+certificate PNG), arcade, tv (channel player), sponsor, therapy, dsm, gazette, cure, chart
+src/experience/ admission (cold open), intake (chatbot + tour), captor ("Your IdP" texts), eggs
 src/games/<id>/ games & toys  ─┐  every folder with an index.js is discovered at build time
 src/shows/<id>/ OKTV shows    ─┘  (see CONTRACT.md for the module API)
-brands/<id>/    brand pack: index.js (site, sponsor facts, theme, enabled modules) + content/ + modules/
+brands/<id>/    brand pack: index.js (site, sponsor facts, theme, enabled modules) + cast.js (voices) + content/ + modules/ + voice/ (rendered clips)
 netlify/        functions/recovery.mjs (/api/*), lib/ (storage-agnostic logic + Netlify Blobs adapter),
                 edge-functions/og.mjs (personalized link previews for shared interventions/diagnoses)
 public/fonts/   self-hosted fonts (scripts/fetch-fonts.mjs)
@@ -56,6 +57,9 @@ The repo-root `netlify.toml` sets `base = "site"`. The functions use Netlify Blo
 | `BRAND` | Brand pack to build (default `oktholm`) |
 | `SITE_URL` | Overrides the brand URL in og:url/og:image (set it on preview/staging sites) |
 | `NOINDEX` | `true` adds `robots` noindex meta, `robots.txt` Disallow and an `X-Robots-Tag` header (automatic for Netlify deploy previews and branch deploys) |
+| `OUTDIR` | build somewhere other than `dist/` (parallel work) |
+
+`ELEVENLABS_API_KEY` is only for `npm run voices` on a developer machine; the deployed site doesn't need it.
 
 Moderate confessions:
 ```
@@ -65,6 +69,36 @@ curl -X POST -H "Authorization: Bearer $ADMIN_TOKEN" -d '{"key":"confession:pend
 
 Counters use ETag compare-and-swap, so they are safe under concurrency. For very high traffic, swap
 `netlify/lib/blob-store.mjs` for a Postgres adapter with the same five methods.
+
+## The admission, Intake and the captor (`src/experience/`)
+
+| file | what | copy |
+| --- | --- | --- |
+| `admission.js` | the cold open: first visit, bare home page only (never share links, reduced motion, Save-Data). `?admit=1` forces it; `#/admit` replays it | `content/admission.js` |
+| `intake.js` | the front-desk chatbot in the lobby hero (docked on other pages), its typed commands and the guided tour. Lobby sections carry `data-tour` and `data-cue` | `content/intake.js` |
+| `captor.js` | "Your IdP" texts that react to what the visitor does, the thread, its PNG export and The Breakup | `content/captor.js` (read the ex test at the top) |
+| `eggs.js` | the Konami code and the devtools note | `content/home.js` → `eggs` |
+
+Also `src/rooms/chart.js`: `#/chart` shows everything the site stores in the browser and every request it made, with a wipe button; `#/break-glass` is the page `robots.txt` points at. `src/engine/scrollcue.js` is the "Learn more ↓" pill (it names the next `<section>` via `data-cue` or its heading).
+
+## Voices (ElevenLabs, rendered ahead of time)
+
+The site plays pre-rendered clips from `brands/<id>/voice/` (committed) and never calls a voice API. The cast (13 original
+voices, their design prompts and browser fallbacks) is `brands/<id>/cast.js`. Rendering needs `ELEVENLABS_API_KEY` in
+the shell, never in Netlify.
+
+```
+npm run voices -- lines                        # what will be spoken, characters, cost
+npm run voices -- harvest                      # run each OKTV show headless and record its lines
+npm run voices -- cast                         # 3 designed previews per role -> voice-work/<brand>/casting/index.html
+npm run voices -- pick paramedic=B doctor=A    # keep the ones you liked -> brands/<id>/voices.json
+npm run voices -- render                       # render missing lines -> brands/<id>/voice/ (commit it)
+npm run voices -- sfx                          # produced sound cues from cast.sounds
+npm run voices -- prune                        # delete clips no line uses
+```
+
+Lines can carry performance tags (`'[sighs] Oktholm. Get them to Intake.'`): the renderer gets them, captions never
+show them. A clip is keyed by role + tagged text, so rewriting or re-directing a line re-renders only that line.
 
 ## Adding a brand for another startup
 
