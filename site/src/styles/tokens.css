@@ -1,0 +1,51 @@
+/* Design tokens. Brand packs override any of these via brand.theme (applied to :root at boot). */
+:root {
+  --bg: #070a0f;
+  --bg-2: #0b1017;
+  --surface: #0f1620;
+  --surface-2: #142030;
+  --surface-3: #1a2a3e;
+  --line: #1e2c3c;
+  --line-2: #2b3e55;
+  --text: #e9f0f7;
+  --text-dim: #a3b3c5;
+  --text-faint: #6f8297;
+
+  --vital: #36f59a;       /* ECG phosphor green: live, healthy, "go" */
+  --vital-2: #1fbf74;
+  --vital-glow: rgba(54, 245, 154, 0.45);
+  --alarm: #ff4757;       /* critical, deny, code red */
+  --alarm-2: #d92e3e;
+  --amber: #ffb627;       /* warning, severe */
+  --amber-2: #e09100;
+  --cure: #4263eb;        /* sponsor brand color (YeshID blue) */
+  --cure-2: #6b86ff;
+  --cure-ink: #ffffff;
+
+  --paper: #f4efe4;       /* documents, certificates, tickets */
+  --paper-2: #e8e0cf;
+  --ink: #16181d;
+  --ink-dim: #545a66;
+  --tape: #ffd400;
+
+  /* Display: Archivo ExtraBold at 75% width, set in sentence case ("When does IT find out?" must read as IT). */
+  --font-display: 'Archivo', 'Arial Narrow', 'Roboto Condensed', sans-serif;
+  /* Stamps and signage only: all-caps words where case can't be misread. */
+  --font-stamp: 'Anton', 'Impact', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-pixel: 'DotGothic16', 'IBM Plex Mono', ui-monospace, monospace;
+  --font-type: 'Special Elite', 'Courier New', Courier, monospace;
+  --font-marker: 'Permanent Marker', 'Comic Sans MS', 'Chalkboard SE', cursive;
+
+  --radius: 16px;
+  --radius-sm: 10px;
+  --radius-xs: 6px;
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.35);
+  --gutter: clamp(16px, 4vw, 40px);
+  --maxw: 1240px;
+  --topbar-h: 60px;
+  --ticker-h: 38px;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}

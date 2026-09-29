@@ -1,0 +1,24 @@
+{
+  "name": "parody-engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Parody lead-gen engine. First brand pack: Oktholm Syndrome (YeshID).",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs --serve",
+    "test": "node --test tests/unit/*.test.mjs",
+    "test:smoke": "node tests/smoke.mjs",
+    "fonts": "node scripts/fetch-fonts.mjs",
+    "preview": "node build.mjs --inline-fonts",
+    "new-brand": "node scripts/new-brand.mjs",
+    "voices": "node scripts/voices.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "playwright": "^1.56.1"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^11.1.1"
+  }
+}

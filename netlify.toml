@@ -1,0 +1,41 @@
+# Netlify: the site lives in site/. Functions (site/netlify/functions) serve /api/*;
+# the edge function (site/netlify/edge-functions/og.mjs) personalizes link previews.
+[build]
+  base = "site"
+  command = "npm ci && npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  BRAND = "oktholm"
+  # Playwright is a dev dependency for local smoke tests; Netlify builds don't need its browsers.
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Short referral links for screenshots and exports: /r/7F3K-2Q -> /?ref=OKT-7F3K-2Q
+[[redirects]]
+  from = "/r/:code"
+  to = "/?ref=OKT-:code&utm_source=png&utm_medium=referral"
+  status = 302
+
+# robots.txt says "Staff only". Obviously someone will look.
+[[redirects]]
+  from = "/break-glass"
+  to = "/#/break-glass"
+  status = 302
+
+[[redirects]]
+  from = "/break-glass/*"
+  to = "/#/break-glass"
+  status = 302

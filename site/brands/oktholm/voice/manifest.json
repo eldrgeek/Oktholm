@@ -1,0 +1,2293 @@
+{
+ "v": 1,
+ "note": "Rendered by npm run voices. Empty until the first render; the site falls back per line.",
+ "clips": {
+  "ur7frm1q978o6": {
+   "f": "ur7frm1q978o6-23c5f7.mp3",
+   "d": 3.75,
+   "r": "paramedic",
+   "t": "Hey. Hey! Can you hear me? Tap if you can hear me."
+  },
+  "1q4hfidcjfwsm": {
+   "f": "1q4hfidcjfwsm-937e11.mp3",
+   "d": 3.11,
+   "r": "paramedic",
+   "t": "Responsive. Unlike their vendor."
+  },
+  "16ctymjvnbrf": {
+   "f": "16ctymjvnbrf-c82b02.mp3",
+   "d": 4.31,
+   "r": "paramedic",
+   "t": "IT admin, found at their desk defending a renewal quote in Slack."
+  },
+  "1lazznsaeieyq": {
+   "f": "1lazznsaeieyq-929374.mp3",
+   "d": 1.91,
+   "r": "doctor",
+   "t": "How long with the provider?"
+  },
+  "1yc616b1sagpd6": {
+   "f": "1yc616b1sagpd6-6b873c.mp3",
+   "d": 5.67,
+   "r": "paramedic",
+   "t": "Seven years. Three price hikes. Still calls it “our partner.”"
+  },
+  "1xslu3gcetk8y": {
+   "f": "1xslu3gcetk8y-427645.mp3",
+   "d": 3.67,
+   "r": "doctor",
+   "t": "Oktholm. Get them to Intake."
+  },
+  "me2xml1hpq900": {
+   "f": "me2xml1hpq900-e013d7.mp3",
+   "d": 4.23,
+   "r": "pa",
+   "t": "Code Oktholm, Emergency Department. Code Oktholm."
+  },
+  "xacs521jgds87": {
+   "f": "xacs521jgds87-a9fe7c.mp3",
+   "d": 1.11,
+   "r": "doctor",
+   "t": "What’ve we got?"
+  },
+  "15okgti1yz5or5": {
+   "f": "15okgti1yz5or5-fd796c.mp3",
+   "d": 6.39,
+   "r": "paramedic",
+   "t": "IT admin. BP one-forty over renewal. Won’t let us read the contract."
+  },
+  "kal92hnlucbt": {
+   "f": "kal92hnlucbt-522179.mp3",
+   "d": 2.63,
+   "r": "patient",
+   "t": "We’re… aligned on outcomes."
+  },
+  "diphwqegvcdy": {
+   "f": "diphwqegvcdy-051c45.mp3",
+   "d": 4.71,
+   "r": "doctor",
+   "t": "They’re quoting the QBR deck. Get them to Intake."
+  },
+  "9nn4hc3b8lwq": {
+   "f": "9nn4hc3b8lwq-61861f.mp3",
+   "d": 2.79,
+   "r": "pa",
+   "t": "Code Oktholm, Emergency Department."
+  },
+  "1dz4j1y1gfc3by": {
+   "f": "1dz4j1y1gfc3by-35ef9a.mp3",
+   "d": 4.87,
+   "r": "nurse",
+   "t": "Crashed during the renewal call. Monitor just says “Contact Sales.”"
+  },
+  "i71pk11fhmbt": {
+   "f": "i71pk11fhmbt-a69408.mp3",
+   "d": 3.27,
+   "r": "doctor",
+   "t": "Charging. Three hundred seats. Clear!"
+  },
+  "hdvbr71pfokr6": {
+   "f": "hdvbr71pfokr6-3578f3.mp3",
+   "d": 2.07,
+   "r": "patient",
+   "t": "…did it auto-renew?"
+  },
+  "hcxwkk1twj6u2": {
+   "f": "hcxwkk1twj6u2-81d795.mp3",
+   "d": 5.75,
+   "r": "pa",
+   "t": "Paging the owner of “Temp-DO-NOT-DELETE.” Your group is blocking the ambulance b"
+  },
+  "197fjof1v16cm4": {
+   "f": "197fjof1v16cm4-2257b1.mp3",
+   "d": 6.39,
+   "r": "pa",
+   "t": "Would the admin who approved “just give me admin” please report to the front des"
+  },
+  "75adocwj6vfs": {
+   "f": "75adocwj6vfs-cd8de0.mp3",
+   "d": 8.47,
+   "r": "pa",
+   "t": "Attention visitors: the SAML certificate in the east wing expires at midnight. N"
+  },
+  "i9bgcl1tf21j4": {
+   "f": "i9bgcl1tf21j4-7092ef.mp3",
+   "d": 6.87,
+   "r": "pa",
+   "t": "Paging Dave from IT. Dave, your accounts are still active. Dave left in 2022."
+  },
+  "1g67il01gsd8tx": {
+   "f": "1g67il01gsd8tx-462655.mp3",
+   "d": 5.43,
+   "r": "pa",
+   "t": "Code yellow in Procurement: a renewal quote has been opened without supervision."
+  },
+  "13pgiv6xy98xu": {
+   "f": "13pgiv6xy98xu-f5e231.mp3",
+   "d": 7.03,
+   "r": "pa",
+   "t": "Reminder: shared passwords are not a form of intimacy. Please return the sticky "
+  },
+  "rbxr53xptqj3": {
+   "f": "rbxr53xptqj3-edab00.mp3",
+   "d": 10.55,
+   "r": "pa",
+   "t": "Will the owner of a grey service account, last seen 2019, answering to “svc_temp"
+  },
+  "8ptn37t11y4g": {
+   "f": "8ptn37t11y4g-71f5e6.mp3",
+   "d": 7.59,
+   "r": "pa",
+   "t": "The cafeteria now accepts single sign-on. Single sign-on costs extra. The cafete"
+  },
+  "1l8rj241f9ehw1": {
+   "f": "1l8rj241f9ehw1-f76ba4.mp3",
+   "d": 7.67,
+   "r": "pa",
+   "t": "Attention: visiting hours are over for contractors whose access ended last quart"
+  },
+  "s6mlqhx26wr5": {
+   "f": "s6mlqhx26wr5-27fabd.mp3",
+   "d": 5.91,
+   "r": "pa",
+   "t": "Paging Doctor Least Privilege. Doctor Least Privilege to every department, immed"
+  },
+  "lllgthxt4kxl": {
+   "f": "lllgthxt4kxl-2d5545.mp3",
+   "d": 6.55,
+   "r": "pa",
+   "t": "The elevator to the Enterprise Plus floor requires a badge, a quote and a three-"
+  },
+  "1cph7gu199tot9": {
+   "f": "1cph7gu199tot9-fb28df.mp3",
+   "d": 7.91,
+   "r": "pa",
+   "t": "Group Therapy begins in five minutes in Conference Room B. Conference Room B was"
+  },
+  "md7sk4xs50oa": {
+   "f": "md7sk4xs50oa-632ad5.mp3",
+   "d": 7.03,
+   "r": "intake",
+   "t": "Hi. I’m Intake: the front desk, the chat widget, and after the budget cuts, most"
+  },
+  "8pqck2usabg4": {
+   "f": "8pqck2usabg4-f32e47.mp3",
+   "d": 5.83,
+   "r": "intake",
+   "t": "Please refer to me as “it.” Not IT. IT is what you are."
+  },
+  "1viutak1mlythv": {
+   "f": "1viutak1mlythv-b2d096.mp3",
+   "d": 10.55,
+   "r": "intake",
+   "t": "You were brought in with suspected Oktholm Syndrome: held by your identity provi"
+  },
+  "11wywo615dwnrz": {
+   "f": "11wywo615dwnrz-0492d5.mp3",
+   "d": 5.43,
+   "r": "intake",
+   "t": "I’m not a person, and I’m not IT. You’re IT. Tag."
+  },
+  "sy1kw38ce2f2": {
+   "f": "sy1kw38ce2f2-260275.mp3",
+   "d": 6.79,
+   "r": "intake",
+   "t": "Other sites put “Jessica from Sales” here. Jessica was also a script. She had be"
+  },
+  "yst4n1j6tqo9": {
+   "f": "yst4n1j6tqo9-7fd204.mp3",
+   "d": 6.39,
+   "r": "intake",
+   "t": "Normally I’d ask for your work email. We don’t collect those. I never know what "
+  },
+  "1ljakiublhdl6": {
+   "f": "1ljakiublhdl6-f332da.mp3",
+   "d": 6.39,
+   "r": "intake",
+   "t": "A concerned colleague checked you in. Under “reason for visit,” they wrote “you "
+  },
+  "19nieme1pvx9ik": {
+   "f": "19nieme1pvx9ik-441796.mp3",
+   "d": 4.71,
+   "r": "intake",
+   "t": "You closed me. I came back. I learned that from your identity provider."
+  },
+  "1v9cadh1nbwl5z": {
+   "f": "1v9cadh1nbwl5z-2dbb09.mp3",
+   "d": 4.55,
+   "r": "intake",
+   "t": "You said “fine” the way a status page says “operational.”"
+  },
+  "1otjn4ch2hdsc": {
+   "f": "1otjn4ch2hdsc-db3c27.mp3",
+   "d": 4.31,
+   "r": "intake",
+   "t": "Of course it loves you. You’re in year two of a five-year term."
+  },
+  "1byjuf41ezvs2x": {
+   "f": "1byjuf41ezvs2x-48f149.mp3",
+   "d": 3.51,
+   "r": "intake",
+   "t": "If it loved you, it would let you export your data."
+  },
+  "11dz17bwucrdu": {
+   "f": "11dz17bwucrdu-210d51.mp3",
+   "d": 5.43,
+   "r": "intake",
+   "t": "It loves you on the Enterprise tier. On your tier, it’s fond of you."
+  },
+  "3riwzjxfnj0g": {
+   "f": "3riwzjxfnj0g-543087.mp3",
+   "d": 4.55,
+   "r": "intake",
+   "t": "“Fine” is a Stage II word. Want it in writing? Two minutes."
+  },
+  "1rqt7i413tl6z7": {
+   "f": "1rqt7i413tl6z7-71fd86.mp3",
+   "d": 3.83,
+   "r": "intake",
+   "t": "Love doesn’t have a 90-day non-renewal notice period."
+  },
+  "1alsd48tnbp4r": {
+   "f": "1alsd48tnbp4r-313036.mp3",
+   "d": 3.19,
+   "r": "intake",
+   "t": "Tour time. Keep your hands inside the gurney."
+  },
+  "16la88413ztx2y": {
+   "f": "16la88413ztx2y-3eb92e.mp3",
+   "d": 7.03,
+   "r": "intake",
+   "t": "Twelve questions, two minutes. Everyone lies on the relationship question. The c"
+  },
+  "ayx50y1arlh0w": {
+   "f": "ayx50y1arlh0w-8ae007.mp3",
+   "d": 7.43,
+   "r": "intake",
+   "t": "Approve access, offboard Dave, hold for support. We call it therapy. Your manage"
+  },
+  "90eikeup3p26": {
+   "f": "90eikeup3p26-045bf4.mp3",
+   "d": 9.91,
+   "r": "intake",
+   "t": "OKTV. Up all night, like you. The news, a drug that doesn’t exist, and Kevin, wh"
+  },
+  "oqs0qe8b7coy": {
+   "f": "oqs0qe8b7coy-f7f4f4.mp3",
+   "d": 7.03,
+   "r": "intake",
+   "t": "For the coworker who calls the renewal “fair.” Send them an intervention. It’s a"
+  },
+  "au3svn13bryrz": {
+   "f": "au3svn13bryrz-b501dd.mp3",
+   "d": 7.91,
+   "r": "intake",
+   "t": "They get diagnosed, you get a chip. Yes, it’s a referral program. I’m a chat wid"
+  },
+  "1lvfzbv3mjtld": {
+   "f": "1lvfzbv3mjtld-3c8d49.mp3",
+   "d": 16.23,
+   "r": "intake",
+   "t": "YeshID automates onboarding, offboarding, access requests, access reviews and sh"
+  },
+  "1jem5r21iqqic8": {
+   "f": "1jem5r21iqqic8-0330a4.mp3",
+   "d": 2.87,
+   "r": "intake",
+   "t": "That’s the tour. Now, about you."
+  },
+  "18zdro1ld8z4j": {
+   "f": "18zdro1ld8z4j-61be8a.mp3",
+   "d": 4.63,
+   "r": "captor",
+   "t": "i love you. per user, per month, billed annually!"
+  },
+  "wo1cwh1dph05w": {
+   "f": "wo1cwh1dph05w-90d386.mp3",
+   "d": 8.55,
+   "r": "captor",
+   "t": "hiii! just circling back! circling back. i’m in the lobby. i brought bagels. the"
+  },
+  "1ovz27n1jw9vfs": {
+   "f": "1ovz27n1jw9vfs-c6b063.mp3",
+   "d": 2.15,
+   "r": "captor",
+   "t": "thanks for picking up! please hold."
+  },
+  "q86n3118hig7f": {
+   "f": "q86n3118hig7f-ed3c50.mp3",
+   "d": 3.51,
+   "r": "pitchman",
+   "t": "Aisha thinks we’re here to celebrate a successful audit."
+  },
+  "hmdyzdma5ml4": {
+   "f": "hmdyzdma5ml4-88fe2e.mp3",
+   "d": 5.99,
+   "r": "pitchman",
+   "t": "Aisha is a security engineer. Aisha keeps a spreadsheet of the other spreadsheet"
+  },
+  "zqllkwav2u0c": {
+   "f": "zqllkwav2u0c-2b4134.mp3",
+   "d": 4.95,
+   "r": "interventionist",
+   "t": "Aisha, everyone in this room loves you. They wrote letters."
+  },
+  "1s7dfurvrojp0": {
+   "f": "1s7dfurvrojp0-4da324.mp3",
+   "d": 6.79,
+   "r": "linda",
+   "t": "This is really hard for me. You have 412 Active Directory groups. We counted."
+  },
+  "dl1wtc1rw9625": {
+   "f": "dl1wtc1rw9625-6a56af.mp3",
+   "d": 2.71,
+   "r": "linda",
+   "t": "You named three of them after your kids."
+  },
+  "1nen2p5mqhpmo": {
+   "f": "1nen2p5mqhpmo-3e68ab.mp3",
+   "d": 5.91,
+   "r": "greg",
+   "t": "You offboarded Dave by hand. It took nine days. Dave left in March."
+  },
+  "2hepzscvvov0": {
+   "f": "2hepzscvvov0-e0ef7c.mp3",
+   "d": 2.07,
+   "r": "greg",
+   "t": "Dave still has Figmint."
+  },
+  "kx0dy5tn39x7": {
+   "f": "kx0dy5tn39x7-eda1bc.mp3",
+   "d": 5.83,
+   "r": "mom",
+   "t": "We’re only here because we care. You’ve been on hold with vendor support since M"
+  },
+  "rxckrv18h685": {
+   "f": "rxckrv18h685-aee995.mp3",
+   "d": 2.63,
+   "r": "mom",
+   "t": "You hum the hold music in your sleep."
+  },
+  "8tvetic3mcjv": {
+   "f": "8tvetic3mcjv-ffd29a.mp3",
+   "d": 7.91,
+   "r": "pitchman",
+   "t": "Aisha, I was scared to say this out loud, so I opened a ticket. It’s a P1. It’s "
+  },
+  "ksduda1n3k14f": {
+   "f": "ksduda1n3k14f-7e9ebc.mp3",
+   "d": 2.71,
+   "r": "interventionist",
+   "t": "Aisha, we’ve arranged treatment."
+  },
+  "1yjszm97ixiks": {
+   "f": "1yjszm97ixiks-e6b731.mp3",
+   "d": 2.23,
+   "r": "pitchman",
+   "t": "Will Aisha accept treatment?"
+  },
+  "mcxkv04h8t3k": {
+   "f": "mcxkv04h8t3k-cfc9df.mp3",
+   "d": 3.83,
+   "r": "pitchman",
+   "t": "Marcus thinks this is a meeting about the new ticketing system."
+  },
+  "hkrtpa13lrpfj": {
+   "f": "hkrtpa13lrpfj-a617d4.mp3",
+   "d": 6.07,
+   "r": "pitchman",
+   "t": "Marcus is a security engineer. Marcus keeps a spreadsheet of the other spreadshe"
+  },
+  "1nj1oogwgkgub": {
+   "f": "1nj1oogwgkgub-ad79d5.mp3",
+   "d": 3.83,
+   "r": "interventionist",
+   "t": "Marcus. Sit down. This is an intervention."
+  },
+  "xh3sof1qb7qm5": {
+   "f": "xh3sof1qb7qm5-81aa05.mp3",
+   "d": 7.35,
+   "r": "linda",
+   "t": "Can we get a close-up for this? You told the CFO the SSO tax is “for our own pro"
+  },
+  "1w1i7yh1p89hq7": {
+   "f": "1w1i7yh1p89hq7-0e39cf.mp3",
+   "d": 3.03,
+   "r": "linda",
+   "t": "Marcus, you sounded like a hostage."
+  },
+  "vkvc1410258kp": {
+   "f": "vkvc1410258kp-e6e365.mp3",
+   "d": 5.67,
+   "r": "greg",
+   "t": "I’m just going to say it. At Thanksgiving you defended a forty percent renewal i"
+  },
+  "17hjn861a9iyuz": {
+   "f": "17hjn861a9iyuz-fc22a3.mp3",
+   "d": 2.23,
+   "r": "greg",
+   "t": "Grandma took the vendor’s side."
+  },
+  "acaqasclwjwl": {
+   "f": "acaqasclwjwl-687180.mp3",
+   "d": 3.19,
+   "r": "greg",
+   "t": "I read the renewal quote, Marcus. It was"
+  },
+  "1u9otjczg38si": {
+   "f": "1u9otjczg38si-f87b7e.mp3",
+   "d": 1.27,
+   "r": "greg",
+   "t": "insulting."
+  },
+  "1hyycznjsya44": {
+   "f": "1hyycznjsya44-b1474c.mp3",
+   "d": 5.59,
+   "r": "mom",
+   "t": "You approved a nine-hundred-row access review in eleven seconds. We timed it."
+  },
+  "qbr0o51h8jn71": {
+   "f": "qbr0o51h8jn71-91629a.mp3",
+   "d": 6.55,
+   "r": "pitchman",
+   "t": "Marcus, I was scared to say this out loud, so I opened a ticket. It’s a P1."
+  },
+  "3wrjfz1x554oa": {
+   "f": "3wrjfz1x554oa-69de7e.mp3",
+   "d": 1.67,
+   "r": "pitchman",
+   "t": "It’s about you."
+  },
+  "1sx77nm1j77gfh": {
+   "f": "1sx77nm1j77gfh-9ef1dc.mp3",
+   "d": 2.71,
+   "r": "interventionist",
+   "t": "Marcus, we’ve arranged treatment."
+  },
+  "140o3fb1ioo0qp": {
+   "f": "140o3fb1ioo0qp-1ef217.mp3",
+   "d": 2.23,
+   "r": "pitchman",
+   "t": "Will Marcus accept treatment?"
+  },
+  "1gohwtbdblksc": {
+   "f": "1gohwtbdblksc-393d68.mp3",
+   "d": 3.35,
+   "r": "pitchman",
+   "t": "Mei thinks we’re here to celebrate a successful audit."
+  },
+  "fr86xh17m2hda": {
+   "f": "fr86xh17m2hda-7c3395.mp3",
+   "d": 5.75,
+   "r": "pitchman",
+   "t": "Mei is a security engineer. Mei keeps a spreadsheet of the other spreadsheets."
+  },
+  "ixoxs91oavdve": {
+   "f": "ixoxs91oavdve-de1c12.mp3",
+   "d": 4.79,
+   "r": "interventionist",
+   "t": "Mei, everyone in this room loves you. They wrote letters."
+  },
+  "14tgrnl1sbpfsd": {
+   "f": "14tgrnl1sbpfsd-3ec745.mp3",
+   "d": 2.87,
+   "r": "linda",
+   "t": "I wrote this down so I wouldn’t cry."
+  },
+  "mzh47m13rx2ri": {
+   "f": "mzh47m13rx2ri-0389dc.mp3",
+   "d": 4.47,
+   "r": "linda",
+   "t": "At Thanksgiving you defended a forty percent renewal increase."
+  },
+  "1674wh7clekjl": {
+   "f": "1674wh7clekjl-77c066.mp3",
+   "d": 2.23,
+   "r": "linda",
+   "t": "Grandma took the vendor’s side."
+  },
+  "1rlv5zv13j24sh": {
+   "f": "1rlv5zv13j24sh-5f93b3.mp3",
+   "d": 2.63,
+   "r": "greg",
+   "t": "I wrote this down so I wouldn’t cry."
+  },
+  "wi2352176pdrl": {
+   "f": "wi2352176pdrl-18c16c.mp3",
+   "d": 7.67,
+   "r": "greg",
+   "t": "You told the CFO the SSO tax is “for our own protection.” Mei, you sounded like "
+  },
+  "jf8xeycpin9q": {
+   "f": "jf8xeycpin9q-9f6ad0.mp3",
+   "d": 2.71,
+   "r": "mom",
+   "t": "We’re only here because we care."
+  },
+  "1aiztbk1pe5hyr": {
+   "f": "1aiztbk1pe5hyr-c4e6ea.mp3",
+   "d": 6.15,
+   "r": "mom",
+   "t": "You gave the intern global admin “just for the afternoon.” That was two years ag"
+  },
+  "19qs7al18xj4ia": {
+   "f": "19qs7al18xj4ia-380844.mp3",
+   "d": 2.39,
+   "r": "mom",
+   "t": "The intern is a director now."
+  },
+  "1gmvgrb15gudfr": {
+   "f": "1gmvgrb15gudfr-e7859b.mp3",
+   "d": 6.63,
+   "r": "pitchman",
+   "t": "Mei, I sit next to you. I hear the sighing. I hear all of the sighing."
+  },
+  "hwubs11lyz6nq": {
+   "f": "hwubs11lyz6nq-bb42ec.mp3",
+   "d": 2.47,
+   "r": "interventionist",
+   "t": "Mei, we’ve arranged treatment."
+  },
+  "18d16kk8tpgpg": {
+   "f": "18d16kk8tpgpg-b84341.mp3",
+   "d": 2.23,
+   "r": "pitchman",
+   "t": "Will Mei accept treatment?"
+  },
+  "upvtesud2c88": {
+   "f": "upvtesud2c88-37520a.mp3",
+   "d": 3.51,
+   "r": "pitchman",
+   "t": "Sam thinks we’re here to celebrate a successful audit."
+  },
+  "13svi0ee1n6n8": {
+   "f": "13svi0ee1n6n8-30eea0.mp3",
+   "d": 5.83,
+   "r": "pitchman",
+   "t": "Sam is a security engineer. Sam keeps a spreadsheet of the other spreadsheets."
+  },
+  "gh9c49sn0n7j": {
+   "f": "gh9c49sn0n7j-8531bc.mp3",
+   "d": 4.87,
+   "r": "interventionist",
+   "t": "Sam, everyone in this room loves you. They wrote letters."
+  },
+  "5jze0pi7h81": {
+   "f": "5jze0pi7h81-fd140f.mp3",
+   "d": 7.03,
+   "r": "linda",
+   "t": "We’re only here because we care. You reset the CEO’s MFA from a beach in Portuga"
+  },
+  "14hquonwzf6mr": {
+   "f": "14hquonwzf6mr-ae0f7c.mp3",
+   "d": 1.99,
+   "r": "linda",
+   "t": "You were on a jet ski."
+  },
+  "1inzo6825aipy": {
+   "f": "1inzo6825aipy-210355.mp3",
+   "d": 6.39,
+   "r": "greg",
+   "t": "Sam, I love you, and I need to say this. The wiki just says “ask Sam.”"
+  },
+  "1h33hgb1lmm1te": {
+   "f": "1h33hgb1lmm1te-b15bec.mp3",
+   "d": 4.47,
+   "r": "greg",
+   "t": "You are the documentation. That is not a job title."
+  },
+  "1l2s23kii7y5n": {
+   "f": "1l2s23kii7y5n-a9039e.mp3",
+   "d": 5.59,
+   "r": "mom",
+   "t": "This is really hard for me. You’ve been on hold with vendor support since March."
+  },
+  "4bgd4e12iildp": {
+   "f": "4bgd4e12iildp-e6fb1e.mp3",
+   "d": 5.99,
+   "r": "pitchman",
+   "t": "Sam, when your pager goes off, mine flinches. We’re bonded by trauma."
+  },
+  "yxoktb11nqvbk": {
+   "f": "yxoktb11nqvbk-8acc73.mp3",
+   "d": 2.71,
+   "r": "pitchman",
+   "t": "Let’s be bonded by something else."
+  },
+  "1mr3jfzcxanbq": {
+   "f": "1mr3jfzcxanbq-12a05d.mp3",
+   "d": 2.71,
+   "r": "interventionist",
+   "t": "Sam, we’ve arranged treatment."
+  },
+  "1nlxvk31wjxtbu": {
+   "f": "1nlxvk31wjxtbu-30590b.mp3",
+   "d": 2.15,
+   "r": "pitchman",
+   "t": "Will Sam accept treatment?"
+  },
+  "1midaig1spigjm": {
+   "f": "1midaig1spigjm-9aeb0a.mp3",
+   "d": 3.75,
+   "r": "pitchman",
+   "t": "Tomás thinks this is a meeting about the new ticketing system."
+  },
+  "i1rwofgditu": {
+   "f": "i1rwofgditu-dd17d8.mp3",
+   "d": 7.59,
+   "r": "pitchman",
+   "t": "Tomás manages IT. Tomás approved the renewal. Twice. Without reading page four."
+  },
+  "1ivu52i19eae9o": {
+   "f": "1ivu52i19eae9o-42ac83.mp3",
+   "d": 3.91,
+   "r": "interventionist",
+   "t": "Tomás. Sit down. This is an intervention."
+  },
+  "sbpd636ip33y": {
+   "f": "sbpd636ip33y-b53a36.mp3",
+   "d": 1.83,
+   "r": "linda",
+   "t": "I’m just going to say it."
+  },
+  "nc45ri1tkp7o2": {
+   "f": "nc45ri1tkp7o2-300848.mp3",
+   "d": 5.59,
+   "r": "linda",
+   "t": "You approve access requests in DMs at 11 PM with a thumbs-up emoji."
+  },
+  "1qd36rxpiq3fh": {
+   "f": "1qd36rxpiq3fh-3b0356.mp3",
+   "d": 3.19,
+   "r": "linda",
+   "t": "Tomás, that is not an audit trail."
+  },
+  "3azu2gezyjz6": {
+   "f": "3azu2gezyjz6-194b93.mp3",
+   "d": 5.11,
+   "r": "greg",
+   "t": "You know the contract end date by heart. You do not know our anniversary."
+  },
+  "2if6wcztwh5a": {
+   "f": "2if6wcztwh5a-1d6a9e.mp3",
+   "d": 4.07,
+   "r": "greg",
+   "t": "And honestly, Tomás? Your group naming convention is"
+  },
+  "q2ovd91x8wm36": {
+   "f": "q2ovd91x8wm36-12483c.mp3",
+   "d": 6.95,
+   "r": "mom",
+   "t": "You have 412 Active Directory groups. We counted. You named three of them after "
+  },
+  "qtb4zdps34t9": {
+   "f": "qtb4zdps34t9-912d3a.mp3",
+   "d": 6.87,
+   "r": "pitchman",
+   "t": "Tomás, I am approving your PTO. You do not get a say. This is a direct order."
+  },
+  "m18wkxhy2csl": {
+   "f": "m18wkxhy2csl-05c36d.mp3",
+   "d": 2.79,
+   "r": "interventionist",
+   "t": "Tomás, we’ve arranged treatment."
+  },
+  "1orf0a91spvgze": {
+   "f": "1orf0a91spvgze-f45ded.mp3",
+   "d": 2.23,
+   "r": "pitchman",
+   "t": "Will Tomás accept treatment?"
+  },
+  "1j1e0urdoxei7": {
+   "f": "1j1e0urdoxei7-dc2c4f.mp3",
+   "d": 3.43,
+   "r": "pitchman",
+   "t": "Olu thinks we’re here to celebrate a successful audit."
+  },
+  "1k77d6yr8xv2k": {
+   "f": "1k77d6yr8xv2k-375bdf.mp3",
+   "d": 1.99,
+   "r": "pitchman",
+   "t": "Olu founded the company."
+  },
+  "1u8o7qm9p2ajd": {
+   "f": "1u8o7qm9p2ajd-7deda3.mp3",
+   "d": 5.83,
+   "r": "pitchman",
+   "t": "Olu is also the help desk, the IT department, and the on-call rotation."
+  },
+  "1mjh7c31b791ce": {
+   "f": "1mjh7c31b791ce-edfd18.mp3",
+   "d": 3.51,
+   "r": "interventionist",
+   "t": "Olu. Sit down. This is an intervention."
+  },
+  "fgqezbtvph0e": {
+   "f": "fgqezbtvph0e-bff636.mp3",
+   "d": 5.83,
+   "r": "linda",
+   "t": "I’m just going to say it. You gave the intern global admin “just for the afterno"
+  },
+  "1lag4ye13ftlt6": {
+   "f": "1lag4ye13ftlt6-6fecd9.mp3",
+   "d": 3.99,
+   "r": "linda",
+   "t": "That was two years ago. The intern is a director now."
+  },
+  "113hlwp8qf9gj": {
+   "f": "113hlwp8qf9gj-634871.mp3",
+   "d": 4.71,
+   "r": "greg",
+   "t": "You sleep with the pager on your pillow. The pager has its own pillow now."
+  },
+  "1o8swh81vr88s2": {
+   "f": "1o8swh81vr88s2-6a34c3.mp3",
+   "d": 4.31,
+   "r": "greg",
+   "t": "And honestly, Olu? Your group naming convention is"
+  },
+  "yfvtro3tj751": {
+   "f": "yfvtro3tj751-f17af9.mp3",
+   "d": 7.83,
+   "r": "mom",
+   "t": "You told the CFO the SSO tax is “for our own protection.” Olu, you sounded like "
+  },
+  "1keflzs1ja8jv": {
+   "f": "1keflzs1ja8jv-c6d728.mp3",
+   "d": 5.67,
+   "r": "pitchman",
+   "t": "Olu, I’m not selling anything. I’m just worried. Mostly worried."
+  },
+  "1k2qqyc1bikqqg": {
+   "f": "1k2qqyc1bikqqg-b27b2d.mp3",
+   "d": 2.63,
+   "r": "interventionist",
+   "t": "Olu, we’ve arranged treatment."
+  },
+  "852crf1hnlmlp": {
+   "f": "852crf1hnlmlp-477321.mp3",
+   "d": 2.23,
+   "r": "pitchman",
+   "t": "Will Olu accept treatment?"
+  },
+  "1bfoomb1cm1jbo": {
+   "f": "1bfoomb1cm1jbo-59c5c9.mp3",
+   "d": 4.87,
+   "r": "pitchman",
+   "t": "Priya was told this was a quick sync. It is not a quick sync."
+  },
+  "1vamcsv1pskz38": {
+   "f": "1vamcsv1pskz38-cbcbe8.mp3",
+   "d": 5.99,
+   "r": "pitchman",
+   "t": "Priya is a security engineer. Priya keeps a spreadsheet of the other spreadsheet"
+  },
+  "ko6fyw18lg805": {
+   "f": "ko6fyw18lg805-e977fe.mp3",
+   "d": 5.03,
+   "r": "interventionist",
+   "t": "Priya, sit down. Nobody leaves until everyone has read their letter."
+  },
+  "nhjkv61rmao3c": {
+   "f": "nhjkv61rmao3c-645dbf.mp3",
+   "d": 5.03,
+   "r": "linda",
+   "t": "No more excuses. You took four thousand screenshots for the auditor."
+  },
+  "14own8b1xfyrr6": {
+   "f": "14own8b1xfyrr6-f25497.mp3",
+   "d": 2.07,
+   "r": "linda",
+   "t": "You had one of them framed."
+  },
+  "7t7n52bud6v": {
+   "f": "7t7n52bud6v-ccc740.mp3",
+   "d": 6.39,
+   "r": "greg",
+   "t": "This stops today. You said “quick SAML question” and didn’t even flinch."
+  },
+  "8ocipf1c00jmc": {
+   "f": "8ocipf1c00jmc-e140c1.mp3",
+   "d": 2.63,
+   "r": "greg",
+   "t": "Priya, there is no such thing."
+  },
+  "1ribbac1g4kktk": {
+   "f": "1ribbac1g4kktk-8349c6.mp3",
+   "d": 6.63,
+   "r": "pitchman",
+   "t": "Priya, I sit next to you. I hear the sighing. I hear all of the sighing."
+  },
+  "174h8fzojjiox": {
+   "f": "174h8fzojjiox-fbbdd5.mp3",
+   "d": 2.63,
+   "r": "interventionist",
+   "t": "Priya, we’ve arranged treatment."
+  },
+  "4pyrizucjm80": {
+   "f": "4pyrizucjm80-a623fc.mp3",
+   "d": 2.23,
+   "r": "pitchman",
+   "t": "Will Priya accept treatment?"
+  },
+  "1p67sqw14ab677": {
+   "f": "1p67sqw14ab677-944e96.mp3",
+   "d": 4.31,
+   "r": "pitchman",
+   "t": "Do you create three Active Directory groups for every new hire?"
+  },
+  "1f8oq731kdq0ct": {
+   "f": "1f8oq731kdq0ct-8b96a8.mp3",
+   "d": 3.43,
+   "r": "pitchman",
+   "t": "Do you defend your renewal quote at family dinners?"
+  },
+  "154qx5d1w682rr": {
+   "f": "154qx5d1w682rr-56a89e.mp3",
+   "d": 3.11,
+   "r": "pitchman",
+   "t": "You may be suffering from Oktholm Syndrome."
+  },
+  "1vwp5ra1o97acc": {
+   "f": "1vwp5ra1o97acc-a3121c.mp3",
+   "d": 3.99,
+   "r": "pitchman",
+   "t": "But there is hope. Introducing Yesh-id-oo-mab."
+  },
+  "p4bg0n14dbovk": {
+   "f": "p4bg0n14dbovk-d815fc.mp3",
+   "d": 3.75,
+   "r": "pitchman",
+   "t": "Ask your C F O if Yesh-id-oo-mab is right for you."
+  },
+  "1pkjit31chtq7": {
+   "f": "1pkjit31chtq7-697d5b.mp3",
+   "d": 4.39,
+   "r": "pitchman",
+   "t": "Imagine leaving work at five. The same day you arrived."
+  },
+  "po6q8x1mg0syh": {
+   "f": "po6q8x1mg0syh-4380cb.mp3",
+   "d": 2.63,
+   "r": "pitchman",
+   "t": "Walking the dog you forgot you had."
+  },
+  "1jk3xlt5dgudb": {
+   "f": "1jk3xlt5dgudb-5151ac.mp3",
+   "d": 3.03,
+   "r": "pitchman",
+   "t": "Flying a kite. On a Tuesday."
+  },
+  "x5249p1ttvyk3": {
+   "f": "x5249p1ttvyk3-df9fea.mp3",
+   "d": 4.23,
+   "r": "pitchman",
+   "t": "Offboarding forty apps with one click, latte in hand."
+  },
+  "2veq6827jky3": {
+   "f": "2veq6827jky3-85d22f.mp3",
+   "d": 2.47,
+   "r": "pitchman",
+   "t": "Even your C F O is smiling."
+  },
+  "nr7xp91822dey": {
+   "f": "nr7xp91822dey-c28a46.mp3",
+   "d": 15.43,
+   "r": "speedreader",
+   "t": "Side effects may include leaving work on time, remembering your children’s names"
+  },
+  "y9p7rw7n18pn": {
+   "f": "y9p7rw7n18pn-c584f5.mp3",
+   "d": 6.63,
+   "r": "speedreader",
+   "t": "Do not take Yesh-id-oo-mab if you are allergic to saving money or are in the fir"
+  },
+  "1pq6dp31vdzrsh": {
+   "f": "1pq6dp31vdzrsh-2351fd.mp3",
+   "d": 4.55,
+   "r": "speedreader",
+   "t": "Tell your doctor about any onboarding lasting longer than four hours."
+  },
+  "mbhp94vkiggt": {
+   "f": "mbhp94vkiggt-9291b5.mp3",
+   "d": 2.71,
+   "r": "speedreader",
+   "t": "Consult procurement before switching."
+  },
+  "1p2o0ua1ct6nxz": {
+   "f": "1p2o0ua1ct6nxz-4f9acc.mp3",
+   "d": 6.87,
+   "r": "pitchman",
+   "t": "Yesh-id-oo-mab. Free for teams under 20 users. 14-day free trial on paid plans."
+  },
+  "oi7b29cqzw3i": {
+   "f": "oi7b29cqzw3i-bc4071.mp3",
+   "d": 1.67,
+   "r": "hostage",
+   "t": "My name is Kevin."
+  },
+  "1xhi4h9rx8euk": {
+   "f": "1xhi4h9rx8euk-18c1e0.mp3",
+   "d": 2.23,
+   "r": "hostage",
+   "t": "I am the I T administrator."
+  },
+  "1ezo1hismhfyn": {
+   "f": "1ezo1hismhfyn-1d7fbe.mp3",
+   "d": 2.15,
+   "r": "hostage",
+   "t": "I am being treated well."
+  },
+  "14blnj51rirtyb": {
+   "f": "14blnj51rirtyb-dc70db.mp3",
+   "d": 3.03,
+   "r": "hostage",
+   "t": "My identity provider is very reasonable."
+  },
+  "1bwvdkv1jo9kbs": {
+   "f": "1bwvdkv1jo9kbs-663102.mp3",
+   "d": 3.91,
+   "r": "hostage",
+   "t": "The forty percent renewal increase is fair and customary."
+  },
+  "1xa1m3z1tt1ewq": {
+   "f": "1xa1m3z1tt1ewq-551226.mp3",
+   "d": 3.11,
+   "r": "hostage",
+   "t": "The S S O tax is for my own protection."
+  },
+  "7gpg4zfc0o7l": {
+   "f": "7gpg4zfc0o7l-e7c33c.mp3",
+   "d": 2.55,
+   "r": "hostage",
+   "t": "I do not need to be rescued."
+  },
+  "1r17myq1n4p5im": {
+   "f": "1r17myq1n4p5im-fb3885.mp3",
+   "d": 2.63,
+   "r": "hostage",
+   "t": "Please do not contact Yesh I D."
+  },
+  "14q31u9bxosx1": {
+   "f": "14q31u9bxosx1-b39fd6.mp3",
+   "d": 4.63,
+   "r": "anchor",
+   "t": "Good evening. I’m Ted Kerberos, and this is Oktholm Nightly News."
+  },
+  "18wfl77dtkgau": {
+   "f": "18wfl77dtkgau-040f02.mp3",
+   "d": 6.79,
+   "r": "anchor",
+   "t": "Our top story tonight. Report: Company Access Spreadsheet Last Accurate in 2014"
+  },
+  "yr7vmr1v8klyp": {
+   "f": "yr7vmr1v8klyp-515ef0.mp3",
+   "d": 10.79,
+   "r": "anchor",
+   "t": "Historians confirm the file “ACCESS_FINAL_v7_REAL. xlsx” is now older than sever"
+  },
+  "1ow6kw21p01yxt": {
+   "f": "1ow6kw21p01yxt-1413c0.mp3",
+   "d": 7.51,
+   "r": "anchor",
+   "t": "Also tonight. Scientists Discover New Element, Legacium, Which Cannot Be Removed"
+  },
+  "1hvvvxr1n1elc9": {
+   "f": "1hvvvxr1n1elc9-661377.mp3",
+   "d": 4.87,
+   "r": "anchor",
+   "t": "Legacium has a half-life of “until the next reorg, then it doubles.”"
+  },
+  "1cr9fenoc6zqh": {
+   "f": "1cr9fenoc6zqh-f0994c.mp3",
+   "d": 8.07,
+   "r": "anchor",
+   "t": "And finally. I T Manager Opens Renewal Quote, Experiences All Five Stages of Gri"
+  },
+  "1ypxdpb1o816us": {
+   "f": "1ypxdpb1o816us-6178e3.mp3",
+   "d": 5.75,
+   "r": "anchor",
+   "t": "Doctors describe the event as “a grief speedrun” and “honestly impressive.”"
+  },
+  "1x1jwbz10ujk99": {
+   "f": "1x1jwbz10ujk99-3a8c46.mp3",
+   "d": 4.47,
+   "r": "anchor",
+   "t": "Now let’s check in with Misty Radius for Outbreak Weather. Misty?"
+  },
+  "8h5ah7lczngg": {
+   "f": "8h5ah7lczngg-5e96c4.mp3",
+   "d": 1.27,
+   "r": "pitchman",
+   "t": "Thanks, Ted."
+  },
+  "j5feai1boy3nl": {
+   "f": "j5feai1boy3nl-26da42.mp3",
+   "d": 5.19,
+   "r": "pitchman",
+   "t": "Sales can expect a warm front of new app sign-ups nobody approved."
+  },
+  "kbn8inlggi3p": {
+   "f": "kbn8inlggi3p-4816ed.mp3",
+   "d": 5.43,
+   "r": "pitchman",
+   "t": "Remote workers can expect M F A prompts every forty minutes, with gusts."
+  },
+  "13fubsnds0k1u": {
+   "f": "13fubsnds0k1u-236fe7.mp3",
+   "d": 5.67,
+   "r": "anchor",
+   "t": "Recovery is possible. Good night, and good luck with your tickets."
+  },
+  "jc729q1t6y9ww": {
+   "f": "jc729q1t6y9ww-c15859.mp3",
+   "d": 1.91,
+   "r": "anchor",
+   "t": "Our top story tonight."
+  },
+  "rk87lx10gnm8": {
+   "f": "rk87lx10gnm8-30d9a4.mp3",
+   "d": 7.43,
+   "r": "anchor",
+   "t": "Nation’s Admins Observe Read-Only Friday; Nation’s Executives Observe “Quick Cha"
+  },
+  "1ui3ul31f34x0u": {
+   "f": "1ui3ul31f34x0u-f68785.mp3",
+   "d": 2.39,
+   "r": "anchor",
+   "t": "Saturday is expected to be lively."
+  },
+  "1y3ke0k6kw2bo": {
+   "f": "1y3ke0k6kw2bo-43a790.mp3",
+   "d": 1.27,
+   "r": "anchor",
+   "t": "Also tonight."
+  },
+  "1m8f6n1oyzbi5": {
+   "f": "1m8f6n1oyzbi5-a9ae9a.mp3",
+   "d": 6.95,
+   "r": "anchor",
+   "t": "Local Man’s Password Rotation Policy Now Requires a Haiku, Two Emojis and Mild R"
+  },
+  "8yawkq13cafh0": {
+   "f": "8yawkq13cafh0-fb64a5.mp3",
+   "d": 5.11,
+   "r": "anchor",
+   "t": "Users responded by writing the haiku on a sticky note on the monitor, per tradit"
+  },
+  "1kfrozu1k3e1jf": {
+   "f": "1kfrozu1k3e1jf-1e9f9b.mp3",
+   "d": 6.23,
+   "r": "anchor",
+   "t": "And finally. Vendor Announces Logout Button Now Available on Enterprise Plus Tie"
+  },
+  "1ezo29j1e8d5jo": {
+   "f": "1ezo29j1e8d5jo-295137.mp3",
+   "d": 5.43,
+   "r": "anchor",
+   "t": "Customers on lower tiers are encouraged to close the browser and think about wha"
+  },
+  "qwuy0i149ins5": {
+   "f": "qwuy0i149ins5-8b76e2.mp3",
+   "d": 3.91,
+   "r": "pitchman",
+   "t": "Expect a light drizzle of password resets on Monday morning."
+  },
+  "1lsqvrh18cln2c": {
+   "f": "1lsqvrh18cln2c-dace1f.mp3",
+   "d": 4.47,
+   "r": "pitchman",
+   "t": "Tickets are accumulating at the help desk at two inches an hour."
+  },
+  "9gtkbk10hgs2m": {
+   "f": "9gtkbk10hgs2m-b60d32.mp3",
+   "d": 6.15,
+   "r": "anchor",
+   "t": "Our top story tonight. “Contact Sales” Button Contacted by Sales"
+  },
+  "gzda6qxxe464": {
+   "f": "gzda6qxxe464-85907c.mp3",
+   "d": 5.35,
+   "r": "anchor",
+   "t": "The button is now in a 14-touch nurture sequence and has been invited to a steak"
+  },
+  "1pklpm1sj76t0": {
+   "f": "1pklpm1sj76t0-09dae1.mp3",
+   "d": 8.39,
+   "r": "anchor",
+   "t": "Also tonight. Contractor’s Contract Ended in 2022; Contractor’s Access Signs Fiv"
+  },
+  "1glxd0i159iu6u": {
+   "f": "1glxd0i159iu6u-88287f.mp3",
+   "d": 3.27,
+   "r": "anchor",
+   "t": "The access was last seen logging in from a boat."
+  },
+  "q5ct9m1bz0iu3": {
+   "f": "q5ct9m1bz0iu3-80d853.mp3",
+   "d": 7.59,
+   "r": "anchor",
+   "t": "And finally. I T Team of One Describes Org Chart as “Me, Reporting to Me, Escala"
+  },
+  "3ek4bipqean2": {
+   "f": "3ek4bipqean2-2017c4.mp3",
+   "d": 3.67,
+   "r": "anchor",
+   "t": "Their manager, also them, approved this headline."
+  },
+  "1ypd355b23lf5": {
+   "f": "1ypd355b23lf5-1a450f.mp3",
+   "d": 6.15,
+   "r": "pitchman",
+   "t": "Isolated outages are possible overnight. Experts say it will be D N S."
+  },
+  "u1kbvd1ua5h9": {
+   "f": "u1kbvd1ua5h9-08cf0b.mp3",
+   "d": 8.07,
+   "r": "anchor",
+   "t": "Our top story tonight. Man Still Receiving Slack Messages From Company He Left i"
+  },
+  "126mgtmqiny2a": {
+   "f": "126mgtmqiny2a-2c12c4.mp3",
+   "d": 4.71,
+   "r": "anchor",
+   "t": "He has been promoted twice. Nobody has noticed he does not work there."
+  },
+  "1bvafb111fy10n": {
+   "f": "1bvafb111fy10n-f765d4.mp3",
+   "d": 4.95,
+   "r": "anchor",
+   "t": "Also tonight. Company Replaces Password Policy With Vibe Check"
+  },
+  "14j4j2g1mftqt9": {
+   "f": "14j4j2g1mftqt9-29d0e1.mp3",
+   "d": 5.03,
+   "r": "anchor",
+   "t": "Early results show the vibe check is harder to pass and just as easy to phish."
+  },
+  "33fz8q1q2sxhe": {
+   "f": "33fz8q1q2sxhe-874c0e.mp3",
+   "d": 5.59,
+   "r": "anchor",
+   "t": "And finally. Recovery Is Possible, Says Admin Who Now Leaves Work at 5"
+  },
+  "1li15cs1bbrsfq": {
+   "f": "1li15cs1bbrsfq-f955e8.mp3",
+   "d": 4.23,
+   "r": "anchor",
+   "t": "Coworkers report she has hobbies now. One of them is pottery."
+  },
+  "1go2m84qukf08": {
+   "f": "1go2m84qukf08-a710f3.mp3",
+   "d": 3.19,
+   "r": "anchor",
+   "t": "The pottery is not in scope for sock 2."
+  },
+  "1an0gobeo6wpj": {
+   "f": "1an0gobeo6wpj-d9d5dd.mp3",
+   "d": 4.63,
+   "r": "pitchman",
+   "t": "A slow-moving front of access requests has stalled over Marketing."
+  },
+  "12l21mg1jyf4zz": {
+   "f": "12l21mg1jyf4zz-caf092.mp3",
+   "d": 6.07,
+   "r": "anchor",
+   "t": "Our top story tonight. Vendor Status Page Remains Green as Building Burns"
+  },
+  "7oacmu1i73ib0": {
+   "f": "7oacmu1i73ib0-3f84e1.mp3",
+   "d": 4.47,
+   "r": "anchor",
+   "t": "“We are investigating reports of degraded vibes,” read the only update."
+  },
+  "lszvut1np58vw": {
+   "f": "lszvut1np58vw-fcec3d.mp3",
+   "d": 6.15,
+   "r": "anchor",
+   "t": "M F A Fatigue Claims Another Victim as Man Approves Login From Van Parked Outsid"
+  },
+  "oepwng1l3nv3p": {
+   "f": "oepwng1l3nv3p-fef762.mp3",
+   "d": 3.99,
+   "r": "anchor",
+   "t": "“It said it was me,” he explained. “It had my name on it.”"
+  },
+  "1tkwyym100cpbx": {
+   "f": "1tkwyym100cpbx-9d9370.mp3",
+   "d": 8.87,
+   "r": "anchor",
+   "t": "And finally. Terraform Plan Shows 847 Resources to Destroy; Engineer Types “yes”"
+  },
+  "1ooh679g6b5rc": {
+   "f": "1ooh679g6b5rc-1692f9.mp3",
+   "d": 4.79,
+   "r": "anchor",
+   "t": "Colleagues describe the moment as “the quietest the Slack channel has ever been."
+  },
+  "cwu9266rskfp": {
+   "f": "cwu9266rskfp-0afb57.mp3",
+   "d": 5.83,
+   "r": "pitchman",
+   "t": "Audit season arrives early. Pack an umbrella and four thousand screenshots."
+  },
+  "56um17g4epdo": {
+   "f": "56um17g4epdo-0ea15d.mp3",
+   "d": 3.91,
+   "r": "pitchman",
+   "t": "Clear skies for anyone whose offboarding runs itself."
+  },
+  "1ogzmm21dp0fco": {
+   "f": "1ogzmm21dp0fco-6a79bb.mp3",
+   "d": 5.75,
+   "r": "anchor",
+   "t": "Onboarding Checklist Found in Break-Room Fridge Next to Yogurt Labeled “2019”"
+  },
+  "mt3gwk14syk21": {
+   "f": "mt3gwk14syk21-cdde76.mp3",
+   "d": 3.99,
+   "r": "anchor",
+   "t": "Both have expired. Only one was ever followed."
+  },
+  "1osqyoe1upg71f": {
+   "f": "1osqyoe1upg71f-b38311.mp3",
+   "d": 5.27,
+   "r": "anchor",
+   "t": "Also tonight. Company Enters Fourth Year of Temporary Firewall Exception"
+  },
+  "1tngpx01bbfdt7": {
+   "f": "1tngpx01bbfdt7-6d089d.mp3",
+   "d": 6.63,
+   "r": "anchor",
+   "t": "The exception has outlasted two SEE-sos and a pandemic, and is up for a long-ser"
+  },
+  "1cqvriktzjwqa": {
+   "f": "1cqvriktzjwqa-a52742.mp3",
+   "d": 7.11,
+   "r": "anchor",
+   "t": "And finally. Admin Asks for Audit Logs Older Than Seven Days, Is Laughed Out of "
+  },
+  "c3szu2jqxsfc": {
+   "f": "c3szu2jqxsfc-ad5669.mp3",
+   "d": 5.11,
+   "r": "anchor",
+   "t": "The eighth day of logs is available as a paid add-on and a spiritual journey."
+  },
+  "1xzpu9ziox9yx": {
+   "f": "1xzpu9ziox9yx-e9686a.mp3",
+   "d": 4.87,
+   "r": "pitchman",
+   "t": "Dense fog over the shared drives. Visibility near zero."
+  },
+  "nhfpio1lapd25": {
+   "f": "nhfpio1lapd25-57f2dc.mp3",
+   "d": 5.11,
+   "r": "pitchman",
+   "t": "The server closet remains under a heat advisory. Nobody knows why."
+  },
+  "3k5jjk1ff7jhh": {
+   "f": "3k5jjk1ff7jhh-5bbc2d.mp3",
+   "d": 8.07,
+   "r": "anchor",
+   "t": "Our top story tonight. Procurement Negotiates 3% Discount on 40% Price Increase,"
+  },
+  "1ya55bh1o14zwt": {
+   "f": "1ya55bh1o14zwt-e765ef.mp3",
+   "d": 3.51,
+   "r": "anchor",
+   "t": "The team received a plaque, which was also billed per seat."
+  },
+  "kt339z3f00ab": {
+   "f": "kt339z3f00ab-88b742.mp3",
+   "d": 5.91,
+   "r": "anchor",
+   "t": "Also tonight. Certificate Expires at 3:14 AM, Exactly as Prophesied"
+  },
+  "7n0u1j1uoc424": {
+   "f": "7n0u1j1uoc424-49d59b.mp3",
+   "d": 4.47,
+   "r": "anchor",
+   "t": "The on-call engineer says she felt it expire before the pager went off."
+  },
+  "seayy41j6jkru": {
+   "f": "seayy41j6jkru-43a34d.mp3",
+   "d": 5.59,
+   "r": "anchor",
+   "t": "And finally. Company Wiki Page “How to Get Access” Requires Access"
+  },
+  "50r2up1f19zqy": {
+   "f": "50r2up1f19zqy-292407.mp3",
+   "d": 3.99,
+   "r": "anchor",
+   "t": "A request to view it has been pending approval since the page was created."
+  },
+  "55s5qd1frviij": {
+   "f": "55s5qd1frviij-065a56.mp3",
+   "d": 4.79,
+   "r": "pitchman",
+   "t": "A ridge of consultants will linger over Engineering through the end of the quart"
+  },
+  "1gi1798yc0ii2": {
+   "f": "1gi1798yc0ii2-da6f91.mp3",
+   "d": 7.75,
+   "r": "anchor",
+   "t": "Our top story tonight. Support Ticket Filed in 2023 Achieves Sentience, Files Ow"
+  },
+  "8l8343108l5jw": {
+   "f": "8l8343108l5jw-937021.mp3",
+   "d": 3.75,
+   "r": "anchor",
+   "t": "The new ticket was auto-closed as a duplicate of itself."
+  },
+  "sl8lwc139evbn": {
+   "f": "sl8lwc139evbn-698535.mp3",
+   "d": 6.55,
+   "r": "anchor",
+   "t": "Identity Provider Announces Customer Loyalty Program: Price Increases Now Arrive"
+  },
+  "ka1gfjj9nqw4": {
+   "f": "ka1gfjj9nqw4-637e45.mp3",
+   "d": 5.35,
+   "r": "anchor",
+   "t": "Loyal customers will receive their increases up to three weeks earlier than comp"
+  },
+  "1okyezc12ihu25": {
+   "f": "1okyezc12ihu25-66f512.mp3",
+   "d": 1.35,
+   "r": "anchor",
+   "t": "And finally."
+  },
+  "176n1pf1detsr0": {
+   "f": "176n1pf1detsr0-bef10a.mp3",
+   "d": 6.39,
+   "r": "anchor",
+   "t": "Area Admin Discovers She Has Been Paying for 40 Seats of a Tool Nobody Has Opene"
+  },
+  "9bpfgl9fb00t": {
+   "f": "9bpfgl9fb00t-e51980.mp3",
+   "d": 6.63,
+   "r": "anchor",
+   "t": "Cancellation requires a phone call, a notarized letter and a 90-day notice perio"
+  },
+  "1le0y1v1pz576o": {
+   "f": "1le0y1v1pz576o-3e6267.mp3",
+   "d": 8.79,
+   "r": "pitchman",
+   "t": "Ninety percent chance of sam-ul errors, scattered A D groups moving in from the "
+  },
+  "kosqfh1ocbclm": {
+   "f": "kosqfh1ocbclm-ca4f9f.mp3",
+   "d": 7.27,
+   "r": "anchor",
+   "t": "Also tonight. Sysadmin Explains the S S O Tax to Family at Dinner; Grandmother P"
+  },
+  "l1alra1pb5g21": {
+   "f": "l1alra1pb5g21-3dc8bc.mp3",
+   "d": 4.95,
+   "r": "anchor",
+   "t": "“It seemed customary,” she said, filling out a purchase order for the mashed pot"
+  },
+  "14zwmecvgi1fe": {
+   "f": "14zwmecvgi1fe-e62c22.mp3",
+   "d": 5.59,
+   "r": "anchor",
+   "t": "And finally. AI Note-Taker Now Attends More Meetings Than Any Human Employee"
+  },
+  "14l3nn1uwgcaw": {
+   "f": "14l3nn1uwgcaw-218f2d.mp3",
+   "d": 5.99,
+   "r": "anchor",
+   "t": "It has been nominated for Employee of the Month despite never being hired, invit"
+  },
+  "1vh1uhd2yw85i": {
+   "f": "1vh1uhd2yw85i-713ece.mp3",
+   "d": 7.51,
+   "r": "anchor",
+   "t": "Our top story tonight. Auditor Asks Who Has Access to Payroll; Room Silent for F"
+  },
+  "10f9jjc7ee0xa": {
+   "f": "10f9jjc7ee0xa-2631a7.mp3",
+   "d": 5.27,
+   "r": "anchor",
+   "t": "Someone eventually said “HR?” with the rising intonation of a hostage."
+  },
+  "1u2n9hmbvauyd": {
+   "f": "1u2n9hmbvauyd-7c28b2.mp3",
+   "d": 7.51,
+   "r": "anchor",
+   "t": "Also tonight. I T Manager Opens Renewal Quote, Experiences All Five Stages of Gr"
+  },
+  "1ubdpoudr0a8b": {
+   "f": "1ubdpoudr0a8b-d5e170.mp3",
+   "d": 6.71,
+   "r": "anchor",
+   "t": "And finally. Company Achieves Zero Trust, Now Trusts Nothing, Including Itself"
+  },
+  "gewjqlh60p8d": {
+   "f": "gewjqlh60p8d-fed8cb.mp3",
+   "d": 3.43,
+   "r": "anchor",
+   "t": "The SEE-so has been locked out of the building since Tuesday."
+  },
+  "1yin2t82xmlmj": {
+   "f": "1yin2t82xmlmj-3301f4.mp3",
+   "d": 3.43,
+   "r": "anchor",
+   "t": "“Working as intended,” he said through the glass."
+  },
+  "3w2ycdnwju8k": {
+   "f": "3w2ycdnwju8k-56c151.mp3",
+   "d": 6.71,
+   "r": "anchor",
+   "t": "Our top story tonight. Vendor Renames Product for Fourth Time; Price Remains Loy"
+  },
+  "1sb36tvl4smdv": {
+   "f": "1sb36tvl4smdv-1de761.mp3",
+   "d": 3.99,
+   "r": "anchor",
+   "t": "The product is now called “Identity Cloud Platform Suite One.”"
+  },
+  "14ljaqwdpff2u": {
+   "f": "14ljaqwdpff2u-0c9280.mp3",
+   "d": 2.87,
+   "r": "anchor",
+   "t": "The invoice is still called “the invoice.”"
+  },
+  "1tknbul1j1m4wx": {
+   "f": "1tknbul1j1m4wx-ca5fc1.mp3",
+   "d": 5.35,
+   "r": "anchor",
+   "t": "Also tonight. New Hire Starts Monday; I T Informed Monday"
+  },
+  "jd7ku41aie8zd": {
+   "f": "jd7ku41aie8zd-4bb21b.mp3",
+   "d": 5.27,
+   "r": "anchor",
+   "t": "The new hire was issued a laptop, a login, and a folding chair in the server roo"
+  },
+  "1ph3qea1ks2ukb": {
+   "f": "1ph3qea1ks2ukb-853c8f.mp3",
+   "d": 7.43,
+   "r": "anchor",
+   "t": "And finally. Procurement Negotiates 3% Discount on 40% Price Increase, Calls It "
+  },
+  "170bto7co24vw": {
+   "f": "170bto7co24vw-6d1d33.mp3",
+   "d": 5.11,
+   "r": "pitchman",
+   "t": "A tropical depression named Renewal is strengthening off the coast of Finance."
+  },
+  "mszchl1gtkqfl": {
+   "f": "mszchl1gtkqfl-7cc882.mp3",
+   "d": 6.55,
+   "r": "anchor",
+   "t": "Intern Granted Global Admin “Just for the Afternoon” Celebrates Seventh Annivers"
+  },
+  "1ppnz9o1xga700": {
+   "f": "1ppnz9o1xga700-6e5a82.mp3",
+   "d": 5.83,
+   "r": "anchor",
+   "t": "The intern, now Director of Platform, says the afternoon “has been a real growth"
+  },
+  "de187bjb56r": {
+   "f": "de187bjb56r-6860c3.mp3",
+   "d": 6.31,
+   "r": "anchor",
+   "t": "Also tonight. Vendor Announces Logout Button Now Available on Enterprise Plus Ti"
+  },
+  "tshqec1rfpzzg": {
+   "f": "tshqec1rfpzzg-5507e2.mp3",
+   "d": 5.19,
+   "r": "anchor",
+   "t": "And finally. Investigation Concludes It Was D N S"
+  },
+  "109k9m6uk6vg8": {
+   "f": "109k9m6uk6vg8-3b7f0f.mp3",
+   "d": 6.71,
+   "r": "anchor",
+   "t": "Investigators added that it is always D N S, and asked to be removed from the on"
+  },
+  "16537c1nf9bk4": {
+   "f": "16537c1nf9bk4-fb0b7f.mp3",
+   "d": 5.99,
+   "r": "anchor",
+   "t": "Our top story tonight. Company Enters Fourth Year of Temporary Firewall Exceptio"
+  },
+  "1dtatcovaediz": {
+   "f": "1dtatcovaediz-106daf.mp3",
+   "d": 6.87,
+   "r": "anchor",
+   "t": "Also tonight. Auditor Asks Who Has Access to Payroll; Room Silent for Four Minut"
+  },
+  "km2dizrp0gvr": {
+   "f": "km2dizrp0gvr-284f10.mp3",
+   "d": 6.79,
+   "r": "anchor",
+   "t": "Admin on Hold With Vendor Support Since Spring Says Hold Music Is Now “Part of W"
+  },
+  "1nb5k631i1yaoz": {
+   "f": "1nb5k631i1yaoz-289f2b.mp3",
+   "d": 5.27,
+   "r": "anchor",
+   "t": "She can hum all four chords. She would like to stop humming all four chords."
+  },
+  "knnu2t1ti0cr3": {
+   "f": "knnu2t1ti0cr3-b460bc.mp3",
+   "d": 4.71,
+   "r": "anchor",
+   "t": "Our top story tonight. Password “Summer2026!”"
+  },
+  "1mrx34r1i9ibfm": {
+   "f": "1mrx34r1i9ibfm-8a6de9.mp3",
+   "d": 4.15,
+   "r": "anchor",
+   "t": "Named Most Popular Password for Third Consecutive Summer"
+  },
+  "1waddxanjhp0r": {
+   "f": "1waddxanjhp0r-1fd2b5.mp3",
+   "d": 4.63,
+   "r": "anchor",
+   "t": "Runners-up include “Autumn2026!” and “Password1!” (a classic)."
+  },
+  "143qgei1nzno2n": {
+   "f": "143qgei1nzno2n-ef15ef.mp3",
+   "d": 6.71,
+   "r": "anchor",
+   "t": "Man Who Wrote the Offboarding Script Is Offboarded; Script Offboards Itself in S"
+  },
+  "2p62711hntc3r": {
+   "f": "2p62711hntc3r-a4163d.mp3",
+   "d": 4.23,
+   "r": "anchor",
+   "t": "Both are said to be doing well and pursuing opportunities in consulting."
+  },
+  "1jw23hx1ssszm8": {
+   "f": "1jw23hx1ssszm8-b980c2.mp3",
+   "d": 5.99,
+   "r": "anchor",
+   "t": "Also tonight. Experts Warn Shadow I T Now Has Its Own Shadow I T"
+  },
+  "1n9szzbyp61bz": {
+   "f": "1n9szzbyp61bz-b168b8.mp3",
+   "d": 6.07,
+   "r": "anchor",
+   "t": "The unsanctioned project-management tool has adopted an unsanctioned project-man"
+  },
+  "1imw5j6ey9pwj": {
+   "f": "1imw5j6ey9pwj-c99682.mp3",
+   "d": 5.67,
+   "r": "anchor",
+   "t": "Our top story tonight. C E O Would Like Admin Rights “Just to See”"
+  },
+  "e85mlrqlpkl3": {
+   "f": "e85mlrqlpkl3-a4655b.mp3",
+   "d": 5.51,
+   "r": "anchor",
+   "t": "He saw. He clicked. The restore from backup took eleven hours."
+  },
+  "1ile7d41rbq81y": {
+   "f": "1ile7d41rbq81y-10b06e.mp3",
+   "d": 6.71,
+   "r": "anchor",
+   "t": "Also tonight. Admin Asks for Audit Logs Older Than Seven Days, Is Laughed Out of"
+  },
+  "1fxwhtysapuhq": {
+   "f": "1fxwhtysapuhq-7e6dba.mp3",
+   "d": 9.03,
+   "r": "anchor",
+   "t": "And finally. Contractor’s Contract Ended in 2022; Contractor’s Access Signs Five"
+  },
+  "hw0w791t3lcde": {
+   "f": "hw0w791t3lcde-29b697.mp3",
+   "d": 6.23,
+   "r": "anchor",
+   "t": "Our top story tonight. New Hire Starts Monday; I T Informed Monday"
+  },
+  "1r9q7wh1rwal6b": {
+   "f": "1r9q7wh1rwal6b-0e85f8.mp3",
+   "d": 7.43,
+   "r": "anchor",
+   "t": "Also tonight. Company Achieves Zero Trust, Now Trusts Nothing, Including Itself"
+  },
+  "18zz2rbkl28p0": {
+   "f": "18zz2rbkl28p0-d43346.mp3",
+   "d": 6.79,
+   "r": "anchor",
+   "t": "Contractor’s Contract Ended in 2022; Contractor’s Access Signs Five-Year Extensi"
+  },
+  "68zbtuakh1nj": {
+   "f": "68zbtuakh1nj-8c4785.mp3",
+   "d": 5.91,
+   "r": "anchor",
+   "t": "And finally. Employee Requests Access to “The Drive,” Refuses to Elaborate"
+  },
+  "gb7zgklalxry": {
+   "f": "gb7zgklalxry-682b06.mp3",
+   "d": 6.95,
+   "r": "anchor",
+   "t": "I T has narrowed it down to 1,140 shared drives, all named “Team Drive.”"
+  },
+  "ny10oj1m7i4r7": {
+   "f": "ny10oj1m7i4r7-8c56f9.mp3",
+   "d": 7.59,
+   "r": "anchor",
+   "t": "Our top story tonight. Group Policy Object From 2011 Discovered Controlling Offi"
+  },
+  "1iy0tzeows33x": {
+   "f": "1iy0tzeows33x-9099bd.mp3",
+   "d": 4.15,
+   "r": "anchor",
+   "t": "Attempts to remove it have raised the office temperature by four degrees."
+  },
+  "8oyzdk75tlar": {
+   "f": "8oyzdk75tlar-e89e54.mp3",
+   "d": 5.43,
+   "r": "anchor",
+   "t": "Also tonight. C E O Would Like Admin Rights “Just to See”"
+  },
+  "qgd5pc1awcvoc": {
+   "f": "qgd5pc1awcvoc-acc5dc.mp3",
+   "d": 6.15,
+   "r": "anchor",
+   "t": "And finally. Auditor Asks Who Has Access to Payroll; Room Silent for Four Minute"
+  },
+  "1kjvzrxo88z7": {
+   "f": "1kjvzrxo88z7-b1f9cd.mp3",
+   "d": 4.95,
+   "r": "pitchman",
+   "t": "Shadow I T sightings reported in Marketing. Do not approach."
+  },
+  "j8g2u21lmcg6m": {
+   "f": "j8g2u21lmcg6m-069efa.mp3",
+   "d": 6.87,
+   "r": "anchor",
+   "t": "I T Manager Opens Renewal Quote, Experiences All Five Stages of Grief at Once"
+  },
+  "79l1u01mbi2lu": {
+   "f": "79l1u01mbi2lu-b89fd0.mp3",
+   "d": 7.19,
+   "r": "anchor",
+   "t": "Also tonight. SaaS App Nobody Has Heard of Found With 312 Active Users and a Cor"
+  },
+  "1rkhaz11lwehdb": {
+   "f": "1rkhaz11lwehdb-e47cce.mp3",
+   "d": 6.15,
+   "r": "anchor",
+   "t": "It is called “Synergize.” No one knows what it does. Everyone is an admin."
+  },
+  "108gh101kbjilx": {
+   "f": "108gh101kbjilx-976c26.mp3",
+   "d": 6.47,
+   "r": "anchor",
+   "t": "Our top story tonight. Office Sonos Retains Admin Rights Through Three Reorgs"
+  },
+  "pum3rc1h0u1bd": {
+   "f": "pum3rc1h0u1bd-3c6f77.mp3",
+   "d": 4.55,
+   "r": "anchor",
+   "t": "Analysts call the Sonos “the most stable member of the leadership team.”"
+  },
+  "12plfwofu97n8": {
+   "f": "12plfwofu97n8-638ed5.mp3",
+   "d": 7.27,
+   "r": "anchor",
+   "t": "Also tonight. Onboarding Checklist Found in Break-Room Fridge Next to Yogurt Lab"
+  },
+  "1cb05ytvevlje": {
+   "f": "1cb05ytvevlje-bc9e55.mp3",
+   "d": 8.15,
+   "r": "anchor",
+   "t": "And finally. Password “Summer2026!” Named Most Popular Password for Third Consec"
+  },
+  "bbgt7nzn9fny": {
+   "f": "bbgt7nzn9fny-b75d75.mp3",
+   "d": 6.63,
+   "r": "anchor",
+   "t": "Board Asks If Company Is “Doing Zero Trust Yet”; SEE-so Says “Directionally”"
+  },
+  "1uynxz91lzeyqx": {
+   "f": "1uynxz91lzeyqx-906464.mp3",
+   "d": 4.79,
+   "r": "anchor",
+   "t": "The board was satisfied. The board is always satisfied by “directionally.”"
+  },
+  "1n8a39lba6cwp": {
+   "f": "1n8a39lba6cwp-46ec53.mp3",
+   "d": 6.47,
+   "r": "anchor",
+   "t": "Dave From Marketing Connects Free Calendar App to Entire Company; Calendar App T"
+  },
+  "g0k44f1nf5tfk": {
+   "f": "g0k44f1nf5tfk-8b1809.mp3",
+   "d": 6.71,
+   "r": "anchor",
+   "t": "The app requested “read and write access to everything, forever.” Dave clicked A"
+  },
+  "fs8jtc1bhc6sa": {
+   "f": "fs8jtc1bhc6sa-cfe338.mp3",
+   "d": 2.31,
+   "r": "anchor",
+   "t": "Dave always clicks Allow."
+  },
+  "18ovmbz1pshnez": {
+   "f": "18ovmbz1pshnez-fbf2ac.mp3",
+   "d": 7.83,
+   "r": "anchor",
+   "t": "And finally. SaaS App Nobody Has Heard of Found With 312 Active Users and a Corp"
+  },
+  "1u81zk116lqlfu": {
+   "f": "1u81zk116lqlfu-a17770.mp3",
+   "d": 5.75,
+   "r": "anchor",
+   "t": "Our top story tonight. Company Replaces Password Policy With Vibe Check"
+  },
+  "16v0tl01ymfdtn": {
+   "f": "16v0tl01ymfdtn-9ad34b.mp3",
+   "d": 6.71,
+   "r": "anchor",
+   "t": "And finally. Man Who Said “Just a Quick sam-ul Integration” Has Not Been Seen Si"
+  },
+  "g3ak1j6xvq89": {
+   "f": "g3ak1j6xvq89-5650c0.mp3",
+   "d": 4.79,
+   "r": "anchor",
+   "t": "Search parties recovered an expired certificate and a half-eaten sandwich."
+  },
+  "338voridpxma": {
+   "f": "338voridpxma-0b3756.mp3",
+   "d": 8.23,
+   "r": "anchor",
+   "t": "Our top story tonight. Local Admin Creates 400th A D Group, Describes Feeling as"
+  },
+  "1vhbw0gbbo9lf": {
+   "f": "1vhbw0gbbo9lf-db2a68.mp3",
+   "d": 6.47,
+   "r": "anchor",
+   "t": "“Marketing-All-v2-FINAL was the hardest,” he said, staring at a point just past "
+  },
+  "1dw5ecxz9003m": {
+   "f": "1dw5ecxz9003m-14a3bb.mp3",
+   "d": 4.95,
+   "r": "anchor",
+   "t": "And finally. Company Enters Fourth Year of Temporary Firewall Exception"
+  },
+  "17dkc3310kwufr": {
+   "f": "17dkc3310kwufr-d168d6.mp3",
+   "d": 7.51,
+   "r": "anchor",
+   "t": "And finally. Sysadmin Explains the S S O Tax to Family at Dinner; Grandmother Pa"
+  },
+  "w9ownk18tjs4k": {
+   "f": "w9ownk18tjs4k-24f467.mp3",
+   "d": 6.63,
+   "r": "anchor",
+   "t": "Our top story tonight. Recovery Is Possible, Says Admin Who Now Leaves Work at 5"
+  },
+  "1q22piib0j6cg": {
+   "f": "1q22piib0j6cg-021249.mp3",
+   "d": 7.43,
+   "r": "anchor",
+   "t": "Also tonight. Admin Who Documented Everything Leaves Company; Documentation Leav"
+  },
+  "1o2q3w31hbi3fd": {
+   "f": "1o2q3w31hbi3fd-daeea2.mp3",
+   "d": 6.39,
+   "r": "anchor",
+   "t": "The wiki now consists of one page titled “ask Greg.” Greg is in Portugal."
+  },
+  "1sa2sgk15ol73h": {
+   "f": "1sa2sgk15ol73h-520714.mp3",
+   "d": 6.31,
+   "r": "anchor",
+   "t": "Scientists Discover New Element, Legacium, Which Cannot Be Removed From Any Stac"
+  },
+  "kvakcv1odpjj7": {
+   "f": "kvakcv1odpjj7-cd5f55.mp3",
+   "d": 7.59,
+   "r": "anchor",
+   "t": "Also tonight. Board Asks If Company Is “Doing Zero Trust Yet”; SEE-so Says “Dire"
+  },
+  "4u014a11k9l3h": {
+   "f": "4u014a11k9l3h-df3875.mp3",
+   "d": 6.23,
+   "r": "anchor",
+   "t": "SaaS App Nobody Has Heard of Found With 312 Active Users and a Corporate Card"
+  },
+  "mzxoe9141n74z": {
+   "f": "mzxoe9141n74z-70ef0e.mp3",
+   "d": 6.95,
+   "r": "anchor",
+   "t": "And finally. Onboarding Checklist Found in Break-Room Fridge Next to Yogurt Labe"
+  },
+  "1vuqnfe1eo4h1j": {
+   "f": "1vuqnfe1eo4h1j-23e42c.mp3",
+   "d": 6.47,
+   "r": "anchor",
+   "t": "Our top story tonight. I T Department Celebrates One Full Hour Without Anyone As"
+  },
+  "ydjq2hbmndaq": {
+   "f": "ydjq2hbmndaq-ca613b.mp3",
+   "d": 5.51,
+   "r": "anchor",
+   "t": "The streak ended at 61 minutes when the C E O asked for admin “just to see.”"
+  },
+  "45ywnml5xrcs": {
+   "f": "45ywnml5xrcs-3dac4f.mp3",
+   "d": 5.91,
+   "r": "anchor",
+   "t": "Admin Who Documented Everything Leaves Company; Documentation Leaves With Him"
+  },
+  "11bniqp1j4h48u": {
+   "f": "11bniqp1j4h48u-b509fd.mp3",
+   "d": 6.55,
+   "r": "anchor",
+   "t": "And finally. Group Policy Object From 2011 Discovered Controlling Office Thermos"
+  },
+  "11fg9xu1c88t22": {
+   "f": "11fg9xu1c88t22-217b68.mp3",
+   "d": 7.83,
+   "r": "anchor",
+   "t": "Our top story tonight. Vendor Announces Logout Button Now Available on Enterpris"
+  },
+  "1l1oc681oppsx3": {
+   "f": "1l1oc681oppsx3-3943fd.mp3",
+   "d": 5.83,
+   "r": "anchor",
+   "t": "Also tonight. Vendor Renames Product for Fourth Time; Price Remains Loyal"
+  },
+  "142xxz21mmfl0t": {
+   "f": "142xxz21mmfl0t-5c9a82.mp3",
+   "d": 7.43,
+   "r": "anchor",
+   "t": "And finally. Scientists Discover New Element, Legacium, Which Cannot Be Removed "
+  },
+  "1l5uqdc1apgso0": {
+   "f": "1l5uqdc1apgso0-6474b9.mp3",
+   "d": 6.47,
+   "r": "anchor",
+   "t": "Seven Days of Audit Logs Deemed “Plenty” by Company That Has Never Been Breached"
+  },
+  "wk9yv0153rkuf": {
+   "f": "wk9yv0153rkuf-c8498a.mp3",
+   "d": 5.51,
+   "r": "anchor",
+   "t": "Security experts describe the logic as “airtight, in the way a colander is airti"
+  },
+  "4j3ih7puh0pi": {
+   "f": "4j3ih7puh0pi-2da420.mp3",
+   "d": 4.63,
+   "r": "anchor",
+   "t": "And finally. “Contact Sales” Button Contacted by Sales"
+  },
+  "ylyfdl1xrxr7a": {
+   "f": "ylyfdl1xrxr7a-b752f2.mp3",
+   "d": 7.43,
+   "r": "anchor",
+   "t": "Terraform Plan Shows 847 Resources to Destroy; Engineer Types “yes” Out of Habit"
+  },
+  "nqwzw71qh2ony": {
+   "f": "nqwzw71qh2ony-cdb79f.mp3",
+   "d": 7.27,
+   "r": "anchor",
+   "t": "And finally. Help Desk Adds “Have You Tried Turning It Off and On Again” to Comp"
+  },
+  "1ezi0t91hty8lz": {
+   "f": "1ezi0t91hty8lz-a00834.mp3",
+   "d": 5.11,
+   "r": "anchor",
+   "t": "It replaces “Customer Obsession,” which was turned off and did not come back on."
+  },
+  "ak42y01if9c1m": {
+   "f": "ak42y01if9c1m-507a87.mp3",
+   "d": 6.63,
+   "r": "anchor",
+   "t": "Our top story tonight. Employee Requests Access to “The Drive,” Refuses to Elabo"
+  },
+  "jl9cql1630huv": {
+   "f": "jl9cql1630huv-32a3cf.mp3",
+   "d": 6.95,
+   "r": "anchor",
+   "t": "Study: 9 in 10 Offboarded Employees Still Have Access to Something; 10th Is Lyin"
+  },
+  "ipwduw1ewxw3x": {
+   "f": "ipwduw1ewxw3x-62ba66.mp3",
+   "d": 5.99,
+   "r": "anchor",
+   "t": "Researchers could not reach the 10th, who was busy in a Figmint workspace he lef"
+  },
+  "15gdp0i178knzh": {
+   "f": "15gdp0i178knzh-360389.mp3",
+   "d": 5.35,
+   "r": "anchor",
+   "t": "Also tonight. Office Sonos Retains Admin Rights Through Three Reorgs"
+  },
+  "1702ko8177lnqt": {
+   "f": "1702ko8177lnqt-b6eeb4.mp3",
+   "d": 5.83,
+   "r": "anchor",
+   "t": "Man Who Said “Just a Quick sam-ul Integration” Has Not Been Seen Since March"
+  },
+  "9l3ej41iupmeq": {
+   "f": "9l3ej41iupmeq-ae716c.mp3",
+   "d": 9.43,
+   "r": "anchor",
+   "t": "Also tonight. Study: 9 in 10 Offboarded Employees Still Have Access to Something"
+  },
+  "b68u441ixxbp5": {
+   "f": "b68u441ixxbp5-ea5229.mp3",
+   "d": 5.11,
+   "r": "anchor",
+   "t": "Our top story tonight. Investigation Concludes It Was D N S"
+  },
+  "1awpixwo1o2by": {
+   "f": "1awpixwo1o2by-76e57a.mp3",
+   "d": 6.95,
+   "r": "anchor",
+   "t": "Also tonight. Local Admin Creates 400th A D Group, Describes Feeling as “Numb”"
+  },
+  "cwxajs1rig193": {
+   "f": "cwxajs1rig193-32eafc.mp3",
+   "d": 6.71,
+   "r": "anchor",
+   "t": "Also tonight. Auditor Impressed by Access Review Until Noticing Every Row Says “"
+  },
+  "hnbi7n1hzdvdk": {
+   "f": "hnbi7n1hzdvdk-3ca67c.mp3",
+   "d": 3.27,
+   "r": "anchor",
+   "t": "The reviewer, reached for comment, said “approved.”"
+  },
+  "12zs7gdxlxm0l": {
+   "f": "12zs7gdxlxm0l-770589.mp3",
+   "d": 7.43,
+   "r": "anchor",
+   "t": "And finally. Group Named “Everyone” Found to Contain Everyone, Three Printers an"
+  },
+  "9ifzjb17rxu0m": {
+   "f": "9ifzjb17rxu0m-a71082.mp3",
+   "d": 5.91,
+   "r": "anchor",
+   "t": "The fridge has been approving expense reports since 2020. They are all for yogur"
+  },
+  "15quccdkfiict": {
+   "f": "15quccdkfiict-5440c6.mp3",
+   "d": 5.99,
+   "r": "anchor",
+   "t": "Our top story tonight. Company’s Single Source of Truth Now Has Four Sources"
+  },
+  "1mxbzydydkx9i": {
+   "f": "1mxbzydydkx9i-013af1.mp3",
+   "d": 3.67,
+   "r": "anchor",
+   "t": "A fifth source has been proposed to reconcile the other four."
+  },
+  "1xnz6471keoce7": {
+   "f": "1xnz6471keoce7-86ac46.mp3",
+   "d": 6.07,
+   "r": "anchor",
+   "t": "Group Named “Everyone” Found to Contain Everyone, Three Printers and a Smart Fri"
+  },
+  "1esfdkpex64vh": {
+   "f": "1esfdkpex64vh-b60f6d.mp3",
+   "d": 5.19,
+   "r": "anchor",
+   "t": "And finally. Company Replaces Password Policy With Vibe Check"
+  },
+  "vn3lyfyhynpe": {
+   "f": "vn3lyfyhynpe-e70e02.mp3",
+   "d": 6.31,
+   "r": "anchor",
+   "t": "Our top story tonight. Company Wiki Page “How to Get Access” Requires Access"
+  },
+  "jpyn5ll230j7": {
+   "f": "jpyn5ll230j7-f38bf7.mp3",
+   "d": 6.31,
+   "r": "anchor",
+   "t": "And finally. Man Still Receiving Slack Messages From Company He Left in 2021"
+  },
+  "7wfr5uwpo5d7": {
+   "f": "7wfr5uwpo5d7-2dc2ad.mp3",
+   "d": 6.23,
+   "r": "anchor",
+   "t": "Our top story tonight. Ex-Employee Replies-All to Company Announcement From New "
+  },
+  "xt6lc47lxlwn": {
+   "f": "xt6lc47lxlwn-5d285f.mp3",
+   "d": 5.19,
+   "r": "anchor",
+   "t": "The reply said “congrats!!” and was the most engaged post of the quarter."
+  },
+  "ftp5hv13226gu": {
+   "f": "ftp5hv13226gu-917ee9.mp3",
+   "d": 6.23,
+   "r": "anchor",
+   "t": "Our top story tonight. Admin Receives “Quick Question”; Loses Afternoon"
+  },
+  "1pfr5rx1eu3vgp": {
+   "f": "1pfr5rx1eu3vgp-a93677.mp3",
+   "d": 4.87,
+   "r": "anchor",
+   "t": "The quick question was “can you just…” followed by a Terraform migration."
+  },
+  "an0rkibz2t8": {
+   "f": "an0rkibz2t8-a3436a.mp3",
+   "d": 8.95,
+   "r": "anchor",
+   "t": "And finally. Study: 9 in 10 Offboarded Employees Still Have Access to Something;"
+  },
+  "1lkpxrx1hdoeev": {
+   "f": "1lkpxrx1hdoeev-92ff3b.mp3",
+   "d": 6.79,
+   "r": "anchor",
+   "t": "Our top story tonight. Certificate Expires at 3:14 AM, Exactly as Prophesied"
+  },
+  "wc7a0by72qx2": {
+   "f": "wc7a0by72qx2-817b33.mp3",
+   "d": 5.99,
+   "r": "anchor",
+   "t": "And finally. Office Sonos Retains Admin Rights Through Three Reorgs"
+  },
+  "fsvu939fepb5": {
+   "f": "fsvu939fepb5-d07696.mp3",
+   "d": 5.35,
+   "r": "anchor",
+   "t": "Help Desk Adds “Have You Tried Turning It Off and On Again” to Company Values"
+  },
+  "11jc0w21eqrvjs": {
+   "f": "11jc0w21eqrvjs-896796.mp3",
+   "d": 6.87,
+   "r": "anchor",
+   "t": "Also tonight. I T Team of One Describes Org Chart as “Me, Reporting to Me, Escal"
+  },
+  "19c6zrv1xde741": {
+   "f": "19c6zrv1xde741-b0b4a8.mp3",
+   "d": 6.31,
+   "r": "anchor",
+   "t": "And finally. I T Department Celebrates One Full Hour Without Anyone Asking for A"
+  },
+  "ajbw5svwyhgn": {
+   "f": "ajbw5svwyhgn-65a92b.mp3",
+   "d": 6.47,
+   "r": "anchor",
+   "t": "Auditor Impressed by Access Review Until Noticing Every Row Says “Approved”"
+  },
+  "qdsuu2z7m3uq": {
+   "f": "qdsuu2z7m3uq-510986.mp3",
+   "d": 6.87,
+   "r": "anchor",
+   "t": "Consultant Completes Nine-Month Rollout, Delivers 400-Page Runbook Written Entir"
+  },
+  "k7urninj0a9z": {
+   "f": "k7urninj0a9z-466705.mp3",
+   "d": 2.87,
+   "r": "anchor",
+   "t": "The runbook includes a module for the runbook."
+  },
+  "jjli2x6xp6oz": {
+   "f": "jjli2x6xp6oz-33ce3b.mp3",
+   "d": 7.91,
+   "r": "anchor",
+   "t": "Also tonight. Support Ticket Filed in 2023 Achieves Sentience, Files Own Ticket"
+  },
+  "94i5pj1v0iwb0": {
+   "f": "94i5pj1v0iwb0-4d1e63.mp3",
+   "d": 5.91,
+   "r": "anchor",
+   "t": "Admin Asks for Audit Logs Older Than Seven Days, Is Laughed Out of the Call"
+  },
+  "1sgmp2zy008qx": {
+   "f": "1sgmp2zy008qx-70c7e6.mp3",
+   "d": 5.27,
+   "r": "anchor",
+   "t": "Also tonight. Company’s Single Source of Truth Now Has Four Sources"
+  },
+  "1htdhft15gi34i": {
+   "f": "1htdhft15gi34i-f7e56d.mp3",
+   "d": 5.99,
+   "r": "anchor",
+   "t": "And finally. Certificate Expires at 3:14 AM, Exactly as Prophesied"
+  },
+  "jc7f0n162fy6y": {
+   "f": "jc7f0n162fy6y-ecbc39.mp3",
+   "d": 6.55,
+   "r": "anchor",
+   "t": "Our top story tonight. AI Note-Taker Now Attends More Meetings Than Any Human Em"
+  },
+  "whzt6pimh9d2": {
+   "f": "whzt6pimh9d2-c3c3cb.mp3",
+   "d": 8.23,
+   "r": "anchor",
+   "t": "Our top story tonight. Sysadmin Explains the S S O Tax to Family at Dinner; Gran"
+  },
+  "j3rn211v0h98f": {
+   "f": "j3rn211v0h98f-bda3f1.mp3",
+   "d": 7.99,
+   "r": "anchor",
+   "t": "Also tonight. Procurement Negotiates 3% Discount on 40% Price Increase, Calls It"
+  },
+  "1lofwkb1tabak9": {
+   "f": "1lofwkb1tabak9-e4eef7.mp3",
+   "d": 7.27,
+   "r": "anchor",
+   "t": "And finally. Experts Warn Shadow I T Now Has Its Own Shadow I T"
+  },
+  "1huq8yd811u2": {
+   "f": "1huq8yd811u2-a2619f.mp3",
+   "d": 7.75,
+   "r": "anchor",
+   "t": "Our top story tonight. Company Achieves Zero Trust, Now Trusts Nothing, Includin"
+  },
+  "1kpiw113adldf": {
+   "f": "1kpiw113adldf-c10c03.mp3",
+   "d": 7.59,
+   "r": "anchor",
+   "t": "Also tonight. Password “Summer2026!” Named Most Popular Password for Third Conse"
+  },
+  "1dxnxez1x3e180": {
+   "f": "1dxnxez1x3e180-6d07b1.mp3",
+   "d": 7.35,
+   "r": "anchor",
+   "t": "And finally. Support Ticket Filed in 2023 Achieves Sentience, Files Own Ticket"
+  },
+  "1t1bc691w5m0ye": {
+   "f": "1t1bc691w5m0ye-ec4e0e.mp3",
+   "d": 5.59,
+   "r": "anchor",
+   "t": "Admin Takes First Vacation in Three Years; Pager Comes Along “Just in Case”"
+  },
+  "64gi3uq80hn5": {
+   "f": "64gi3uq80hn5-7166ae.mp3",
+   "d": 3.91,
+   "r": "anchor",
+   "t": "The pager has already posted more beach photos than the admin."
+  },
+  "bvlrffcwa6t0": {
+   "f": "bvlrffcwa6t0-79a2ac.mp3",
+   "d": 5.35,
+   "r": "anchor",
+   "t": "Also tonight. Admin Receives “Quick Question”; Loses Afternoon"
+  },
+  "fwx9rv81b5wp": {
+   "f": "fwx9rv81b5wp-e7aa76.mp3",
+   "d": 5.11,
+   "r": "anchor",
+   "t": "And finally. New Hire Starts Monday; I T Informed Monday"
+  },
+  "16k7cvd17nhjzq": {
+   "f": "16k7cvd17nhjzq-3cc1b1.mp3",
+   "d": 5.75,
+   "r": "anchor",
+   "t": "Vendor Launches AI Assistant That Answers Every Support Ticket With a Link to th"
+  },
+  "8euo6m3p3hb2": {
+   "f": "8euo6m3p3hb2-f9113c.mp3",
+   "d": 4.79,
+   "r": "anchor",
+   "t": "Customer satisfaction is unchanged, which the vendor is calling “flat growth.”"
+  },
+  "1aykj3c1kz2la6": {
+   "f": "1aykj3c1kz2la6-162d8a.mp3",
+   "d": 5.19,
+   "r": "anchor",
+   "t": "And finally. Company’s Single Source of Truth Now Has Four Sources"
+  },
+  "1uvjrsj7uyfj3": {
+   "f": "1uvjrsj7uyfj3-10dc74.mp3",
+   "d": 6.07,
+   "r": "anchor",
+   "t": "Also tonight. Auditor Requests “Just a Few Screenshots,” Receives 4,000"
+  },
+  "1wugibe1hh3fpt": {
+   "f": "1wugibe1hh3fpt-b35a7e.mp3",
+   "d": 5.27,
+   "r": "anchor",
+   "t": "“I see them when I close my eyes,” said the admin, who has not closed his eyes s"
+  },
+  "9grbst18fud4c": {
+   "f": "9grbst18fud4c-09a5e9.mp3",
+   "d": 4.31,
+   "r": "anchor",
+   "t": "And finally. C E O Would Like Admin Rights “Just to See”"
+  },
+  "1cu5myy15l8p9w": {
+   "f": "1cu5myy15l8p9w-4f683f.mp3",
+   "d": 7.83,
+   "r": "anchor",
+   "t": "Admin Deletes Group Named “DO NOT DELETE”; Nothing Happens; Admin Now More Afrai"
+  },
+  "kmuym28woy2": {
+   "f": "kmuym28woy2-4d3f72.mp3",
+   "d": 4.39,
+   "r": "anchor",
+   "t": "“Something happened,” she whispered. “We just don’t know what yet.”"
+  },
+  "p4rti61do28gu": {
+   "f": "p4rti61do28gu-7f5cb6.mp3",
+   "d": 6.95,
+   "r": "anchor",
+   "t": "Our top story tonight. Experts Warn Shadow I T Now Has Its Own Shadow I T"
+  },
+  "107ixobqhe9uw": {
+   "f": "107ixobqhe9uw-5ef009.mp3",
+   "d": 7.11,
+   "r": "anchor",
+   "t": "Our top story tonight. Auditor Requests “Just a Few Screenshots,” Receives 4,000"
+  },
+  "r4jx7f10ss2ow": {
+   "f": "r4jx7f10ss2ow-a3e2ce.mp3",
+   "d": 6.87,
+   "r": "anchor",
+   "t": "I T Team of One Describes Org Chart as “Me, Reporting to Me, Escalating to Me”"
+  },
+  "x5bkaege5kwi": {
+   "f": "x5bkaege5kwi-05ce7e.mp3",
+   "d": 6.15,
+   "r": "anchor",
+   "t": "Also tonight. Help Desk Adds “Have You Tried Turning It Off and On Again” to Com"
+  }
+ },
+ "sfx": {
+  "gurney": {
+   "f": "sfx-gurney-505c47.mp3",
+   "d": 6
+  },
+  "doors": {
+   "f": "sfx-doors-9ee9a8.mp3",
+   "d": 1.5
+  },
+  "pa-chime": {
+   "f": "sfx-pa-chime-dd1adc.mp3",
+   "d": 2
+  },
+  "defib": {
+   "f": "sfx-defib-84f5dc.mp3",
+   "d": 2.5
+  },
+  "wristband": {
+   "f": "sfx-wristband-5dacb7.mp3",
+   "d": 2
+  },
+  "room-tone": {
+   "f": "sfx-room-tone-ff7145.mp3",
+   "d": 20
+  },
+  "desk-bell": {
+   "f": "sfx-desk-bell-d15134.mp3",
+   "d": 1
+  },
+  "buzz": {
+   "f": "sfx-buzz-53266b.mp3",
+   "d": 1.5
+  },
+  "motif": {
+   "f": "sfx-motif-392136.mp3",
+   "d": 6
+  },
+  "oktv-ident": {
+   "f": "sfx-oktv-ident-8f7f13.mp3",
+   "d": 4
+  }
+ },
+ "generated": "2026-09-29T05:26:37.097Z"
+}

@@ -1,0 +1,14 @@
+Oktholm General
+
+/* TEAM */
+Front desk: Intake (a list, not an AI)
+Overhead pages: the PA system
+Billing: your identity provider
+
+/* THANKS */
+RFC 2324, for /brew
+Every admin who has ever defended a renewal quote at dinner
+
+/* SITE */
+Standards: HTML, CSS, JavaScript. No framework. No trackers.
+Disclosure: a parody, paid for by YeshID.

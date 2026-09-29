@@ -6,6 +6,14 @@
 ![Completion](https://img.shields.io/badge/Completion-32.5%25-orange)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
+## 🚑 v2: Oktholm General (reinvention, 2026-09)
+
+The static site is being reinvented as **Oktholm General**, a fake hospital with its own 24/7 TV network (OKTV). Visitors get diagnosed, play games about their worst days in IT, and stage interventions for coworkers, and every one of those actions is a referral. It runs on a reusable **parody engine**, so other startups can get the same treatment with a new brand pack.
+
+- **Concept, launch plan, sponsorship rewards:** [`docs/oktholm-2.0-concept.md`](docs/oktholm-2.0-concept.md)
+- **What a 24/7 AI TV channel costs per day:** [`docs/channel-economics.md`](docs/channel-economics.md)
+- **Working prototype (engine + YeshID brand pack + Netlify backend):** [`site/`](site/README.md) — `cd site && npm i && npm run preview`, then open `site/dist/index.html`
+
 ## 📖 What is Oktholm Syndrome?
 
 **Oktholm Syndrome** is a satirical "medical condition" representing the Stockholm Syndrome-like relationship IT professionals develop with problematic identity management software. This campaign parodies corporate wellness initiatives while offering genuine humor, community value, and practical solutions.
