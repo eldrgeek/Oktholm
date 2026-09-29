@@ -100,6 +100,16 @@ npm run voices -- prune                        # delete clips no line uses
 Lines can carry performance tags (`'[sighs] Oktholm. Get them to Intake.'`): the renderer gets them, captions never
 show them. A clip is keyed by role + tagged text, so rewriting or re-directing a line re-renders only that line.
 
+**The key:** Mike's ElevenLabs key is listed in the Voice Synthesis section of `api-keys-reference.md` (and in his
+memory notes). Export it as `ELEVENLABS_API_KEY` for the run; never write it into this repo or a Netlify build log.
+
+**First render, in order:**
+1. `npm run voices -- harvest`: about 20 minutes; the shows' lines land in `voice-work/`.
+2. `npm run voices -- cast`: three designed voices per role. Put `voice-work/oktholm/casting/` somewhere Mike can
+   listen (for example, a preview deploy under `/casting/` that isn't committed). He picks by ear.
+3. `npm run voices -- pick paramedic=B doctor=A …`, then commit `brands/oktholm/voices.json`.
+4. `npm run voices -- render`, then `sfx`, then commit `brands/oktholm/voice/` and redeploy the preview.
+
 ## Adding a brand for another startup
 
 1. `npm run new-brand -- <id>`.
