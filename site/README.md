@@ -83,7 +83,7 @@ Also `src/rooms/chart.js`: `#/chart` shows everything the site stores in the bro
 
 ## Voices (ElevenLabs, rendered ahead of time)
 
-The site plays pre-rendered clips from `brands/<id>/voice/` (committed) and never calls a voice API. The cast (13 original
+The site plays pre-rendered clips from `brands/<id>/voice/` (committed) and never calls a voice API. The cast (18 original
 voices, their design prompts and browser fallbacks) is `brands/<id>/cast.js`. Rendering needs `ELEVENLABS_API_KEY` in
 the shell, never in Netlify.
 

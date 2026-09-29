@@ -219,7 +219,7 @@ What changed after the first review, and why.
 **Easter eggs for the people who look:** the Konami code ("B·A: Budget approved"), a devtools warning in character, a view-source note, `curl` on the home page returns a discharge summary, `/brew` is a teapot, `robots.txt` disallows `/break-glass/`.
 
 **Voices.** ElevenLabs Eleven v4, rendered at build time into `site/brands/oktholm/voice/` and committed; the site never calls the API.
-- A cast of 13 original voices (`site/brands/oktholm/cast.js`), with accents chosen so voices separate by ear.
+- A cast of 18 original voices (`site/brands/oktholm/cast.js`), with accents chosen so voices separate by ear.
 - A casting call page lets a human pick each voice by ear.
 - Browser speech remains only as a fallback for older show lines; the cold open, Intake and the captor stay captioned-silent rather than use a robot voice.
 - Interventions will need names spoken: the plan is a runtime vocative restricted to an allowlist of about 20,000 first names from global sources, cached server-side, so the name list isn't Anglo-only and nothing typed can be made to speak.
